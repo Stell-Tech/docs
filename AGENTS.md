@@ -28,6 +28,7 @@ Write for the merchant, not the operator. Assume no knowledge of Stell internals
 - **Never document admin-only features**: the admin dashboard (`/admin/*`), Quick Setup wizard, SuperAdmin controls, downtime toggles, certificate management internals, or anything merchants cannot reach.
 - Never include internal identifiers, raw API payloads, AWS service names, or implementation file paths in published pages.
 - Engage is a **Gated Module** — some companies don't have it. Note this where relevant ("If you don't see Engage in your navigation, it isn't enabled for your company — contact support") rather than assuming everyone has it.
+- Don't mirror wallet-provider developer documentation (Apple Wallet Passes, Google Wallet API). Stell's editor abstracts those formats — document pass anatomy and behavior in merchant terms from the editor's actual capabilities, and link to provider docs only as optional further reading (the pass-templates section sets the pattern).
 - English only.
 
 ## Terminology
