@@ -3,4 +3,45 @@ title: "Enrollment troubleshooting"
 description: "Help customers who run into problems getting their pass"
 ---
 
-<Note>This page is a placeholder — content is on its way.</Note>
+A reference for support staff: the situations customers report during [enrollment](/enrollment/how-enrollment-works), what they see, and how to resolve them.
+
+## Form and eligibility
+
+| Customer reports | What's happening | Resolution |
+|---|---|---|
+| "It says I need to correct errors" | A field failed validation or a required field is empty | Have them check the highlighted fields — usually a typo in the email or phone format |
+| "It says I'm not old enough" | The program has a minimum age and the birth date entered is below it | The age rule is the merchant's policy; if the customer believes it's wrong, check the date they entered |
+| "It says access is restricted" | The program is limited to a specific customer group, and their details aren't on the list | Eligibility is controlled by the merchant — escalate to whoever owns the program's access list |
+| "It says onboarding is unavailable" | Enrollment is switched off for the program | Check whether this is intentional (maintenance, campaign ended); contact Stell to re-enable |
+
+## Verification codes (existing members)
+
+When the email or phone matches an existing member, a 6-digit verification code is required.
+
+| Customer reports | Resolution |
+|---|---|
+| "I never got the code" | Check the email/phone they entered for typos; check spam. If the contact details in your CRM are outdated, the code goes to the old address — update the CRM record |
+| "The code is invalid" | Re-enter carefully; codes are 6 digits. After several wrong attempts there's a short cooldown |
+| "The code expired" | They took too long — have them tap **Send Verification Code** again for a fresh one |
+| "It says too many attempts" | Rate limiting kicked in. Wait the time shown, then request a new code |
+
+## Getting the pass into the wallet
+
+| Customer reports | What's happening | Resolution |
+|---|---|---|
+| "Nothing happens after the form" / "Couldn't prepare my pass" | Pass generation failed — often a temporary hiccup reaching the merchant's customer system | Try again. If it persists, [contact Stell support](/support/contact) with the program and the time it happened |
+| "The pass won't add to my wallet" | Wallet add failed on the device | Update iOS, use Safari rather than another browser, or retry on another device |
+| "I got a file instead of a pass" (on a Mac) | Non-Safari browsers on macOS download the `.pkpass` file instead of opening Wallet | Open the downloaded file — it adds the pass — or redo the flow in Safari |
+| "I'm on Android and it says no compatible wallet" | Google Wallet enrollment isn't available yet | Explain that the pass currently requires an iPhone; this is expected behavior |
+| "My emailed pass link doesn't work anymore" | Pass links expire after 24 hours | Have them go through the enrollment link again — existing members just verify and get a fresh pass |
+| "I never received the pass email" | The email address had a typo, or delivery failed | Verify the address; the customer can always re-run enrollment to get the pass directly |
+
+## Checking from the portal
+
+When a customer says they enrolled but something's off, look them up under **Engage → Contacts** (search by email or external ID) and check their pass:
+
+- Pass is **Pre-Active** → the pass was issued but never added to the wallet. Walk the customer through adding it.
+- Pass is **Inactive** → the customer removed the pass from their wallet. They can re-add it.
+- No contact found → enrollment likely never completed. Have them try again.
+
+See [pass lifecycle](/passes/lifecycle) for the full status reference. If you can't resolve it, [contact Stell support](/support/contact) with the pass ID or the customer's external ID.

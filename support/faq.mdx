@@ -3,4 +3,71 @@ title: "Frequently asked questions"
 description: "Answers to common questions about the merchant portal"
 ---
 
-<Note>This page is a placeholder — content is on its way.</Note>
+## Access and account
+
+<AccordionGroup>
+<Accordion title="I don't see Engage (or Organization) in my sidebar">
+They're optional modules enabled per company. If your company should have one, [contact support](/support/contact).
+</Accordion>
+<Accordion title="I lost my authenticator app and can't sign in">
+[Contact support](/support/contact) — they can verify your identity and reset your two-factor setup. If you can still sign in, you can switch authenticator under [account security](/account/security) yourself.
+</Accordion>
+<Accordion title="I work with several companies — why don't I see the right data?">
+The portal shows one company at a time. Open the account menu at the bottom of the sidebar and switch to the right company.
+</Accordion>
+</AccordionGroup>
+
+## Passes
+
+<AccordionGroup>
+<Accordion title="What's the difference between Pre-Active, Active, and Inactive?">
+**Pre-Active**: issued but not yet added to a wallet. **Active**: in a wallet and working. **Inactive**: the customer removed it from their wallet — it reactivates if they add it back. See [pass lifecycle](/passes/lifecycle).
+</Accordion>
+<Accordion title="Can I undo voiding a pass?">
+No — voiding is permanent. Issue a new pass for the customer instead.
+</Accordion>
+<Accordion title="A customer says their pass doesn't work at the till">
+Look up the pass and check its status, then check the [transaction log](/transactions/overview) for a denied transaction — the status reason usually explains it.
+</Accordion>
+<Accordion title="Do template changes affect passes that are already issued?">
+Yes. Saving the [pass template](/programs/templates) updates all existing passes immediately.
+</Accordion>
+</AccordionGroup>
+
+## Enrollment
+
+<AccordionGroup>
+<Accordion title="Can customers on Android get a pass?">
+Not yet through the enrollment flow — it currently issues Apple Wallet passes only. Android users see a message explaining this.
+</Accordion>
+<Accordion title="A customer enrolled but has no pass">
+Find them under **Engage → Contacts** and check the pass status — most often the pass is Pre-Active, meaning they never finished adding it to their wallet. See [enrollment troubleshooting](/enrollment/troubleshooting).
+</Accordion>
+<Accordion title="Can we change which fields and consents the enrollment form asks for?">
+Yes — fields, consents, branding, age limits, and verification rules are configured per program. [Contact support](/support/contact) with the changes you want.
+</Accordion>
+</AccordionGroup>
+
+## Messaging (Engage)
+
+<AccordionGroup>
+<Accordion title="Why is my campaign's reach lower than my segment size?">
+Push messages only reach customers with the pass **installed in a wallet**. Members whose passes are Pre-Active or Inactive aren't reachable.
+</Accordion>
+<Accordion title="Can I edit or cancel a campaign after sending?">
+Sent campaigns can't be edited. Scheduled notifications sit in the **Pending** tab of [notification history](/engage/notifications) until their send time.
+</Accordion>
+</AccordionGroup>
+
+## Integrations
+
+<AccordionGroup>
+<Accordion title="I lost an API key — can I see it again?">
+No. The full key is shown only once, at creation or rotation. Rotate the key to get a new secret, then update your application.
+</Accordion>
+<Accordion title="How do my systems get notified about pass events?">
+Set up event webhooks on the program page — Stell sends the program's pass events to your HTTPS endpoint. See [programs](/programs/overview).
+</Accordion>
+</AccordionGroup>
+
+Didn't find your answer? [Contact support](/support/contact).

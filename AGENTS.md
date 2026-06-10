@@ -75,3 +75,12 @@ Screenshots are **generated** by the Playwright pipeline in `screenshots/` — n
 ## Workflow
 
 Per section: read the portal section's code in stell-core → draft MDX → add screenshot entries and capture → review with `npx mint dev` → commit and push (Mintlify deploys via GitHub sync). Run `mint broken-links` before pushing navigation changes.
+
+## Doc maintenance
+
+The baseline docs reflect the source repos at the SHAs recorded in `.docs-sync`. To sync after product changes:
+
+1. In stell-core: `git log --oneline <last-sync-sha>..HEAD -- 'app/(portal)'` — and the same in launchpad for `app/(public)` and `messages/`.
+2. Map touched routes to doc pages (route folders mirror the docs nav: `portal/passes` → `passes/*.mdx`, etc.). Check changed UI strings against the exact labels quoted in the docs.
+3. Update affected pages, run `npm run shots` (re-login with `npm run shots:login` if the session expired), and review which PNGs changed in git diff.
+4. Update `.docs-sync` with the new SHAs and commit.

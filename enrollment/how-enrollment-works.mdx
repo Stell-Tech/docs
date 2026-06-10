@@ -3,4 +3,52 @@ title: "How enrollment works"
 description: "How customers get their pass through the web or App Clip enrollment flow"
 ---
 
-<Note>This page is a placeholder — content is on its way.</Note>
+**Enrollment** is how your customers get their pass: they open an enrollment link, fill in a short form, accept the consents, and the pass lands in their wallet. This page walks through that journey so you and your support staff know exactly what customers see.
+
+<Note>
+Enrollment currently issues **Apple Wallet** passes. Android / Google Wallet enrollment isn't available yet — Android users see a message explaining this (or are redirected, depending on your setup).
+</Note>
+
+## How customers get there
+
+| Entry point | How it works |
+|---|---|
+| **Link or QR code** | The customer opens your enrollment link in their browser — typically from a QR code in store, your website, or a receipt |
+| **App Clip** | On iPhone, tapping an App Clip code or NFC tag opens the same flow instantly as a lightweight native experience — no app install |
+| **Pre-filled link** | Links from your systems can securely pre-fill the customer's details, skipping typing (and sometimes the whole form) |
+| **Existing-member link** | Customers who already exist in your CRM can get a direct link that just issues their pass |
+
+## The customer journey
+
+<Steps>
+<Step title="Welcome screen">
+The customer sees your program's branding with a welcome like "Join [program name]" and taps **Continue**.
+</Step>
+<Step title="Personal details">
+A short form — which fields appear (name, email, phone, birth date, address, and so on) depends on your program's configuration. Validation happens as they type.
+</Step>
+<Step title="Consents">
+Required and optional consents with links to your terms of use and privacy policy. The customer can't continue without the required ones.
+</Step>
+<Step title="Already a member? Verification">
+If the email or phone number matches an existing member, the customer verifies their identity with a 6-digit code sent by email or SMS before getting their pass. Programs using Vipps login can skip this — identity is already verified.
+</Step>
+<Step title="Pass added to wallet">
+The pass is prepared and added to Apple Wallet — automatically in Safari on iPhone, or via an **Add to Apple Wallet** button. The customer sees a confirmation: "Welcome to [program name]!" with a short how-it-works guide.
+</Step>
+</Steps>
+
+## NFC and barcode passes
+
+What the customer does at checkout depends on the program's pass type:
+
+- **NFC (tap to use)** — the pass works through Apple Pay: the customer taps their phone as usual and the pass is applied automatically.
+- **Barcode/QR** — the customer opens their wallet and shows the barcode at checkout.
+
+The confirmation screen tells the customer which applies to them.
+
+## What's specific to your program
+
+The flow's skeleton is the same for everyone, but your program controls: the branding and texts, which form fields are asked, which consents appear, a minimum age requirement, whether existing members must verify with a code, whether the pass is also sent by email or SMS, and any follow-up links on the confirmation screen (like "download our app"). If you want any of these changed, [contact support](/support/contact).
+
+The enrollment flow is available in English, Norwegian, Swedish, and Danish.
