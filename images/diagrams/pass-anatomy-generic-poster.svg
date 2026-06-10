@@ -1,0 +1,98 @@
+<svg width="960" height="600" viewBox="0 0 960 600" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Segoe UI', sans-serif">
+  <!-- canvas -->
+  <rect width="960" height="600" rx="16" fill="#F6F6F4"/>
+
+  <!-- pass body with full-bleed artwork -->
+  <clipPath id="passClip"><rect x="340" y="60" width="280" height="460" rx="18"/></clipPath>
+  <rect x="340" y="60" width="280" height="460" rx="18" fill="#88b9c3" fill-opacity="0.35"/>
+  <g clip-path="url(#passClip)">
+    <!-- decorative artwork shapes -->
+    <circle cx="430" cy="180" r="70" fill="#88b9c3" fill-opacity="0.35"/>
+    <circle cx="560" cy="140" r="40" fill="#88b9c3" fill-opacity="0.25"/>
+    <path d="M 340 400 Q 430 300 500 380 T 620 360 V 520 H 340 Z" fill="#88b9c3" fill-opacity="0.4"/>
+    <path d="M 340 440 Q 450 360 620 430 V 520 H 340 Z" fill="#1a2f3f" fill-opacity="0.08"/>
+  </g>
+  <rect x="340" y="60" width="280" height="460" rx="18" fill="none" stroke="#1a2f3f" stroke-width="1.5"/>
+
+  <!-- logo & logo text zone -->
+  <rect x="354" y="74" width="104" height="26" rx="6" fill="#ffffff" fill-opacity="0.85" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <circle cx="368" cy="87" r="7" fill="#88b9c3" fill-opacity="0.6"/>
+  <text x="382" y="91" font-size="10" font-weight="600" fill="#1a2f3f">MUSEUM</text>
+
+  <!-- header field zone -->
+  <rect x="540" y="74" width="66" height="26" rx="6" fill="#ffffff" fill-opacity="0.85" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="573" y="85" text-anchor="middle" font-size="7" fill="#5a6b75">GUEST NO.</text>
+  <text x="573" y="96" text-anchor="middle" font-size="10" font-weight="600" fill="#1a2f3f">102035</text>
+
+  <!-- centered QR barcode -->
+  <rect x="425" y="235" width="110" height="110" rx="10" fill="#ffffff" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <g fill="#1a2f3f">
+    <!-- finder patterns -->
+    <rect x="437" y="247" width="22" height="22" rx="2"/><rect x="441" y="251" width="14" height="14" fill="#ffffff" rx="1"/><rect x="445" y="255" width="6" height="6"/>
+    <rect x="501" y="247" width="22" height="22" rx="2"/><rect x="505" y="251" width="14" height="14" fill="#ffffff" rx="1"/><rect x="509" y="255" width="6" height="6"/>
+    <rect x="437" y="311" width="22" height="22" rx="2"/><rect x="441" y="315" width="14" height="14" fill="#ffffff" rx="1"/><rect x="445" y="319" width="6" height="6"/>
+    <!-- data dots -->
+    <rect x="467" y="251" width="5" height="5"/><rect x="477" y="247" width="5" height="5"/><rect x="487" y="255" width="5" height="5"/><rect x="471" y="261" width="5" height="5"/><rect x="483" y="265" width="5" height="5"/>
+    <rect x="441" y="277" width="5" height="5"/><rect x="451" y="281" width="5" height="5"/><rect x="463" y="277" width="5" height="5"/><rect x="475" y="283" width="5" height="5"/><rect x="487" y="277" width="5" height="5"/><rect x="499" y="281" width="5" height="5"/><rect x="511" y="277" width="5" height="5"/><rect x="519" y="285" width="5" height="5"/>
+    <rect x="445" y="293" width="5" height="5"/><rect x="457" y="297" width="5" height="5"/><rect x="469" y="293" width="5" height="5"/><rect x="481" y="299" width="5" height="5"/><rect x="493" y="293" width="5" height="5"/><rect x="505" y="297" width="5" height="5"/><rect x="517" y="293" width="5" height="5"/>
+    <rect x="467" y="311" width="5" height="5"/><rect x="479" y="315" width="5" height="5"/><rect x="491" y="311" width="5" height="5"/><rect x="503" y="317" width="5" height="5"/><rect x="513" y="311" width="5" height="5"/><rect x="471" y="325" width="5" height="5"/><rect x="485" y="329" width="5" height="5"/><rect x="499" y="325" width="5" height="5"/>
+  </g>
+
+  <!-- primary fields at the bottom -->
+  <rect x="354" y="424" width="122" height="42" rx="6" fill="#ffffff" fill-opacity="0.88" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="362" y="439" font-size="7" fill="#5a6b75">MEMBER NAME</text>
+  <text x="362" y="457" font-size="12" font-weight="600" fill="#1a2f3f">Anna Berg</text>
+  <rect x="486" y="424" width="120" height="42" rx="6" fill="#ffffff" fill-opacity="0.88" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="494" y="439" font-size="7" fill="#5a6b75">EXPIRES</text>
+  <text x="494" y="457" font-size="12" font-weight="600" fill="#1a2f3f">01/02/27</text>
+
+  <!-- footer field -->
+  <rect x="354" y="476" width="86" height="24" rx="6" fill="#ffffff" fill-opacity="0.8" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="362" y="492" font-size="9" font-weight="600" fill="#1a2f3f">Family Pass</text>
+
+  <!-- LEFT callouts -->
+  <g stroke="#1a2f3f" stroke-width="1">
+    <line x1="300" y1="87" x2="352" y2="87"/>
+    <line x1="300" y1="200" x2="339" y2="200"/>
+    <line x1="300" y1="445" x2="352" y2="445"/>
+  </g>
+  <g fill="#1a2f3f">
+    <circle cx="352" cy="87" r="2.5"/><circle cx="339" cy="200" r="2.5"/><circle cx="352" cy="445" r="2.5"/>
+  </g>
+  <text x="292" y="82" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Primary logo &amp; logo text</text>
+  <text x="292" y="97" text-anchor="end" font-size="11.5" fill="#5a6b75">uses the Primary Logo slot —</text>
+  <text x="292" y="110" text-anchor="end" font-size="11.5" fill="#5a6b75">falls back to your regular logo</text>
+
+  <text x="292" y="195" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Artwork</text>
+  <text x="292" y="210" text-anchor="end" font-size="11.5" fill="#5a6b75">the full-bleed visual focus of the</text>
+  <text x="292" y="223" text-anchor="end" font-size="11.5" fill="#5a6b75">pass — uploading it enables</text>
+  <text x="292" y="236" text-anchor="end" font-size="11.5" fill="#5a6b75">the poster layout</text>
+
+  <text x="292" y="440" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Primary fields</text>
+  <text x="292" y="455" text-anchor="end" font-size="11.5" fill="#5a6b75">move to the bottom on the</text>
+  <text x="292" y="468" text-anchor="end" font-size="11.5" fill="#5a6b75">poster layout</text>
+
+  <!-- RIGHT callouts -->
+  <g stroke="#1a2f3f" stroke-width="1">
+    <line x1="608" y1="87" x2="660" y2="87"/>
+    <line x1="537" y1="290" x2="660" y2="290"/>
+    <line x1="442" y1="488" x2="660" y2="488"/>
+  </g>
+  <g fill="#1a2f3f">
+    <circle cx="608" cy="87" r="2.5"/><circle cx="537" cy="290" r="2.5"/><circle cx="442" cy="488" r="2.5"/>
+  </g>
+  <text x="668" y="82" font-size="14" font-weight="600" fill="#1a2f3f">Header fields</text>
+  <text x="668" y="97" font-size="11.5" fill="#5a6b75">still top right, always visible</text>
+
+  <text x="668" y="285" font-size="14" font-weight="600" fill="#1a2f3f">Barcode</text>
+  <text x="668" y="300" font-size="11.5" fill="#5a6b75">moves to the center of the pass</text>
+  <text x="668" y="313" font-size="11.5" fill="#5a6b75">on the poster layout</text>
+
+  <text x="668" y="483" font-size="14" font-weight="600" fill="#1a2f3f">Footer fields</text>
+  <text x="668" y="498" font-size="11.5" fill="#5a6b75">a final line at the very bottom —</text>
+  <text x="668" y="511" font-size="11.5" fill="#5a6b75">shown on the poster layout</text>
+
+  <!-- footer note -->
+  <text x="480" y="568" text-anchor="middle" font-size="11" fill="#5a6b75">Generic poster layout (iOS 27 and later) — shown when your template has poster artwork.</text>
+  <text x="480" y="583" text-anchor="middle" font-size="11" fill="#5a6b75">Older devices fall back to the standard generic layout.</text>
+</svg>

@@ -25,7 +25,7 @@ From top to bottom:
 Customers reach the back by tapping the **ⓘ** on the pass. **Back fields** hold everything that doesn't belong on the front: terms, contact details, longer descriptions, links. There's much more room here, and text can be longer.
 
 <Note>
-The editor also offers **footer fields**, but these aren't currently displayed on the pass — keep your content in the areas above.
+The editor also offers **footer fields**. These only appear on the [generic poster layout](#the-generic-poster-layout), as a final line at the very bottom of the pass — on other layouts, keep your content in the areas above.
 </Note>
 
 ## Pass styles
@@ -38,11 +38,27 @@ The **pass style** (chosen in the **Settings** tab) decides the overall layout �
 |---|---|---|
 | **Store Card** | Strip image | Loyalty and membership cards — the most common choice |
 | **Coupon** | Strip image | Offers and vouchers |
-| **Generic** | Background image | Anything that doesn't fit the other styles |
+| **Generic** | Background image — or the [poster layout](#the-generic-poster-layout) with full-bleed artwork on the newest iPhones | Anything that doesn't fit the other styles |
 | **Event Ticket** | Strip image, or a full-poster layout with its own artwork on newer iPhones | Events and entry passes |
 | **Boarding Pass** | Background image | Travel — also allows 5 secondary/auxiliary fields instead of 4 |
 
 Switching style keeps your fields and images but changes how they're laid out — check the preview after switching, since a strip image won't show on a background-based style and vice versa.
+
+## The generic poster layout
+
+On iPhones running iOS 27 and later, a Generic pass with poster **artwork** uploaded renders as a **generic poster** — a layout that puts the artwork front and center, and rearranges the familiar areas around it:
+
+![The generic poster layout: primary logo and header fields at the top, full-bleed artwork, the barcode centered on the pass, primary fields at the bottom, and footer fields at the very bottom](/images/diagrams/pass-anatomy-generic-poster.svg)
+
+What changes compared to the standard layout:
+
+- **The artwork is the pass** — it fills the whole front, so it carries the design. The automatic dark gradient at the top keeps the logo and header readable (you can turn it off in the editor's visual options).
+- **The barcode moves to the center**, on top of the artwork.
+- **Primary fields move to the bottom**, label above value — name and expiry live here in Apple's reference design.
+- **Footer fields appear** as a final line at the very bottom.
+- The **Primary Logo** image slot replaces your regular logo at the top (and falls back to it if not set).
+
+Older devices fall back to the standard generic layout automatically, so keep the standard images and fields in good shape — the same template serves both.
 
 ## How this knowledge maps to the editor
 
