@@ -7,10 +7,9 @@
     <rect x="58" y="48" width="36" height="12" rx="3" fill="#88b9c3" fill-opacity="0.35"/>
     <rect x="152" y="48" width="30" height="12" rx="3" fill="#88b9c3" fill-opacity="0.35"/>
     <rect x="50.6" y="66" width="138.8" height="40" fill="#88b9c3" fill-opacity="0.5"/>
-    <rect x="58" y="114" width="56" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
-    <rect x="122" y="114" width="60" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
-    <rect x="58" y="132" width="56" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
-    <rect x="122" y="132" width="60" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
+    <rect x="58" y="114" width="38" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
+    <rect x="102" y="114" width="38" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
+    <rect x="146" y="114" width="36" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
     <rect x="86" y="192" width="68" height="34" rx="5" fill="#ffffff" stroke="#1a2f3f" stroke-width="0.8"/>
     <g fill="#1a2f3f"><rect x="94" y="198" width="2" height="22"/><rect x="99" y="198" width="1.5" height="22"/><rect x="103" y="198" width="2.5" height="22"/><rect x="109" y="198" width="1.5" height="22"/><rect x="113" y="198" width="2" height="22"/><rect x="118" y="198" width="3" height="22"/><rect x="124" y="198" width="1.5" height="22"/><rect x="128" y="198" width="2" height="22"/><rect x="133" y="198" width="1.5" height="22"/><rect x="137" y="198" width="2.5" height="22"/><rect x="142" y="198" width="1.5" height="22"/></g>
     <text x="120" y="270" text-anchor="middle" font-size="13" font-weight="600" fill="#1a2f3f">Store Card</text>

@@ -24,21 +24,16 @@
   <text x="362" y="148" font-size="7" fill="#5a6b75">MEMBER</text>
   <text x="362" y="165" font-size="13" font-weight="600" fill="#1a2f3f">Anna Berg</text>
 
-  <!-- secondary fields -->
-  <rect x="354" y="200" width="118" height="30" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <!-- secondary & auxiliary fields (one shared row on store cards) -->
+  <rect x="354" y="200" width="76" height="30" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
   <text x="362" y="212" font-size="7" fill="#5a6b75">TIER</text>
   <text x="362" y="224" font-size="10" font-weight="600" fill="#1a2f3f">Gold</text>
-  <rect x="486" y="200" width="120" height="30" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
-  <text x="494" y="212" font-size="7" fill="#5a6b75">MEMBER SINCE</text>
-  <text x="494" y="224" font-size="10" font-weight="600" fill="#1a2f3f">2024</text>
-
-  <!-- auxiliary fields -->
-  <rect x="354" y="242" width="118" height="30" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
-  <text x="362" y="254" font-size="7" fill="#5a6b75">STORE</text>
-  <text x="362" y="266" font-size="10" font-weight="600" fill="#1a2f3f">Oslo</text>
-  <rect x="486" y="242" width="120" height="30" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
-  <text x="494" y="254" font-size="7" fill="#5a6b75">EXPIRES</text>
-  <text x="494" y="266" font-size="10" font-weight="600" fill="#1a2f3f">Dec 2026</text>
+  <rect x="442" y="200" width="76" height="30" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="450" y="212" font-size="7" fill="#5a6b75">SINCE</text>
+  <text x="450" y="224" font-size="10" font-weight="600" fill="#1a2f3f">2024</text>
+  <rect x="530" y="200" width="76" height="30" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="538" y="212" font-size="7" fill="#5a6b75">EXPIRES</text>
+  <text x="538" y="224" font-size="10" font-weight="600" fill="#1a2f3f">Dec 26</text>
 
   <!-- barcode -->
   <rect x="410" y="400" width="140" height="76" rx="8" fill="#ffffff" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
@@ -55,11 +50,10 @@
   <g stroke="#1a2f3f" stroke-width="1">
     <line x1="300" y1="87" x2="352" y2="87"/>
     <line x1="300" y1="149" x2="339" y2="149"/>
-    <line x1="300" y1="257" x2="352" y2="257"/>
     <line x1="300" y1="438" x2="408" y2="438"/>
   </g>
   <g fill="#1a2f3f">
-    <circle cx="352" cy="87" r="2.5"/><circle cx="339" cy="149" r="2.5"/><circle cx="352" cy="257" r="2.5"/><circle cx="408" cy="438" r="2.5"/>
+    <circle cx="352" cy="87" r="2.5"/><circle cx="339" cy="149" r="2.5"/><circle cx="408" cy="438" r="2.5"/>
   </g>
   <text x="292" y="82" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Logo &amp; logo text</text>
   <text x="292" y="97" text-anchor="end" font-size="11.5" fill="#5a6b75">your brand anchor, top left</text>
@@ -67,9 +61,6 @@
   <text x="292" y="144" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Strip image</text>
   <text x="292" y="159" text-anchor="end" font-size="11.5" fill="#5a6b75">or a full background image,</text>
   <text x="292" y="172" text-anchor="end" font-size="11.5" fill="#5a6b75">depending on pass style</text>
-
-  <text x="292" y="252" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Auxiliary fields</text>
-  <text x="292" y="267" text-anchor="end" font-size="11.5" fill="#5a6b75">second row of details, up to 4</text>
 
   <text x="292" y="433" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Barcode or NFC</text>
   <text x="292" y="448" text-anchor="end" font-size="11.5" fill="#5a6b75">how the pass is read at checkout</text>
@@ -92,8 +83,9 @@
   <text x="668" y="164" font-size="11.5" fill="#5a6b75">the headline value, rendered</text>
   <text x="668" y="177" font-size="11.5" fill="#5a6b75">large on top of the strip</text>
 
-  <text x="668" y="210" font-size="14" font-weight="600" fill="#1a2f3f">Secondary fields</text>
-  <text x="668" y="225" font-size="11.5" fill="#5a6b75">supporting details, up to 4</text>
+  <text x="668" y="210" font-size="14" font-weight="600" fill="#1a2f3f">Secondary &amp; auxiliary fields</text>
+  <text x="668" y="225" font-size="11.5" fill="#5a6b75">on a store card they share one row —</text>
+  <text x="668" y="238" font-size="11.5" fill="#5a6b75">up to 4 fields in total</text>
 
   <text x="668" y="473" font-size="14" font-weight="600" fill="#1a2f3f">Back of the pass</text>
   <text x="668" y="488" font-size="11.5" fill="#5a6b75">tap to flip — back fields hold terms,</text>

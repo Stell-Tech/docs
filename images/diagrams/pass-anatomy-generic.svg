@@ -1,0 +1,74 @@
+<svg width="960" height="560" viewBox="0 0 960 560" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="960" height="560" rx="16" fill="#F6F6F4"/>
+
+  <!-- pass body with full background image -->
+  <rect x="340" y="60" width="280" height="440" rx="18" fill="#88b9c3" fill-opacity="0.3" stroke="#1a2f3f" stroke-width="1.5"/>
+  <!-- notch -->
+  <path d="M 462 60 A 18 14 0 0 0 498 60 Z" fill="#F6F6F4" stroke="#1a2f3f" stroke-width="1.5"/>
+
+  <!-- logo zone -->
+  <rect x="354" y="78" width="80" height="26" rx="6" fill="#ffffff" fill-opacity="0.85" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="394" y="95" text-anchor="middle" font-size="10" font-weight="600" fill="#1a2f3f">LOGO</text>
+
+  <!-- header field zone -->
+  <rect x="540" y="78" width="66" height="26" rx="6" fill="#ffffff" fill-opacity="0.85" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="573" y="89" text-anchor="middle" font-size="7" fill="#5a6b75">MEMBER NO.</text>
+  <text x="573" y="100" text-anchor="middle" font-size="10" font-weight="600" fill="#1a2f3f">847291</text>
+
+  <!-- primary field: larger, top section, leaves room on the right -->
+  <rect x="354" y="140" width="170" height="52" rx="8" fill="#ffffff" fill-opacity="0.88" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="364" y="158" font-size="7" fill="#5a6b75">MEMBER</text>
+  <text x="364" y="180" font-size="16" font-weight="600" fill="#1a2f3f">Anna Berg</text>
+
+  <!-- secondary fields -->
+  <rect x="354" y="216" width="118" height="30" rx="6" fill="#ffffff" fill-opacity="0.75" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="362" y="228" font-size="7" fill="#5a6b75">TIER</text>
+  <text x="362" y="240" font-size="10" font-weight="600" fill="#1a2f3f">Gold</text>
+  <rect x="486" y="216" width="120" height="30" rx="6" fill="#ffffff" fill-opacity="0.75" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="494" y="228" font-size="7" fill="#5a6b75">MEMBER SINCE</text>
+  <text x="494" y="240" font-size="10" font-weight="600" fill="#1a2f3f">2024</text>
+
+  <!-- auxiliary fields -->
+  <rect x="354" y="258" width="118" height="30" rx="6" fill="#ffffff" fill-opacity="0.75" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="362" y="270" font-size="7" fill="#5a6b75">STORE</text>
+  <text x="362" y="282" font-size="10" font-weight="600" fill="#1a2f3f">Oslo</text>
+  <rect x="486" y="258" width="120" height="30" rx="6" fill="#ffffff" fill-opacity="0.75" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="494" y="270" font-size="7" fill="#5a6b75">EXPIRES</text>
+  <text x="494" y="282" font-size="10" font-weight="600" fill="#1a2f3f">Dec 2026</text>
+
+  <!-- barcode -->
+  <rect x="410" y="400" width="140" height="76" rx="8" fill="#ffffff" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <g fill="#1a2f3f">
+    <rect x="424" y="412" width="3" height="40"/><rect x="430" y="412" width="2" height="40"/><rect x="436" y="412" width="4" height="40"/><rect x="444" y="412" width="2" height="40"/><rect x="450" y="412" width="3" height="40"/><rect x="457" y="412" width="2" height="40"/><rect x="462" y="412" width="5" height="40"/><rect x="471" y="412" width="2" height="40"/><rect x="477" y="412" width="3" height="40"/><rect x="484" y="412" width="2" height="40"/><rect x="490" y="412" width="4" height="40"/><rect x="498" y="412" width="2" height="40"/><rect x="504" y="412" width="3" height="40"/><rect x="511" y="412" width="2" height="40"/><rect x="517" y="412" width="4" height="40"/><rect x="525" y="412" width="2" height="40"/><rect x="531" y="412" width="3" height="40"/>
+  </g>
+  <text x="480" y="466" text-anchor="middle" font-size="8" fill="#5a6b75">1234 5678</text>
+
+  <!-- LEFT callouts -->
+  <g stroke="#1a2f3f" stroke-width="1">
+    <line x1="300" y1="166" x2="352" y2="166"/>
+    <line x1="300" y1="330" x2="339" y2="330"/>
+  </g>
+  <g fill="#1a2f3f"><circle cx="352" cy="166" r="2.5"/><circle cx="339" cy="330" r="2.5"/></g>
+  <text x="292" y="161" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Primary field</text>
+  <text x="292" y="176" text-anchor="end" font-size="11.5" fill="#5a6b75">renders larger in the top section</text>
+  <text x="292" y="189" text-anchor="end" font-size="11.5" fill="#5a6b75">on generic passes</text>
+
+  <text x="292" y="325" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Background image</text>
+  <text x="292" y="340" text-anchor="end" font-size="11.5" fill="#5a6b75">fills the whole pass behind</text>
+  <text x="292" y="353" text-anchor="end" font-size="11.5" fill="#5a6b75">every field</text>
+
+  <!-- RIGHT callouts -->
+  <g stroke="#1a2f3f" stroke-width="1">
+    <line x1="608" y1="91" x2="660" y2="91"/>
+    <line x1="608" y1="231" x2="660" y2="231"/>
+  </g>
+  <g fill="#1a2f3f"><circle cx="608" cy="91" r="2.5"/><circle cx="608" cy="231" r="2.5"/></g>
+  <text x="668" y="86" font-size="14" font-weight="600" fill="#1a2f3f">Header fields</text>
+  <text x="668" y="101" font-size="11.5" fill="#5a6b75">same spot on every style</text>
+
+  <text x="668" y="226" font-size="14" font-weight="600" fill="#1a2f3f">Secondary &amp; auxiliary fields</text>
+  <text x="668" y="241" font-size="11.5" fill="#5a6b75">kept as separate rows on generic</text>
+  <text x="668" y="254" font-size="11.5" fill="#5a6b75">passes — up to 8 fields in total</text>
+
+  <text x="480" y="536" text-anchor="middle" font-size="11" fill="#5a6b75">Generic — standard layout. With poster artwork, iPhones on iOS 27+ use the generic poster layout instead.</text>
+</svg>
