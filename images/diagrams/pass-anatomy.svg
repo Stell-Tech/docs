@@ -1,0 +1,104 @@
+<svg width="960" height="560" viewBox="0 0 960 560" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Segoe UI', sans-serif">
+  <!-- canvas -->
+  <rect width="960" height="560" rx="16" fill="#F6F6F4"/>
+
+  <!-- pass body -->
+  <rect x="340" y="60" width="280" height="440" rx="18" fill="#ffffff" stroke="#1a2f3f" stroke-width="1.5"/>
+
+  <!-- logo zone -->
+  <rect x="354" y="74" width="80" height="26" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="394" y="91" text-anchor="middle" font-size="10" font-weight="600" fill="#1a2f3f">LOGO</text>
+
+  <!-- header field zone -->
+  <rect x="540" y="74" width="66" height="26" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="573" y="85" text-anchor="middle" font-size="7" fill="#5a6b75">POINTS</text>
+  <text x="573" y="96" text-anchor="middle" font-size="10" font-weight="600" fill="#1a2f3f">2,500</text>
+
+  <!-- strip zone -->
+  <rect x="341" y="112" width="278" height="74" fill="#88b9c3" fill-opacity="0.45"/>
+  <line x1="341" y1="112" x2="619" y2="112" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="341" y1="186" x2="619" y2="186" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- primary field (overlaying strip) -->
+  <rect x="354" y="134" width="130" height="40" rx="6" fill="#ffffff" fill-opacity="0.85" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="362" y="148" font-size="7" fill="#5a6b75">MEMBER</text>
+  <text x="362" y="165" font-size="13" font-weight="600" fill="#1a2f3f">Anna Berg</text>
+
+  <!-- secondary fields -->
+  <rect x="354" y="200" width="118" height="30" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="362" y="212" font-size="7" fill="#5a6b75">TIER</text>
+  <text x="362" y="224" font-size="10" font-weight="600" fill="#1a2f3f">Gold</text>
+  <rect x="486" y="200" width="120" height="30" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="494" y="212" font-size="7" fill="#5a6b75">MEMBER SINCE</text>
+  <text x="494" y="224" font-size="10" font-weight="600" fill="#1a2f3f">2024</text>
+
+  <!-- auxiliary fields -->
+  <rect x="354" y="242" width="118" height="30" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="362" y="254" font-size="7" fill="#5a6b75">STORE</text>
+  <text x="362" y="266" font-size="10" font-weight="600" fill="#1a2f3f">Oslo</text>
+  <rect x="486" y="242" width="120" height="30" rx="6" fill="#88b9c3" fill-opacity="0.30" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="494" y="254" font-size="7" fill="#5a6b75">EXPIRES</text>
+  <text x="494" y="266" font-size="10" font-weight="600" fill="#1a2f3f">Dec 2026</text>
+
+  <!-- barcode -->
+  <rect x="410" y="400" width="140" height="76" rx="8" fill="#ffffff" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <g fill="#1a2f3f">
+    <rect x="424" y="412" width="3" height="40"/><rect x="430" y="412" width="2" height="40"/><rect x="436" y="412" width="4" height="40"/><rect x="444" y="412" width="2" height="40"/><rect x="450" y="412" width="3" height="40"/><rect x="457" y="412" width="2" height="40"/><rect x="462" y="412" width="5" height="40"/><rect x="471" y="412" width="2" height="40"/><rect x="477" y="412" width="3" height="40"/><rect x="484" y="412" width="2" height="40"/><rect x="490" y="412" width="4" height="40"/><rect x="498" y="412" width="2" height="40"/><rect x="504" y="412" width="3" height="40"/><rect x="511" y="412" width="2" height="40"/><rect x="517" y="412" width="4" height="40"/><rect x="525" y="412" width="2" height="40"/><rect x="531" y="412" width="3" height="40"/>
+  </g>
+  <text x="480" y="466" text-anchor="middle" font-size="8" fill="#5a6b75">1234 5678</text>
+
+  <!-- info (i) -->
+  <circle cx="598" cy="478" r="9" fill="none" stroke="#1a2f3f" stroke-width="1.2"/>
+  <text x="598" y="482" text-anchor="middle" font-size="11" font-weight="600" font-style="italic" fill="#1a2f3f">i</text>
+
+  <!-- LEFT callouts -->
+  <g stroke="#1a2f3f" stroke-width="1">
+    <line x1="300" y1="87" x2="352" y2="87"/>
+    <line x1="300" y1="149" x2="339" y2="149"/>
+    <line x1="300" y1="257" x2="352" y2="257"/>
+    <line x1="300" y1="438" x2="408" y2="438"/>
+  </g>
+  <g fill="#1a2f3f">
+    <circle cx="352" cy="87" r="2.5"/><circle cx="339" cy="149" r="2.5"/><circle cx="352" cy="257" r="2.5"/><circle cx="408" cy="438" r="2.5"/>
+  </g>
+  <text x="292" y="82" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Logo &amp; logo text</text>
+  <text x="292" y="97" text-anchor="end" font-size="11.5" fill="#5a6b75">your brand anchor, top left</text>
+
+  <text x="292" y="144" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Strip image</text>
+  <text x="292" y="159" text-anchor="end" font-size="11.5" fill="#5a6b75">or a full background image,</text>
+  <text x="292" y="172" text-anchor="end" font-size="11.5" fill="#5a6b75">depending on pass style</text>
+
+  <text x="292" y="252" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Auxiliary fields</text>
+  <text x="292" y="267" text-anchor="end" font-size="11.5" fill="#5a6b75">second row of details, up to 4</text>
+
+  <text x="292" y="433" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Barcode or NFC</text>
+  <text x="292" y="448" text-anchor="end" font-size="11.5" fill="#5a6b75">how the pass is read at checkout</text>
+
+  <!-- RIGHT callouts -->
+  <g stroke="#1a2f3f" stroke-width="1">
+    <line x1="608" y1="87" x2="660" y2="87"/>
+    <line x1="486" y1="154" x2="660" y2="154"/>
+    <line x1="608" y1="215" x2="660" y2="215"/>
+    <line x1="609" y1="478" x2="660" y2="478"/>
+  </g>
+  <g fill="#1a2f3f">
+    <circle cx="608" cy="87" r="2.5"/><circle cx="486" cy="154" r="2.5"/><circle cx="608" cy="215" r="2.5"/><circle cx="609" cy="478" r="2.5"/>
+  </g>
+  <text x="668" y="82" font-size="14" font-weight="600" fill="#1a2f3f">Header fields</text>
+  <text x="668" y="97" font-size="11.5" fill="#5a6b75">always visible, even when the</text>
+  <text x="668" y="110" font-size="11.5" fill="#5a6b75">pass is stacked in the wallet</text>
+
+  <text x="668" y="149" font-size="14" font-weight="600" fill="#1a2f3f">Primary field</text>
+  <text x="668" y="164" font-size="11.5" fill="#5a6b75">the headline value, rendered</text>
+  <text x="668" y="177" font-size="11.5" fill="#5a6b75">large on top of the strip</text>
+
+  <text x="668" y="210" font-size="14" font-weight="600" fill="#1a2f3f">Secondary fields</text>
+  <text x="668" y="225" font-size="11.5" fill="#5a6b75">supporting details, up to 4</text>
+
+  <text x="668" y="473" font-size="14" font-weight="600" fill="#1a2f3f">Back of the pass</text>
+  <text x="668" y="488" font-size="11.5" fill="#5a6b75">tap to flip — back fields hold terms,</text>
+  <text x="668" y="501" font-size="11.5" fill="#5a6b75">contact details, and links</text>
+
+  <!-- footer note -->
+  <text x="480" y="536" text-anchor="middle" font-size="11" fill="#5a6b75">Apple Wallet layout shown — Store Card style. Google Wallet renders the same fields in a standardized card.</text>
+</svg>

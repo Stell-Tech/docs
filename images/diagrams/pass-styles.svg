@@ -1,0 +1,91 @@
+<svg width="960" height="330" viewBox="0 0 960 330" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="960" height="330" rx="16" fill="#F6F6F4"/>
+
+  <!-- ===== Store Card: strip, no notch ===== -->
+  <g>
+    <rect x="50" y="40" width="140" height="200" rx="12" fill="#ffffff" stroke="#1a2f3f" stroke-width="1.2"/>
+    <rect x="58" y="48" width="36" height="12" rx="3" fill="#88b9c3" fill-opacity="0.35"/>
+    <rect x="152" y="48" width="30" height="12" rx="3" fill="#88b9c3" fill-opacity="0.35"/>
+    <rect x="50.6" y="66" width="138.8" height="40" fill="#88b9c3" fill-opacity="0.5"/>
+    <rect x="58" y="114" width="56" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
+    <rect x="122" y="114" width="60" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
+    <rect x="58" y="132" width="56" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
+    <rect x="122" y="132" width="60" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
+    <rect x="86" y="192" width="68" height="34" rx="5" fill="#ffffff" stroke="#1a2f3f" stroke-width="0.8"/>
+    <g fill="#1a2f3f"><rect x="94" y="198" width="2" height="22"/><rect x="99" y="198" width="1.5" height="22"/><rect x="103" y="198" width="2.5" height="22"/><rect x="109" y="198" width="1.5" height="22"/><rect x="113" y="198" width="2" height="22"/><rect x="118" y="198" width="3" height="22"/><rect x="124" y="198" width="1.5" height="22"/><rect x="128" y="198" width="2" height="22"/><rect x="133" y="198" width="1.5" height="22"/><rect x="137" y="198" width="2.5" height="22"/><rect x="142" y="198" width="1.5" height="22"/></g>
+    <text x="120" y="270" text-anchor="middle" font-size="13" font-weight="600" fill="#1a2f3f">Store Card</text>
+    <text x="120" y="287" text-anchor="middle" font-size="11" fill="#5a6b75">strip image</text>
+    <text x="120" y="301" text-anchor="middle" font-size="11" fill="#5a6b75">loyalty &amp; membership</text>
+  </g>
+
+  <!-- ===== Coupon: strip + notch ===== -->
+  <g>
+    <rect x="230" y="40" width="140" height="200" rx="12" fill="#ffffff" stroke="#1a2f3f" stroke-width="1.2"/>
+    <path d="M 282 40 A 18 14 0 0 0 318 40 Z" fill="#F6F6F4" stroke="#1a2f3f" stroke-width="1.2"/>
+    <rect x="238" y="52" width="36" height="12" rx="3" fill="#88b9c3" fill-opacity="0.35"/>
+    <rect x="332" y="52" width="30" height="12" rx="3" fill="#88b9c3" fill-opacity="0.35"/>
+    <rect x="230.6" y="70" width="138.8" height="40" fill="#88b9c3" fill-opacity="0.5"/>
+    <rect x="238" y="118" width="56" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
+    <rect x="302" y="118" width="60" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
+    <rect x="266" y="192" width="68" height="34" rx="5" fill="#ffffff" stroke="#1a2f3f" stroke-width="0.8"/>
+    <g fill="#1a2f3f"><rect x="274" y="198" width="2" height="22"/><rect x="279" y="198" width="1.5" height="22"/><rect x="283" y="198" width="2.5" height="22"/><rect x="289" y="198" width="1.5" height="22"/><rect x="293" y="198" width="2" height="22"/><rect x="298" y="198" width="3" height="22"/><rect x="304" y="198" width="1.5" height="22"/><rect x="308" y="198" width="2" height="22"/><rect x="313" y="198" width="1.5" height="22"/><rect x="317" y="198" width="2.5" height="22"/><rect x="322" y="198" width="1.5" height="22"/></g>
+    <text x="300" y="270" text-anchor="middle" font-size="13" font-weight="600" fill="#1a2f3f">Coupon</text>
+    <text x="300" y="287" text-anchor="middle" font-size="11" fill="#5a6b75">strip image, notched top</text>
+    <text x="300" y="301" text-anchor="middle" font-size="11" fill="#5a6b75">offers &amp; vouchers</text>
+  </g>
+
+  <!-- ===== Generic: full background ===== -->
+  <g>
+    <rect x="410" y="40" width="140" height="200" rx="12" fill="#88b9c3" fill-opacity="0.35" stroke="#1a2f3f" stroke-width="1.2"/>
+    <path d="M 462 40 A 18 14 0 0 0 498 40 Z" fill="#F6F6F4" stroke="#1a2f3f" stroke-width="1.2"/>
+    <rect x="418" y="52" width="36" height="12" rx="3" fill="#ffffff" fill-opacity="0.8"/>
+    <rect x="512" y="52" width="30" height="12" rx="3" fill="#ffffff" fill-opacity="0.8"/>
+    <rect x="438" y="88" width="84" height="22" rx="4" fill="#ffffff" fill-opacity="0.85"/>
+    <rect x="418" y="124" width="56" height="12" rx="3" fill="#ffffff" fill-opacity="0.7"/>
+    <rect x="482" y="124" width="60" height="12" rx="3" fill="#ffffff" fill-opacity="0.7"/>
+    <rect x="446" y="192" width="68" height="34" rx="5" fill="#ffffff" stroke="#1a2f3f" stroke-width="0.8"/>
+    <g fill="#1a2f3f"><rect x="454" y="198" width="2" height="22"/><rect x="459" y="198" width="1.5" height="22"/><rect x="463" y="198" width="2.5" height="22"/><rect x="469" y="198" width="1.5" height="22"/><rect x="473" y="198" width="2" height="22"/><rect x="478" y="198" width="3" height="22"/><rect x="484" y="198" width="1.5" height="22"/><rect x="488" y="198" width="2" height="22"/><rect x="493" y="198" width="1.5" height="22"/><rect x="497" y="198" width="2.5" height="22"/><rect x="502" y="198" width="1.5" height="22"/></g>
+    <text x="480" y="270" text-anchor="middle" font-size="13" font-weight="600" fill="#1a2f3f">Generic</text>
+    <text x="480" y="287" text-anchor="middle" font-size="11" fill="#5a6b75">background image</text>
+    <text x="480" y="301" text-anchor="middle" font-size="11" fill="#5a6b75">everything else</text>
+  </g>
+
+  <!-- ===== Event Ticket: strip + thumbnail ===== -->
+  <g>
+    <rect x="590" y="40" width="140" height="200" rx="12" fill="#ffffff" stroke="#1a2f3f" stroke-width="1.2"/>
+    <path d="M 642 40 A 18 14 0 0 0 678 40 Z" fill="#F6F6F4" stroke="#1a2f3f" stroke-width="1.2"/>
+    <rect x="598" y="52" width="36" height="12" rx="3" fill="#88b9c3" fill-opacity="0.35"/>
+    <rect x="692" y="52" width="30" height="12" rx="3" fill="#88b9c3" fill-opacity="0.35"/>
+    <rect x="590.6" y="70" width="138.8" height="40" fill="#88b9c3" fill-opacity="0.5"/>
+    <rect x="598" y="118" width="56" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
+    <rect x="690" y="118" width="32" height="32" rx="4" fill="#88b9c3" fill-opacity="0.45" stroke="#1a2f3f" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <rect x="598" y="136" width="56" height="12" rx="3" fill="#88b9c3" fill-opacity="0.3"/>
+    <rect x="626" y="192" width="68" height="34" rx="5" fill="#ffffff" stroke="#1a2f3f" stroke-width="0.8"/>
+    <g fill="#1a2f3f"><rect x="634" y="198" width="2" height="22"/><rect x="639" y="198" width="1.5" height="22"/><rect x="643" y="198" width="2.5" height="22"/><rect x="649" y="198" width="1.5" height="22"/><rect x="653" y="198" width="2" height="22"/><rect x="658" y="198" width="3" height="22"/><rect x="664" y="198" width="1.5" height="22"/><rect x="668" y="198" width="2" height="22"/><rect x="673" y="198" width="1.5" height="22"/><rect x="677" y="198" width="2.5" height="22"/><rect x="682" y="198" width="1.5" height="22"/></g>
+    <text x="660" y="270" text-anchor="middle" font-size="13" font-weight="600" fill="#1a2f3f">Event Ticket</text>
+    <text x="660" y="287" text-anchor="middle" font-size="11" fill="#5a6b75">strip + thumbnail, or poster</text>
+    <text x="660" y="301" text-anchor="middle" font-size="11" fill="#5a6b75">layout on newer iPhones</text>
+  </g>
+
+  <!-- ===== Boarding Pass: background, wider rows ===== -->
+  <g>
+    <rect x="770" y="40" width="140" height="200" rx="12" fill="#88b9c3" fill-opacity="0.2" stroke="#1a2f3f" stroke-width="1.2"/>
+    <path d="M 822 40 A 18 14 0 0 0 858 40 Z" fill="#F6F6F4" stroke="#1a2f3f" stroke-width="1.2"/>
+    <rect x="778" y="52" width="36" height="12" rx="3" fill="#88b9c3" fill-opacity="0.45"/>
+    <rect x="872" y="52" width="30" height="12" rx="3" fill="#88b9c3" fill-opacity="0.45"/>
+    <rect x="778" y="84" width="40" height="20" rx="4" fill="#88b9c3" fill-opacity="0.45"/>
+    <rect x="862" y="84" width="40" height="20" rx="4" fill="#88b9c3" fill-opacity="0.45"/>
+    <path d="M 826 94 h 22 m 0 0 l -6 -5 m 6 5 l -6 5" stroke="#1a2f3f" stroke-width="1.4" fill="none"/>
+    <rect x="778" y="118" width="36" height="11" rx="3" fill="#88b9c3" fill-opacity="0.4"/>
+    <rect x="822" y="118" width="36" height="11" rx="3" fill="#88b9c3" fill-opacity="0.4"/>
+    <rect x="866" y="118" width="36" height="11" rx="3" fill="#88b9c3" fill-opacity="0.4"/>
+    <rect x="778" y="136" width="36" height="11" rx="3" fill="#88b9c3" fill-opacity="0.4"/>
+    <rect x="822" y="136" width="36" height="11" rx="3" fill="#88b9c3" fill-opacity="0.4"/>
+    <rect x="866" y="136" width="36" height="11" rx="3" fill="#88b9c3" fill-opacity="0.4"/>
+    <rect x="806" y="192" width="68" height="34" rx="5" fill="#ffffff" stroke="#1a2f3f" stroke-width="0.8"/>
+    <g fill="#1a2f3f"><rect x="814" y="198" width="2" height="22"/><rect x="819" y="198" width="1.5" height="22"/><rect x="823" y="198" width="2.5" height="22"/><rect x="829" y="198" width="1.5" height="22"/><rect x="833" y="198" width="2" height="22"/><rect x="838" y="198" width="3" height="22"/><rect x="844" y="198" width="1.5" height="22"/><rect x="848" y="198" width="2" height="22"/><rect x="853" y="198" width="1.5" height="22"/><rect x="857" y="198" width="2.5" height="22"/><rect x="862" y="198" width="1.5" height="22"/></g>
+    <text x="840" y="270" text-anchor="middle" font-size="13" font-weight="600" fill="#1a2f3f">Boarding Pass</text>
+    <text x="840" y="287" text-anchor="middle" font-size="11" fill="#5a6b75">background image,</text>
+    <text x="840" y="301" text-anchor="middle" font-size="11" fill="#5a6b75">5 fields per row</text>
+  </g>
+</svg>
