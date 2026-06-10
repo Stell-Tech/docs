@@ -94,5 +94,5 @@
 
   <!-- footer note -->
   <text x="480" y="568" text-anchor="middle" font-size="11" fill="#5a6b75">Generic poster layout (iOS 27 and later) — shown when your template has poster artwork.</text>
-  <text x="480" y="583" text-anchor="middle" font-size="11" fill="#5a6b75">Older devices fall back to the standard generic layout.</text>
+  <text x="480" y="583" text-anchor="middle" font-size="11" fill="#5a6b75">On iOS 26 and earlier the standard generic layout is used.</text>
 </svg>

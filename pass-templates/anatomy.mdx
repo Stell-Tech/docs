@@ -25,7 +25,7 @@ From top to bottom:
 Customers reach the back by tapping the **ⓘ** on the pass. **Back fields** hold everything that doesn't belong on the front: terms, contact details, longer descriptions, links. There's much more room here, and text can be longer.
 
 <Note>
-The editor also offers **footer fields**. These only appear on the [generic poster layout](#the-generic-poster-layout), as a final line at the very bottom of the pass — on other layouts, keep your content in the areas above.
+The editor also offers **footer fields**. These only appear on the [generic poster layout](#layout-by-style), as a final line at the very bottom of the pass — on other layouts, keep your content in the areas above.
 </Note>
 
 ## Pass styles
@@ -38,7 +38,7 @@ The **pass style** (chosen in the **Settings** tab) decides the overall layout �
 |---|---|---|
 | **Store Card** | Strip image | Loyalty and membership cards — the most common choice |
 | **Coupon** | Strip image | Offers and vouchers |
-| **Generic** | Background image — or the [poster layout](#the-generic-poster-layout) with full-bleed artwork on the newest iPhones | Anything that doesn't fit the other styles |
+| **Generic** | Background image — or the [poster layout](#layout-by-style) with full-bleed artwork on the newest iPhones | Anything that doesn't fit the other styles |
 | **Event Ticket** | Strip image, or a full-poster layout with its own artwork on newer iPhones | Events and entry passes |
 | **Boarding Pass** | Background image | Travel — also allows 5 secondary/auxiliary fields instead of 4 |
 
@@ -46,21 +46,39 @@ Switching style keeps your fields and images but changes how they're laid out �
 
 ## Layout by style
 
-Each style arranges the same areas differently. The diagram at the top of this page shows the **Store Card** — here's how the others compare:
+Each style arranges the same areas differently. The diagram at the top of this page shows the **Store Card** — here's how the others compare. The two **poster** variants are the new, modern pass presentations: full-bleed artwork carries the design, and they activate automatically on newer iPhones when your template has poster artwork.
 
 <Tabs>
 <Tab title="Store Card & Coupon">
-The layout at the top of this page: strip image with the primary field on it, and secondary and auxiliary fields **sharing one row** — up to 4 fields in total, kept short so they fit. The Coupon style is laid out the same way; it's the styling and intent that differ (a coupon reads as an offer, a store card as a membership).
+The layout at the top of this page: strip image with the primary field on it, and secondary and auxiliary fields **sharing one row** — up to 4 fields in total, kept short so they fit. The Coupon style is laid out the same way, but with the classic ticket-style details — it reads as an offer, where a store card reads as a membership.
 </Tab>
 <Tab title="Generic">
 ![Generic pass layout: a larger primary field in the top section, separate secondary and auxiliary rows, background image behind everything](/images/diagrams/pass-anatomy-generic.svg)
 
-The primary field renders **larger, in the top section**. Unlike store cards, secondary and auxiliary fields stay on **separate rows** — up to 4 each, for a total of 8 displayed fields. With poster artwork, newer iPhones switch to the [generic poster layout](#the-generic-poster-layout).
+The primary field renders **larger, in the top section**. Unlike store cards, secondary and auxiliary fields stay on **separate rows** — up to 4 each, for a total of 8 displayed fields.
+</Tab>
+<Tab title="Generic Poster">
+![The generic poster layout: primary logo and header fields at the top, full-bleed artwork, the barcode centered on the pass, primary fields at the bottom, and footer fields at the very bottom](/images/diagrams/pass-anatomy-generic-poster.svg)
+
+The modern take on the generic pass, on iPhones running **iOS 27 and later**. The **artwork is the pass** — it fills the whole front (an automatic dark gradient keeps the top readable; you can turn it off in the editor's visual options). The **barcode moves to the center**, **primary fields move to the bottom**, and **footer fields appear** as a final line. The **Primary Logo** slot replaces your regular logo at the top, falling back to it if not set.
+
+<Note>
+If you configure a generic poster, customers on **iOS 26 and earlier** automatically see the standard **Generic** layout instead — so keep the standard images and fields in good shape. One template serves both.
+</Note>
 </Tab>
 <Tab title="Event Ticket">
-![Event ticket layout: event name as primary field with a square thumbnail beside it, location as secondary field, and time/level/row/seat as auxiliary fields](/images/diagrams/pass-anatomy-event-ticket.svg)
+![Event ticket layout: notched top, event name as primary field with a square thumbnail beside it, location as secondary field, and time/level/row/seat as auxiliary fields](/images/diagrams/pass-anatomy-event-ticket.svg)
 
-The only style with a **thumbnail** — a square image beside the primary field. Put the event name in the primary field, the venue in secondary, and time/seat details in auxiliary. A strip image replaces the thumbnail row when used; with poster artwork, iPhones on iOS 18+ render a full-bleed poster version.
+Recognizable by the **curved notch at the top** — the classic ticket cutout. It's also the only style with a **thumbnail**: a square image beside the primary field. Put the event name in the primary field, the venue in secondary, and time/seat details in auxiliary. A strip image replaces the thumbnail row when used.
+</Tab>
+<Tab title="Poster Event Ticket">
+![The poster event ticket layout: primary logo and date at the top, full-bleed artwork, a barcode band, and event details and seats at the bottom](/images/diagrams/pass-anatomy-event-poster.svg)
+
+The modern event ticket, on iPhones running **iOS 18 and later** — structured like the generic poster: full-bleed **artwork**, the **Primary Logo** at the top with the date and time opposite, the **barcode as a band** across the pass, and event details and seat information along the bottom. Event tickets also get extra poster slots in the editor: a **Secondary Logo** and a **Venue Map**.
+
+<Note>
+Customers on **iOS 17 and earlier** automatically see the standard **Event Ticket** layout instead — the same template serves both.
+</Note>
 </Tab>
 <Tab title="Boarding Pass">
 ![Boarding pass layout: origin and destination codes rendered large as primary fields, auxiliary fields above secondary fields, QR barcode at the bottom](/images/diagrams/pass-anatomy-boarding.svg)
@@ -68,22 +86,6 @@ The only style with a **thumbnail** — a square image beside the primary field.
 Origin and destination render large as the primary fields. Two quirks are unique to this style: **auxiliary fields sit above secondary fields**, and rows fit up to **5 fields** instead of 4.
 </Tab>
 </Tabs>
-
-## The generic poster layout
-
-On iPhones running iOS 27 and later, a Generic pass with poster **artwork** uploaded renders as a **generic poster** — a layout that puts the artwork front and center, and rearranges the familiar areas around it:
-
-![The generic poster layout: primary logo and header fields at the top, full-bleed artwork, the barcode centered on the pass, primary fields at the bottom, and footer fields at the very bottom](/images/diagrams/pass-anatomy-generic-poster.svg)
-
-What changes compared to the standard layout:
-
-- **The artwork is the pass** — it fills the whole front, so it carries the design. The automatic dark gradient at the top keeps the logo and header readable (you can turn it off in the editor's visual options).
-- **The barcode moves to the center**, on top of the artwork.
-- **Primary fields move to the bottom**, label above value — name and expiry live here in Apple's reference design.
-- **Footer fields appear** as a final line at the very bottom.
-- The **Primary Logo** image slot replaces your regular logo at the top (and falls back to it if not set).
-
-Older devices fall back to the standard generic layout automatically, so keep the standard images and fields in good shape — the same template serves both.
 
 ## How this knowledge maps to the editor
 

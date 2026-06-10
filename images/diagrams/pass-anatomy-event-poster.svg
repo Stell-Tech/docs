@@ -1,0 +1,95 @@
+<svg width="960" height="600" viewBox="0 0 960 600" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Segoe UI', sans-serif">
+  <!-- canvas -->
+  <rect width="960" height="600" rx="16" fill="#F6F6F4"/>
+
+  <!-- pass body with full-bleed artwork -->
+  <clipPath id="passClipEv"><rect x="340" y="60" width="280" height="460" rx="18"/></clipPath>
+  <rect x="340" y="60" width="280" height="460" rx="18" fill="#88b9c3" fill-opacity="0.35"/>
+  <g clip-path="url(#passClipEv)">
+    <circle cx="560" cy="190" r="60" fill="#88b9c3" fill-opacity="0.35"/>
+    <circle cx="420" cy="130" r="36" fill="#88b9c3" fill-opacity="0.25"/>
+    <path d="M 340 300 Q 420 220 480 280 T 620 250 V 520 H 340 Z" fill="#88b9c3" fill-opacity="0.4"/>
+    <path d="M 340 360 Q 460 290 620 350 V 520 H 340 Z" fill="#1a2f3f" fill-opacity="0.08"/>
+  </g>
+  <rect x="340" y="60" width="280" height="460" rx="18" fill="none" stroke="#1a2f3f" stroke-width="1.5"/>
+
+  <!-- primary logo & logo text -->
+  <rect x="354" y="74" width="104" height="26" rx="6" fill="#ffffff" fill-opacity="0.85" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <circle cx="368" cy="87" r="7" fill="#88b9c3" fill-opacity="0.6"/>
+  <text x="382" y="91" font-size="10" font-weight="600" fill="#1a2f3f">SUMMER LIVE</text>
+
+  <!-- event details: date & time top right -->
+  <rect x="540" y="74" width="66" height="26" rx="6" fill="#ffffff" fill-opacity="0.85" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="573" y="85" text-anchor="middle" font-size="7" fill="#5a6b75">JUN 21</text>
+  <text x="573" y="96" text-anchor="middle" font-size="10" font-weight="600" fill="#1a2f3f">19:00</text>
+
+  <!-- barcode band -->
+  <rect x="354" y="318" width="252" height="56" rx="8" fill="#ffffff" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <g fill="#1a2f3f">
+    <rect x="374" y="328" width="3" height="30"/><rect x="380" y="328" width="2" height="30"/><rect x="386" y="328" width="4" height="30"/><rect x="394" y="328" width="2" height="30"/><rect x="400" y="328" width="3" height="30"/><rect x="407" y="328" width="2" height="30"/><rect x="412" y="328" width="5" height="30"/><rect x="421" y="328" width="2" height="30"/><rect x="427" y="328" width="3" height="30"/><rect x="434" y="328" width="2" height="30"/><rect x="440" y="328" width="4" height="30"/><rect x="448" y="328" width="2" height="30"/><rect x="454" y="328" width="3" height="30"/><rect x="461" y="328" width="2" height="30"/><rect x="467" y="328" width="4" height="30"/><rect x="475" y="328" width="2" height="30"/><rect x="481" y="328" width="3" height="30"/><rect x="488" y="328" width="2" height="30"/><rect x="494" y="328" width="4" height="30"/><rect x="502" y="328" width="2" height="30"/><rect x="508" y="328" width="3" height="30"/><rect x="515" y="328" width="2" height="30"/><rect x="521" y="328" width="5" height="30"/><rect x="530" y="328" width="2" height="30"/><rect x="536" y="328" width="3" height="30"/><rect x="543" y="328" width="2" height="30"/><rect x="549" y="328" width="4" height="30"/><rect x="557" y="328" width="2" height="30"/><rect x="563" y="328" width="3" height="30"/><rect x="570" y="328" width="2" height="30"/><rect x="576" y="328" width="4" height="30"/><rect x="584" y="328" width="2" height="30"/>
+  </g>
+  <text x="480" y="368" text-anchor="middle" font-size="8" fill="#5a6b75">1234 5678</text>
+
+  <!-- event details bottom left -->
+  <rect x="354" y="424" width="104" height="48" rx="6" fill="#ffffff" fill-opacity="0.88" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="362" y="442" font-size="13" font-weight="600" fill="#1a2f3f">VIP</text>
+  <text x="362" y="460" font-size="8" fill="#5a6b75">Oslo Spektrum</text>
+
+  <!-- seats bottom right -->
+  <rect x="470" y="424" width="44" height="48" rx="6" fill="#ffffff" fill-opacity="0.88" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="492" y="440" text-anchor="middle" font-size="7" fill="#5a6b75">LEVEL</text>
+  <text x="492" y="460" text-anchor="middle" font-size="13" font-weight="600" fill="#1a2f3f">3</text>
+  <rect x="520" y="424" width="44" height="48" rx="6" fill="#ffffff" fill-opacity="0.88" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="542" y="440" text-anchor="middle" font-size="7" fill="#5a6b75">ROW</text>
+  <text x="542" y="460" text-anchor="middle" font-size="13" font-weight="600" fill="#1a2f3f">12</text>
+  <rect x="570" y="424" width="36" height="48" rx="6" fill="#ffffff" fill-opacity="0.88" stroke="#1a2f3f" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="588" y="440" text-anchor="middle" font-size="7" fill="#5a6b75">SEAT</text>
+  <text x="588" y="460" text-anchor="middle" font-size="13" font-weight="600" fill="#1a2f3f">5</text>
+
+  <!-- LEFT callouts -->
+  <g stroke="#1a2f3f" stroke-width="1">
+    <line x1="300" y1="87" x2="352" y2="87"/>
+    <line x1="300" y1="200" x2="339" y2="200"/>
+    <line x1="300" y1="448" x2="352" y2="448"/>
+  </g>
+  <g fill="#1a2f3f">
+    <circle cx="352" cy="87" r="2.5"/><circle cx="339" cy="200" r="2.5"/><circle cx="352" cy="448" r="2.5"/>
+  </g>
+  <text x="292" y="82" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Primary logo &amp; logo text</text>
+  <text x="292" y="97" text-anchor="end" font-size="11.5" fill="#5a6b75">uses the Primary Logo slot —</text>
+  <text x="292" y="110" text-anchor="end" font-size="11.5" fill="#5a6b75">falls back to your regular logo</text>
+
+  <text x="292" y="195" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Artwork</text>
+  <text x="292" y="210" text-anchor="end" font-size="11.5" fill="#5a6b75">the full-bleed visual focus —</text>
+  <text x="292" y="223" text-anchor="end" font-size="11.5" fill="#5a6b75">uploading it enables the</text>
+  <text x="292" y="236" text-anchor="end" font-size="11.5" fill="#5a6b75">poster layout</text>
+
+  <text x="292" y="443" text-anchor="end" font-size="14" font-weight="600" fill="#1a2f3f">Event details</text>
+  <text x="292" y="458" text-anchor="end" font-size="11.5" fill="#5a6b75">access level and venue,</text>
+  <text x="292" y="471" text-anchor="end" font-size="11.5" fill="#5a6b75">bottom left</text>
+
+  <!-- RIGHT callouts -->
+  <g stroke="#1a2f3f" stroke-width="1">
+    <line x1="608" y1="87" x2="660" y2="87"/>
+    <line x1="608" y1="346" x2="660" y2="346"/>
+    <line x1="608" y1="448" x2="660" y2="448"/>
+  </g>
+  <g fill="#1a2f3f">
+    <circle cx="608" cy="87" r="2.5"/><circle cx="608" cy="346" r="2.5"/><circle cx="608" cy="448" r="2.5"/>
+  </g>
+  <text x="668" y="82" font-size="14" font-weight="600" fill="#1a2f3f">Date &amp; time</text>
+  <text x="668" y="97" font-size="11.5" fill="#5a6b75">the most important event</text>
+  <text x="668" y="110" font-size="11.5" fill="#5a6b75">details, top right</text>
+
+  <text x="668" y="341" font-size="14" font-weight="600" fill="#1a2f3f">Barcode</text>
+  <text x="668" y="356" font-size="11.5" fill="#5a6b75">a band across the pass, on</text>
+  <text x="668" y="369" font-size="11.5" fill="#5a6b75">top of the artwork</text>
+
+  <text x="668" y="443" font-size="14" font-weight="600" fill="#1a2f3f">Seats</text>
+  <text x="668" y="458" font-size="11.5" fill="#5a6b75">level, row, and seat in the</text>
+  <text x="668" y="471" font-size="11.5" fill="#5a6b75">bottom row</text>
+
+  <!-- footer note -->
+  <text x="480" y="568" text-anchor="middle" font-size="11" fill="#5a6b75">Poster Event Ticket (iOS 18 and later) — shown when your template has poster artwork.</text>
+  <text x="480" y="583" text-anchor="middle" font-size="11" fill="#5a6b75">On iOS 17 and earlier the standard event ticket layout is used.</text>
+</svg>
