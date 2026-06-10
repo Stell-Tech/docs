@@ -3,4 +3,38 @@ title: "Contacts and segments"
 description: "Manage your contacts and group them into audience segments"
 ---
 
-<Note>This page is a placeholder — content is on its way.</Note>
+**Contacts** are the customers you can message; **segments** group them into audiences you can target with [campaigns](/engage/campaigns).
+
+![Contacts](/images/portal/engage/contacts.png)
+
+## Contacts
+
+Open **Contacts** in the sidebar to see your audience. Each contact shows their name and email, external ID, pass status, program, and segment memberships. Search by name, email, or external ID, and filter by segment or **Show only contacts with an active pass**.
+
+### Add contacts
+
+- **One at a time** — click **Add Contact** and fill in the name, optional email and external ID, the program, and any segments.
+- **In bulk** — click **Import** to upload a CSV or XML file. You map your file's columns to contact fields and review a preview before importing.
+
+Contacts can also be created automatically through the API or integrations connected to your programs.
+
+### Work with a contact
+
+Click a contact to open their details, where you can **Edit**, **Send Notification** (a direct message to just that contact's pass), or **Delete**. Select multiple rows to delete in bulk.
+
+## Segments
+
+Open **Segments** to see your audiences. Each segment card shows its member count, how many of those members hold an installed pass, and the resulting reachable percentage.
+
+### Create a segment
+
+Click **Add Segment** and choose the type:
+
+- **Dynamic** — define criteria (field, operator, value), and the segment keeps itself up to date as contacts change.
+- **Static** — upload a fixed list of contacts.
+
+Segments can also be created via the API or data imports — useful when your CRM already knows your audiences.
+
+<Tip>
+Watch the **reachable** percentage on a segment before sending to it. Members without an installed pass can't receive push messages — a 1,000-member segment with 40% reachability delivers to 400 people.
+</Tip>

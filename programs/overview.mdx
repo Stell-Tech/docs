@@ -3,4 +3,34 @@ title: "Programs"
 description: "What a program is and how to manage your company's programs"
 ---
 
-<Note>This page is a placeholder — content is on its way.</Note>
+A **program** is the foundation everything else builds on: it defines a pass your customers can add to their wallet — for example a loyalty card or an entry pass — together with how that pass looks and behaves.
+
+![Programs list](/images/portal/programs/list.png)
+
+## Your programs
+
+Open **Programs** in the sidebar to see your company's programs. Each card shows the program's name, its type — **Loyalty** or **Entry** — and whether its pass template is set up. Click a card to open the program.
+
+<Note>
+Programs are set up for you by Stell. If a program is missing or you need a new one, [contact support](/support/contact).
+</Note>
+
+## The program page
+
+Each program page gives you:
+
+- **Overview** — the program's status (Published, Draft, or Archived), its subtype (for example Points, Stamps, Tiers, or Membership for loyalty programs), whether tap to use (NFC) is enabled, and key dates.
+- **Wallet card template** — how this program's pass looks in your customers' wallets. Click **Edit template** to open the [pass template editor](/programs/templates).
+- **Wallet certificate** — the Apple certificate that signs this program's passes. If Stell manages it, renewal is handled for you. If your company uses its own certificate, you can replace it here, and you'll see its expiry date and status.
+- **Program passes** — every pass issued under this program, newest first, with the same details as the main [passes list](/passes/overview).
+- **Event webhooks** — send this program's pass events to your own HTTPS endpoints. Useful when your systems should react to passes being added, used, or changed.
+
+Some programs show extra sections depending on their setup, such as **NFC terminal encryption keys** (used when configuring NFC terminal providers — treat these as secrets) and **iCloud Account Binding** settings for Apple Wallet.
+
+<Warning>
+The private and Adyen NFC keys can decrypt pass payloads. Reveal them only when you need them, and share them only with trusted terminal providers.
+</Warning>
+
+## Next steps
+
+The most common thing you'll do here is adjust how your pass looks — head to [pass templates](/programs/templates).

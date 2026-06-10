@@ -3,4 +3,34 @@ title: "Transaction log"
 description: "Investigate how passes are used across your stores and terminals"
 ---
 
-<Note>This page is a placeholder — content is on its way.</Note>
+A **transaction** is a record of a pass being used at one of your stores — a tap, a scan, sometimes with a payment and loyalty points attached. The **Transaction Log** is your company's complete, newest-first record of all of them.
+
+![Transaction log](/images/portal/transactions/list.png)
+
+## Finding a transaction
+
+Open **Transactions** in the sidebar. Filter by **Reference**, **Status**, **Type**, **Instrument** (how the pass was captured — for example a card terminal, QR scan, or NFC tap), and a **From**/**To** date range, then click **Apply**.
+
+Each row shows the date, status, type, the pass and cardholder, the store and terminal, the amount, and points earned or spent. Click a row to open the full detail.
+
+## Transaction statuses
+
+| Status | Meaning |
+|---|---|
+| **Approved** | The transaction went through |
+| **Denied** | The transaction was rejected — the detail page shows the reason |
+| **Failed** | Something went wrong processing it — the detail page shows the reason |
+| **Pending** | Still being processed |
+
+## The transaction detail
+
+The detail page shows everything your company is involved in for one transaction:
+
+- **Capture details** — the reference, type, instrument, and exactly when it was processed.
+- **Payment & rewards** — the amount, payment and PSP references, and loyalty points earned or spent (shown when the transaction has a payment or points component — a plain tap may have neither).
+- **Line items** — the purchased items with SKU, quantity, and amount, when your POS provides them.
+- **Related records** — direct links to the [pass](/passes/overview), the [store, and the terminal](/organization/overview) involved.
+
+<Tip>
+When a customer disputes a denied tap, start here: the status reason on the detail page usually explains it — for example a voided pass or an expired membership.
+</Tip>

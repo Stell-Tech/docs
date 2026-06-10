@@ -1,6 +1,34 @@
 ---
 title: "API keys"
-description: "Create and manage API keys for integrations"
+description: "Create and manage API keys for your integrations"
 ---
 
-<Note>This page is a placeholder — content is on its way.</Note>
+**API keys** let your own systems — your CRM, POS, or e-commerce platform — talk to Stell's API on your company's behalf.
+
+![API keys](/images/portal/account/api-keys.png)
+
+## Create a key
+
+1. Open **API Keys** in the sidebar and click **Create API Key**.
+2. Give it a **Name** that says what uses it — for example "Production integration".
+3. Choose **Expires In**: 30 days, 90 days, 1 year, or Never.
+4. Click **Create**.
+
+<Warning>
+The full key is shown **only once**, right after creation. Copy it and store it somewhere safe, like a password manager or your secrets vault. Afterwards the portal only shows the last few characters.
+</Warning>
+
+## Manage keys
+
+The list shows each key's status, expiry, creation date, and **Last Used** — handy for spotting keys that are no longer in use. From a key's menu you can:
+
+- **Rotate** — replace the key's secret immediately. The old secret stops working at once, and the new one is shown a single time. Update your applications right away.
+- **Delete** — revoke the key permanently. Applications using it lose access immediately, and this can't be undone.
+
+Expired and deleted keys move to the **Inactive API Keys** section, where they no longer authenticate requests.
+
+## Good practice
+
+- One key per integration — when something needs to be revoked, you only break that one system.
+- Prefer an expiry over **Never** for keys you can rotate easily.
+- Never paste an API key into email, chat, or a support ticket.
