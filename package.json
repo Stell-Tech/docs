@@ -1,0 +1,14 @@
+{
+  "name": "stell-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "mint dev",
+    "shots:login": "node screenshots/login.mjs",
+    "shots": "node screenshots/capture.mjs"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "playwright": "^1.49.0"
+  }
+}
