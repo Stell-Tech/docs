@@ -24,8 +24,18 @@
           {
             "group": "Programs",
             "pages": [
-              "programs/overview",
-              "programs/templates"
+              "programs/overview"
+            ]
+          },
+          {
+            "group": "Pass templates",
+            "pages": [
+              "pass-templates/overview",
+              "pass-templates/anatomy",
+              "pass-templates/images",
+              "pass-templates/fields",
+              "pass-templates/barcodes",
+              "pass-templates/apple-vs-google"
             ]
           },
           {
@@ -90,6 +100,12 @@
       }
     ]
   },
+  "redirects": [
+    {
+      "source": "/programs/templates",
+      "destination": "/pass-templates/overview"
+    }
+  ],
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"

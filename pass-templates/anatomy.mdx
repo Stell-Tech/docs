@@ -1,0 +1,51 @@
+---
+title: "Anatomy of a pass"
+description: "The areas of a wallet pass and how the pass style shapes them"
+---
+
+A wallet pass has a fixed set of areas, each with its own job. Once you know them, every control in the [template editor](/pass-templates/overview) maps to a spot on the pass.
+
+## The front of the pass
+
+From top to bottom:
+
+| Area | What goes there |
+|---|---|
+| **Logo and logo text** | Top-left corner: your logo (and optionally a short logo text next to it). This is your brand anchor — it's the first thing a customer recognizes |
+| **Header fields** | Top-right corner, opposite the logo. Always visible — even when the pass is stacked with other passes in the wallet — so use them for the single most useful value, like a points balance |
+| **Strip or background image** | The visual heart of the pass. Depending on the pass style, this is a **strip image** (a banner across the upper part) or a full **background image** |
+| **Primary field** | The pass's headline value, rendered large — for example the member's name or balance. On styles with a strip image, the primary field sits on top of it |
+| **Secondary and auxiliary fields** | Two rows of smaller values in the middle of the pass — member since, tier, store, and so on. Up to 4 fields each (5 on boarding passes) |
+| **Barcode or NFC** | The bottom of the pass: the scannable barcode, or for tap-to-use programs the NFC capability (shown with a small tap icon). See [barcodes and NFC](/pass-templates/barcodes) |
+
+## The back of the pass
+
+Customers reach the back by tapping the **ⓘ** on the pass. **Back fields** hold everything that doesn't belong on the front: terms, contact details, longer descriptions, links. There's much more room here, and text can be longer.
+
+<Note>
+The editor also offers **footer fields**, but these aren't currently displayed on the pass — keep your content in the areas above.
+</Note>
+
+## Pass styles
+
+The **pass style** (chosen in the **Settings** tab) decides the overall layout — most importantly whether the pass uses a strip image or a full background:
+
+| Style | Visual base | Typical use |
+|---|---|---|
+| **Store Card** | Strip image | Loyalty and membership cards — the most common choice |
+| **Coupon** | Strip image | Offers and vouchers |
+| **Generic** | Background image | Anything that doesn't fit the other styles |
+| **Event Ticket** | Strip image, or a full-poster layout with its own artwork on newer iPhones | Events and entry passes |
+| **Boarding Pass** | Background image | Travel — also allows 5 secondary/auxiliary fields instead of 4 |
+
+Switching style keeps your fields and images but changes how they're laid out — check the preview after switching, since a strip image won't show on a background-based style and vice versa.
+
+## How this knowledge maps to the editor
+
+- The wallet draws the pass; you supply the ingredients. You can't move the areas around — you decide what goes *in* each area.
+- Less is more: passes are glanced at, not read. A strong image, one primary value, and a couple of supporting fields beat a crowded layout.
+- Field values can be **dynamic** — showing each customer their own name, balance, or tier. See [fields and dynamic content](/pass-templates/fields).
+
+<Info>
+Want to go deeper? Apple's developer documentation covers the underlying pass format in technical detail — see [Wallet Passes](https://developer.apple.com/documentation/walletpasses) on the Apple Developer site. You won't need it to use the editor; everything merchant-relevant is covered in these pages.
+</Info>

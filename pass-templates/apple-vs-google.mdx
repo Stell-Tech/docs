@@ -1,0 +1,36 @@
+---
+title: "Apple Wallet vs Google Wallet"
+description: "How one template renders on the two wallets, and what to check"
+---
+
+You maintain **one template per program**, and Stell renders it for both wallets. Apple Wallet follows your template closely — it's what the editor preview shows. Google Wallet uses a more standardized card layout, so the same template comes out simpler there. Knowing the differences saves surprises.
+
+## What carries over to Google Wallet
+
+| Template setting | On Google Wallet |
+|---|---|
+| Organization name | Shown as the issuer and program name |
+| Background color | The card's background color |
+| Logo text | The account name label |
+| Primary, secondary, and auxiliary fields | Up to **3 rows of 3 fields** on the card front, in that priority order |
+| Header and back fields | In the **details section** below the card, not on the front |
+| Barcode | Rendered on the card |
+| NFC (tap to use) | Becomes Google **Smart Tap** |
+
+## What doesn't carry over
+
+- **Strip image** — Google Wallet has no strip-image concept; the card relies on your background color and logo.
+- **Pass style** — Store Card, Coupon, and the other styles are Apple layouts. On Google, every program uses the standard card layout.
+- **Background image and poster artwork** — not used on the Google card.
+- **Notification icon** — Apple-specific.
+
+## What this means in practice
+
+- **Don't put critical information only in an image.** A points balance baked into the strip image is invisible on Google Wallet — keep values in [fields](/pass-templates/fields), which render on both.
+- **Pick a background color that stands alone.** On Apple the strip image dominates; on Google the background color *is* the design.
+- **Mind the front-field budget.** Google shows at most 3 rows × 3 fields on the front; anything beyond that moves to the details section. Your most important fields should be in the primary and secondary areas so they win the front-row spots on both wallets.
+- **Test on both.** After significant template changes, [issue a test pass](/passes/issuing) for each wallet type and look at them side by side.
+
+<Note>
+The [customer enrollment flow](/enrollment/how-enrollment-works) currently issues Apple Wallet passes only — Google Wallet passes are issued from the portal or via the API.
+</Note>

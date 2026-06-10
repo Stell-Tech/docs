@@ -25,6 +25,18 @@ export default [
     clicks: ['main a[href^="/portal/programs/"]', 'text=Edit template'],
     waitForUrl: '**/template',
   },
+  {
+    name: 'portal/pass-templates/design-tab',
+    path: '/portal/programs',
+    clicks: ['main a[href^="/portal/programs/"]', 'text=Edit template', 'button:has-text("Design")'],
+    waitForUrl: '**/template',
+  },
+  {
+    name: 'portal/pass-templates/content-tab',
+    path: '/portal/programs',
+    clicks: ['main a[href^="/portal/programs/"]', 'text=Edit template', 'button:has-text("Content")'],
+    waitForUrl: '**/template',
+  },
   { name: 'portal/engage/overview', path: '/portal/engage' },
   { name: 'portal/engage/campaign-new', path: '/portal/engage/campaigns' },
   { name: 'portal/engage/automations', path: '/portal/engage/automations' },
