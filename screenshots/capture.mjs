@@ -38,34 +38,56 @@ if (filter && selected.length === 0) {
   process.exit(1);
 }
 
+async function capture(shot, outPath) {
+  await page.goto(`${baseUrl}${shot.path}`, { waitUntil: 'networkidle' });
+  if (page.url().includes('/login')) {
+    console.error('Session expired — redirected to login. Run: npm run shots:login');
+    process.exit(1);
+  }
+  if (shot.waitFor) {
+    await page.waitForSelector(shot.waitFor, { timeout: 15000 });
+  }
+  if (shot.clicks?.length) {
+    // Let React hydration settle first — a click that lands mid-hydration
+    // can hit a node being replaced and get silently dropped.
+    await page.waitForTimeout(1000);
+  }
+  for (const selector of shot.clicks ?? []) {
+    await page.click(selector, { timeout: 15000 });
+    await page.waitForLoadState('networkidle');
+    // Let dialogs and page transitions finish animating before capture.
+    await page.waitForTimeout(800);
+  }
+  if (shot.waitForUrl) {
+    await page.waitForURL(shot.waitForUrl, { timeout: 15000 });
+    await page.waitForLoadState('networkidle');
+  }
+  if (shot.collapseSidebar) {
+    // The sidebar state persists in a cookie, so only toggle when expanded.
+    const expanded = await page.locator('[data-collapsible][data-state="expanded"]').count();
+    if (expanded > 0) {
+      await page.click('button[aria-label="Toggle sidebar"]');
+      await page.waitForTimeout(500);
+    }
+  }
+  // Wait for loading skeletons to finish rendering real content.
+  await page
+    .waitForSelector('.animate-pulse', { state: 'detached', timeout: 20000 })
+    .catch(() => console.warn(`  (skeletons still visible on ${shot.name})`));
+  await mkdir(dirname(outPath), { recursive: true });
+  await page.screenshot({ path: outPath, fullPage: shot.fullPage ?? false });
+}
+
 let failed = 0;
 for (const shot of selected) {
   const outPath = `images/${shot.name}.png`;
   try {
-    await page.goto(`${baseUrl}${shot.path}`, { waitUntil: 'networkidle' });
-    if (page.url().includes('/login')) {
-      console.error('Session expired — redirected to login. Run: npm run shots:login');
-      process.exit(1);
+    try {
+      await capture(shot, outPath);
+    } catch {
+      console.warn(`  (retrying ${shot.name})`);
+      await capture(shot, outPath);
     }
-    if (shot.waitFor) {
-      await page.waitForSelector(shot.waitFor, { timeout: 15000 });
-    }
-    for (const selector of shot.clicks ?? []) {
-      await page.click(selector, { timeout: 15000 });
-      await page.waitForLoadState('networkidle');
-      // Let dialogs and page transitions finish animating before capture.
-      await page.waitForTimeout(800);
-    }
-    if (shot.waitForUrl) {
-      await page.waitForURL(shot.waitForUrl, { timeout: 15000 });
-      await page.waitForLoadState('networkidle');
-    }
-    // Wait for loading skeletons to finish rendering real content.
-    await page
-      .waitForSelector('.animate-pulse', { state: 'detached', timeout: 20000 })
-      .catch(() => console.warn(`  (skeletons still visible on ${shot.name})`));
-    await mkdir(dirname(outPath), { recursive: true });
-    await page.screenshot({ path: outPath, fullPage: shot.fullPage ?? false });
     console.log(`✓ ${outPath}`);
   } catch (err) {
     failed++;

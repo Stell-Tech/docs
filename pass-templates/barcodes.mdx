@@ -10,7 +10,16 @@ The bottom of the pass is where it gets *used*: either a **barcode** the store s
 - **NFC (tap to use)** — the pass works through a tap, like a payment card. Whether NFC is available depends on your program's setup (it requires NFC-capable terminals and certificates); when active, the pass shows a small tap icon instead of a barcode.
 - **Barcode** — works with any scanner your stores already have. This is the default for most programs.
 
-A pass shows one or the other, not both.
+A pass shows one or the other, not both. Here is the same pass both ways, in Apple Wallet on an iPhone:
+
+<Columns cols={2}>
+  <Frame caption="NFC: a small tap icon in the corner, and the wallet asks the customer to hold the phone near the reader.">
+    <img src="/images/wallet/iphone-front.png" alt="A pass with NFC enabled in Apple Wallet, showing a tap icon on the pass and the Hold Near Reader prompt below it" />
+  </Frame>
+  <Frame caption="Barcode: a QR code at the bottom of the pass, ready to scan.">
+    <img src="/images/wallet/iphone-front-qr.png" alt="The same pass with a QR code at the bottom instead of the NFC tap icon" />
+  </Frame>
+</Columns>
 
 ## Barcode formats
 

@@ -72,6 +72,7 @@ Screenshots are **generated** by the Playwright pipeline in `screenshots/` — n
 - To add a screenshot: add an entry to `screenshots/shots.config.ts`, then `npm run shots`
 - Auth: `npm run shots:login` opens a headed browser for a manual staging login (MFA included); the session is saved to `screenshots/.auth/state.json` (gitignored) and reused until it expires
 - If staging access is unavailable, write the content anyway and leave the image embed in place — backfill the capture later
+- Exception: `images/wallet/` holds manual device captures (real iPhone wallet renders, English device language) supplied by Morten — not part of the pipeline; replacing them means retaking them on a device
 
 ## Workflow
 
