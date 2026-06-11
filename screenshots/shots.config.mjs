@@ -75,4 +75,82 @@ export default [
     waitFor: 'text=Email links',
     scrollTo: '[role="tablist"]',
   },
+  // The customer enrollment flow (Mintleaf demo program on develop), captured
+  // as an emulated iPhone in English (`mobile: true` sets both). The success
+  // and welcome shots SUBMIT a real enrollment — each run creates a throwaway
+  // test member; the unique email keeps re-runs on the new-member path
+  // instead of the existing-member verification branch.
+  ...enrollmentShots(),
 ];
+
+function enrollmentShots() {
+  const url = 'https://develop.stell.in/p/IpGeE4Bh';
+  // Each enrollment attempt needs a fresh email — submitting the same address
+  // twice (across shots, or on a shot retry) would route the second attempt
+  // to existing-member verification instead. The function value is evaluated
+  // per attempt by capture.mjs.
+  const fillForm = (tag) => [
+    { click: 'button:has-text("Continue")' },
+    { fill: { selector: '#firstName', value: 'Emma' } },
+    { fill: { selector: '#lastName', value: 'Davis' } },
+    { fill: { selector: '#email', value: () => `mintleaf-docs+${Date.now()}-${tag}@example.com` } },
+  ];
+  const toConsents = (tag) => [
+    ...fillForm(tag),
+    { click: 'button[type="submit"]:has-text("Continue")' },
+    { waitGone: 'text=Processing...' },
+    { waitGone: 'text=Loading...' },
+    { waitFor: 'h3:has-text("Consents"), h2:has-text("Consents"), h1:has-text("Consents")' },
+  ];
+  const toSuccess = (tag) => [
+    ...toConsents(tag),
+    // The first switch is the required consent; the submit stays disabled
+    // until it's given.
+    { click: '[role="switch"]' },
+    { click: 'button[type="submit"]:has-text("Join")' },
+    { waitGone: 'text=Joining...' },
+    { waitFor: 'text=Almost there!' },
+    // The badge starts grey ("Preparing your pass...") and turns black with
+    // this label once the pass is generated; the pause lets its opacity
+    // transition finish.
+    { waitFor: 'button[aria-label="Add to Apple Wallet"]:not([disabled])' },
+    { pause: 800 },
+  ];
+  // Trim each shot just below the "Powered by Stell" footer — the rest of
+  // the emulated phone viewport is empty background. ("Powered by" and the
+  // "Stell" link are separate elements, so match on the first part.)
+  const clipBottom = 'text=Powered by';
+  return [
+    { name: 'enrollment/splash', url, mobile: true, clipBottom, waitFor: 'text=Join Mintleaf Rewards' },
+    {
+      // This shot never submits, so a clean static email is safe (no member
+      // is created); the heading click drops the focus ring off the last field.
+      name: 'enrollment/form',
+      url,
+      mobile: true,
+      clipBottom,
+      actions: [
+        { click: 'button:has-text("Continue")' },
+        { fill: { selector: '#email', value: 'emma.davis@example.com' } },
+        { fill: { selector: '#firstName', value: 'Emma' } },
+        { fill: { selector: '#lastName', value: 'Davis' } },
+        { click: 'text=Personal details' },
+      ],
+    },
+    { name: 'enrollment/consents', url, mobile: true, clipBottom, actions: toConsents('consents') },
+    { name: 'enrollment/success', url, mobile: true, clipBottom, actions: toSuccess('success') },
+    {
+      name: 'enrollment/welcome',
+      url,
+      mobile: true,
+      clipBottom,
+      actions: [
+        ...toSuccess('welcome'),
+        // Tapping the wallet button downloads the pass and reveals the
+        // welcome screen with the how-it-works guide.
+        { click: 'button[aria-label="Add to Apple Wallet"]' },
+        { waitFor: 'text=Welcome' },
+      ],
+    },
+  ];
+}

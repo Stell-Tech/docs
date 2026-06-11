@@ -16,21 +16,46 @@ description: "How customers get their pass through the web or App Clip enrollmen
 
 ## The customer journey
 
+The walkthrough below follows the **Mintleaf Rewards** demo program on an iPhone. Your program shows your own branding, form fields, and consents — the steps stay the same.
+
 <Steps>
 <Step title="Welcome screen">
-The customer sees your program's branding with a welcome like "Join [program name]" and taps **Continue**.
+The customer lands on your program's welcome screen: your header image and branding at the top, a welcome like "Join [program name]", and a short invitation text. One tap on **Continue** starts the enrollment.
+
+<Frame caption="The welcome screen carries the program's branding — here the Mintleaf demo program.">
+  <img src="/images/enrollment/splash.png" alt="The enrollment welcome screen with the Mintleaf Coffee header image, the title Join Mintleaf Rewards, and a Continue button" width="320" />
+</Frame>
 </Step>
 <Step title="Personal details">
-A short form — which fields appear (name, email, phone, birth date, address, and so on) depends on your program's configuration. Validation happens as they type.
-</Step>
-<Step title="Consents">
-Required and optional consents with links to your terms of use and privacy policy. The customer can't continue without the required ones.
+A short form collects the customer's details. Which fields appear — and which are required, marked with an asterisk — depends on your program's configuration: name, email, phone, birth date, address, and so on. Validation happens as the customer types, and the phone field has a country-code picker. Customers arriving through a pre-filled link find these fields already completed.
+
+<Frame caption="Mintleaf asks for email, phone, and name — your program defines its own set of fields.">
+  <img src="/images/enrollment/form.png" alt="The personal details form with email, phone, first name, and last name fields filled in, and a Continue button" width="320" />
+</Frame>
 </Step>
 <Step title="Already a member? Verification">
-If the email or phone number matches an existing member, the customer verifies their identity with a 6-digit code sent by email or SMS before getting their pass. Programs using Vipps login can skip this — identity is already verified.
+When the form is submitted, Stell checks whether the email or phone number matches an existing member. If it does, the customer verifies their identity with a 6-digit code sent by email or SMS, and then goes straight to adding their pass — the consents step is skipped, since they accepted when they first enrolled. New customers skip this step, and programs using Vipps login skip it too — identity is already verified.
 </Step>
-<Step title="Pass added to wallet">
-The pass is prepared and added to the customer's wallet — **Apple Wallet** on iPhone (automatically in Safari, or via an **Add to Apple Wallet** button) or **Google Wallet** on Android (via an **Add to Google Wallet** button). On desktop, the customer picks their wallet. The customer sees a confirmation: "Welcome to [program name]!" with a short how-it-works guide.
+<Step title="Consents">
+New members see the consents next. Each consent is a toggle, with required ones labeled — the join button stays inactive until every required consent is given. Below the toggles, a legal note names your company as the consent processor, with links to your terms of use and privacy policy.
+
+<Frame caption="The required consent must be switched on before the customer can join.">
+  <img src="/images/enrollment/consents.png" alt="The consents screen with two toggles, Receive Marketing emails marked required and Receive Marketing SMS optional, legal text, and an inactive Join Mintleaf Rewards button" width="320" />
+</Frame>
+</Step>
+<Step title="Add the pass to the wallet">
+The pass is prepared and the customer is asked to add it: **Add to Apple Wallet** on iPhone, **Add to Google Wallet** on Android. On desktop, the customer picks their wallet. Tapping the badge opens the wallet's own add-pass prompt.
+
+<Frame caption="On an iPhone the customer gets the Apple Wallet badge; Android shows Google Wallet instead.">
+  <img src="/images/enrollment/success.png" alt="The Almost there screen telling the customer their Mintleaf Rewards pass is ready, with an Add to Apple Wallet badge" width="320" />
+</Frame>
+</Step>
+<Step title="Confirmation">
+Once the pass is added, the customer sees a confirmation — "Welcome to [program name]!" — with a short how-it-works guide matched to the program's pass type (see below). If your program has follow-up links configured (like "download our app"), they appear here.
+
+<Frame caption="The confirmation explains how to use the pass — here for an NFC program, where the pass works through Apple Pay.">
+  <img src="/images/enrollment/welcome.png" alt="The Welcome to Mintleaf Rewards confirmation screen with a green checkmark and a three-step how-it-works guide" width="320" />
+</Frame>
 </Step>
 </Steps>
 
@@ -46,5 +71,3 @@ The confirmation screen tells the customer which applies to them.
 ## What's specific to your program
 
 The flow's skeleton is the same for everyone, but your program controls: the branding and texts, which form fields are asked, which consents appear, a minimum age requirement, which wallets are offered (Apple Wallet, Google Wallet, or both), whether existing members must verify with a code, whether the pass is also sent by email or SMS, and any follow-up links on the confirmation screen (like "download our app"). If you want any of these changed, [contact support](/support/contact).
-
-The enrollment flow is available in English, Norwegian, Swedish, and Danish.
