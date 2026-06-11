@@ -1,0 +1,97 @@
+---
+title: "Wallet button widget"
+description: "Add an Add to Wallet button to your own website or emails so customers can save their pass in a tap"
+---
+
+The **wallet button widget** is an **Add to Wallet** button you place on your own website or in your emails. When a customer who is signed in to your site (or opens your email) taps it, their pass is issued and added to **Apple Wallet** or **Google Wallet** — no enrollment form needed. It's a distribution channel alongside the [standard enrollment flow](/enrollment/how-enrollment-works), best suited for customers who already exist in your systems.
+
+Stell provides a **configurator** that generates the code for you: you pick the options, see a live preview, and copy a ready-made snippet.
+
+## What you need
+
+| | |
+|---|---|
+| **Program nano ID** | A short identifier for your program. Stell provides it (or a pre-filled configurator link) during onboarding — [contact support](/support/contact) if you don't have yours. |
+| **Member identifier** | Each visitor's or recipient's ID from your own systems — whatever your CRM uses as the member ID, typically a UUID like `8e4a00f7-e6da-4048-9684-b42801178375`. An email address also works. Your site template or email tool fills this in per person. |
+
+## The configurator
+
+Open the configurator at [stell.in/embed/configurator](https://stell.in/embed/configurator). It has two tabs: **On your site** for embedding the button in web pages, and **In your emails** for email templates.
+
+![The configurator's On your site tab, with the configuration form, a live preview of the Apple Wallet and Google Wallet buttons, and the copyable embed snippet](/images/embed/configurator-site.png)
+
+On the **On your site** tab you set:
+
+| Option | What it controls |
+|---|---|
+| **Program nano ID** | Which program the button issues passes for |
+| **Member identifier** | A test value for the preview — replaced per visitor in production |
+| **Wallets** | Which wallet buttons render — see [the options below](#wallet-options) |
+| **Locale** | The language of the button labels (defaults to the visitor's browser language) |
+| **Layout** | Whether multiple buttons stack horizontally or vertically |
+| **Base64 encode identifier** | Leave on unless Stell has told you otherwise |
+
+The **Preview** card renders the real button with your test values — tapping it runs the same flow your visitors get.
+
+### Wallet options
+
+| Setting | What renders on the page |
+|---|---|
+| **Default — program config** | A button for every wallet your program supports — both **Add to Apple Wallet** and **Save to Google Wallet** if your program offers both. The safe choice for most sites. |
+| **Apple Wallet** | Only the Apple Wallet button, on every device. |
+| **Google Wallet** | Only the Google Wallet button, on every device. |
+| **Apple + Google** | Both buttons, on every device — an Android visitor will also see the Apple Wallet button, and an iPhone visitor the Google Wallet one. |
+| **Auto — detect device** | Picks by the visitor's device: only the Apple Wallet button on iPhone, only the Google Wallet button on Android, and both on desktop. Use this to avoid showing a button the visitor's phone can't use. |
+
+Whatever you pick, the widget never shows a button for a wallet your program doesn't support — the selection is always filtered against your program's configuration. Further down the page you'll find a built-in integration guide with a pre-launch checklist, Content Security Policy notes, a Shopify example, and troubleshooting.
+
+## On your site
+
+<Steps>
+<Step title="Configure the button">
+Open the configurator with your program's nano ID, enter a test member identifier, and pick wallets, locale, and layout. Check the preview.
+</Step>
+<Step title="Copy the snippet">
+Click **Copy** on the **Drop it on any page** card. The snippet looks like this:
+
+```html
+<!-- Replace data-identifier with the current visitor's member ID from your site template. -->
+<div
+  data-program-nano-id="YOUR_PROGRAM_NANO_ID"
+  data-identifier="VISITOR_MEMBER_ID"
+>
+  <noscript>Enable JavaScript to add this pass to your wallet.</noscript>
+</div>
+<script src="https://stell.in/embed/wallet-button.js" async></script>
+```
+</Step>
+<Step title="Paste it into your page template">
+Place the snippet where the button should appear — a member page, order confirmation, or account area.
+</Step>
+<Step title="Make the identifier dynamic">
+Replace the `data-identifier` value with the signed-in visitor's CRM ID or email from your site template, so every visitor gets their own pass. The button must never render with a hard-coded or shared identifier.
+</Step>
+</Steps>
+
+## In your emails
+
+The **In your emails** tab generates wallet links for email templates instead of a script — email clients don't run JavaScript, so the button is a plain image wrapped in a link.
+
+![The configurator's In your emails tab, with test values and the email links card containing wallet link templates and downloadable button images](/images/embed/configurator-email.png)
+
+1. Paste the HTML snippet from the **Email links** card into your email template. It contains an **Add to Apple Wallet** and a **Save to Google Wallet** button, each linking to a URL template like `https://stell.in/api/pass/{nanoId}/{identifier}?wallet=apple`.
+2. At send time, have your email tool replace `{nanoId}` with your program's nano ID and `{identifier}` with each recipient's CRM member ID — or their email address; the link works with either.
+3. For non-English emails, swap the button image's `/en.svg` for the matching language (`/nb.svg`, `/sv.svg`, `/de.svg`, and so on).
+
+<Tip>
+Prefer hosting images yourself? **Download all assets** on the same tab gives you every Apple Wallet and Google Wallet button image as a single ZIP.
+</Tip>
+
+## Before you launch
+
+- **Identifier is per-visitor.** Each signed-in visitor or email recipient must get their own identifier — test with at least two different members.
+- **Test on a real phone.** Add a pass to Apple Wallet on an iPhone and Google Wallet on an Android device, not just in a desktop browser.
+- **Check your Content Security Policy.** If your site enforces a strict CSP, allow the Stell origins — the configurator's guide lists exactly which directives to add.
+- **Check localization.** If your audience isn't English-speaking, set the locale (or verify auto-detect) and use matching email button images.
+
+The full pre-launch checklist and troubleshooting guide are built into the [configurator page](https://stell.in/embed/configurator) itself, below the snippet.

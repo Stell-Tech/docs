@@ -39,8 +39,10 @@ if (filter && selected.length === 0) {
 }
 
 async function capture(shot, outPath) {
-  await page.goto(`${baseUrl}${shot.path}`, { waitUntil: 'networkidle' });
-  if (page.url().includes('/login')) {
+  // Shots with an absolute `url` target public pages outside the portal
+  // (e.g. the embed configurator), so the login check doesn't apply.
+  await page.goto(shot.url ?? `${baseUrl}${shot.path}`, { waitUntil: 'networkidle' });
+  if (!shot.url && page.url().includes('/login')) {
     console.error('Session expired — redirected to login. Run: npm run shots:login');
     process.exit(1);
   }
@@ -61,6 +63,15 @@ async function capture(shot, outPath) {
   if (shot.waitForUrl) {
     await page.waitForURL(shot.waitForUrl, { timeout: 15000 });
     await page.waitForLoadState('networkidle');
+  }
+  if (shot.scrollTo) {
+    // Align the element with the top of the viewport so the capture starts
+    // there instead of at the page top (e.g. to skip a marketing hero).
+    await page
+      .locator(shot.scrollTo)
+      .first()
+      .evaluate((el) => el.scrollIntoView({ block: 'start' }));
+    await page.waitForTimeout(500);
   }
   if (shot.collapseSidebar) {
     // The sidebar state persists in a cookie, so only toggle when expanded.

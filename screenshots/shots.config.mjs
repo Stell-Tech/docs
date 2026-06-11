@@ -2,7 +2,9 @@
 // name → output file images/<name>.png; path → portal route to visit.
 // Optional: waitFor (CSS selector to await), clicks (selectors clicked in order
 // before capture, e.g. to open a dialog), fullPage (default false),
-// collapseSidebar (collapse the nav sidebar before capture, default false).
+// collapseSidebar (collapse the nav sidebar before capture, default false),
+// url (absolute URL for public pages outside the portal; replaces path and
+// skips the login check), scrollTo (selector aligned to the viewport top).
 export default [
   { name: 'portal/getting-started/dashboard', path: '/portal' },
   { name: 'portal/passes/list', path: '/portal/passes', waitFor: 'table' },
@@ -58,4 +60,19 @@ export default [
   { name: 'portal/transactions/list', path: '/portal/transactions' },
   { name: 'portal/organization/overview', path: '/portal/organization' },
   { name: 'portal/account/api-keys', path: '/portal/api-keys' },
+  // The wallet widget configurator is a public launchpad page, captured from
+  // the develop environment via an absolute `url` (no portal session needed).
+  // Query params seed the form and select the tab; `scrollTo` skips the hero.
+  {
+    name: 'embed/configurator-site',
+    url: 'https://develop.stell.in/embed/configurator?nanoId=IpGeE4Bh&identifier=8e4a00f7-e6da-4048-9684-b42801178375',
+    waitFor: 'text=Drop it on any page',
+    scrollTo: '[role="tablist"]',
+  },
+  {
+    name: 'embed/configurator-email',
+    url: 'https://develop.stell.in/embed/configurator?nanoId=IpGeE4Bh&identifier=8e4a00f7-e6da-4048-9684-b42801178375&tab=link',
+    waitFor: 'text=Email links',
+    scrollTo: '[role="tablist"]',
+  },
 ];

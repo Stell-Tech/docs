@@ -81,6 +81,7 @@
             "group": "Customer enrollment",
             "pages": [
               "enrollment/how-enrollment-works",
+              "enrollment/wallet-button-widget",
               "enrollment/troubleshooting"
             ]
           },
