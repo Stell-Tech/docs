@@ -17,20 +17,9 @@ Programs are set up for you by Stell. If a program is missing or you need a new 
 
 ## The program page
 
-Each program page gives you:
-
-- **Overview** — the program's status (Published, Draft, or Archived), its subtype (for example Points, Stamps, Tiers, or Membership for loyalty programs), whether tap to use (NFC) is enabled, and key dates.
-- **Wallet card template** — how this program's pass looks in your customers' wallets. Click **Edit template** to open the [pass template editor](/pass-templates/overview).
-- **Wallet certificate** — the Apple certificate that signs this program's passes. If Stell manages it, renewal is handled for you. If your company uses its own certificate, you can replace it here, and you'll see its expiry date and status.
-- **Program passes** — every pass issued under this program, newest first, with the same details as the main [passes list](/passes/overview).
-- **Event webhooks** — send this program's pass events to your own HTTPS endpoints. Useful when your systems should react to passes being added, used, or changed.
-
-Some programs show extra sections depending on their setup, such as **NFC terminal encryption keys** (used when configuring NFC terminal providers — treat these as secrets) and **iCloud Account Binding** settings for Apple Wallet.
-
-<Warning>
-The private and Adyen NFC keys can decrypt pass payloads. Reveal them only when you need them, and share them only with trusted terminal providers.
-</Warning>
+Each program page shows the program's status and settings, its pass template and signing certificate, the passes issued under it, and its event webhooks. See [the program page](/programs/the-program-page) for a walkthrough of every section.
 
 ## Next steps
 
-The most common thing you'll do here is adjust how your pass looks — head to [pass templates](/pass-templates/overview).
+- [The program page](/programs/the-program-page) — what you see and can do when you open a program.
+- [Pass templates](/pass-templates/overview) — the most common thing you'll do here is adjust how your pass looks.

@@ -24,7 +24,8 @@
           {
             "group": "Programs",
             "pages": [
-              "programs/overview"
+              "programs/overview",
+              "programs/the-program-page"
             ]
           },
           {

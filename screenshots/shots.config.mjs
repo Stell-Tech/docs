@@ -20,6 +20,12 @@ export default [
   },
   { name: 'portal/programs/list', path: '/portal/programs' },
   {
+    name: 'portal/programs/detail',
+    path: '/portal/programs',
+    clicks: ['main a[href^="/portal/programs/"]'],
+    waitForUrl: '**/portal/programs/*',
+  },
+  {
     name: 'portal/programs/template-editor',
     path: '/portal/programs',
     clicks: ['main a[href^="/portal/programs/"]', 'text=Edit template'],

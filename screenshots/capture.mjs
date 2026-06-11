@@ -30,8 +30,16 @@ const context = await browser.newContext({
 });
 const page = await context.newPage();
 
+// Optional filter: `npm run shots -- programs/detail` captures matching names only.
+const filter = process.argv[2];
+const selected = filter ? shots.filter((s) => s.name.includes(filter)) : shots;
+if (filter && selected.length === 0) {
+  console.error(`No shots match "${filter}"`);
+  process.exit(1);
+}
+
 let failed = 0;
-for (const shot of shots) {
+for (const shot of selected) {
   const outPath = `images/${shot.name}.png`;
   try {
     await page.goto(`${baseUrl}${shot.path}`, { waitUntil: 'networkidle' });
