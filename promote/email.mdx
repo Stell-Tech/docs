@@ -23,67 +23,245 @@ A good program email is short and has exactly one call to action. The Mintleaf R
 
 ## Example emails
 
-Two emails cover most launches: an **announcement** to your full list, and a one-tap **invitation** to customers who already exist in your CRM. The copy below is a starting point — adapt the voice, keep the structure.
+The three examples below are complete, email-safe HTML — tables and inline styles, one column, 600 px wide, the way email clients require. Copy one into your email tool, swap the Mintleaf branding and copy for your own, and replace the placeholders:
+
+| Placeholder | Replace with |
+|---|---|
+| `https://YOUR-ENROLLMENT-LINK` | Your program's enrollment link |
+| `{nanoId}` / `{identifier}` | Your program's nano ID and each recipient's member ID — your email tool fills the identifier per recipient ([details](/enrollment/wallet-button-widget#in-your-emails)) |
+| `https://YOUR-IMAGE-HOST/...` | Images you host yourself — your hero and pass image |
+| `https://YOUR-UNSUBSCRIBE-LINK` | Your email tool's unsubscribe link |
 
 <Tabs>
 <Tab title="Announcement">
 For your full mailing list at launch. Recipients may or may not be in your CRM, so the call to action links to the enrollment flow.
 
-```text
-Subject: Your coffee now earns you free coffee — meet Mintleaf Rewards
+**Subject:** Your coffee now earns you free coffee — meet Mintleaf Rewards
 
-Preview text: No app, no plastic card. It takes 30 seconds.
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meet Mintleaf Rewards</title>
+</head>
+<body style="margin:0; padding:0; background-color:#faf7f2;">
 
----
+  <!-- Preview text: shown next to the subject in the inbox, invisible in the email -->
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+    No app, no plastic card. It takes 30 seconds.
+  </div>
 
-Hi Anna,
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#faf7f2;">
+    <tr><td align="center" style="padding:32px 16px;">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0"
+             style="width:600px; max-width:100%; background-color:#ffffff; border-radius:12px; overflow:hidden;">
 
-Your loyalty card just got an upgrade — by disappearing.
+        <!-- Hero -->
+        <tr><td align="center" style="background-color:#14432f; padding:44px 24px 40px;">
+          <div style="font-family:Helvetica,Arial,sans-serif; font-size:22px; letter-spacing:4px; font-weight:bold; color:#ffffff;">MINTLEAF</div>
+          <div style="font-family:Helvetica,Arial,sans-serif; font-size:11px; letter-spacing:7px; color:#ffffff; padding-top:4px;">COFFEE</div>
+          <div style="font-family:Helvetica,Arial,sans-serif; font-size:14px; color:#8fe6b4; padding-top:16px;">Fresh roasts, fresher rewards.</div>
+        </td></tr>
 
-Mintleaf Rewards lives in your phone's wallet. No app to
-install, no plastic card to forget. Join once, and every
-coffee counts automatically when you tap to pay — your
-tenth one is on us.
+        <!-- Value proposition -->
+        <tr><td style="padding:36px 40px 8px; font-family:Helvetica,Arial,sans-serif;">
+          <h1 style="margin:0; font-size:24px; line-height:1.3; color:#1a2b24;">Your loyalty card just got an upgrade &mdash; by disappearing.</h1>
+          <p style="margin:16px 0 0; font-size:15px; line-height:1.6; color:#51635a;">
+            Mintleaf Rewards lives in your phone's wallet. No app to install, no plastic
+            card to forget. Join once, and every coffee counts automatically when you
+            tap to pay &mdash; your tenth one is on us.
+          </p>
+        </td></tr>
 
-    [ Join Mintleaf Rewards ]
+        <!-- Call to action -->
+        <tr><td align="center" style="padding:28px 40px 8px;">
+          <table role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td style="background-color:#14432f; border-radius:10px;">
+              <a href="https://YOUR-ENROLLMENT-LINK"
+                 style="display:inline-block; padding:16px 32px; font-family:Helvetica,Arial,sans-serif; font-size:16px; font-weight:bold; color:#ffffff; text-decoration:none;">
+                Join Mintleaf Rewards
+              </a>
+            </td></tr>
+          </table>
+        </td></tr>
+        <tr><td align="center" style="padding:14px 40px 36px; font-family:Helvetica,Arial,sans-serif; font-size:12px; color:#51635a;">
+          Takes about 30 seconds &mdash; works with Apple Wallet and Google Wallet.
+        </td></tr>
 
-Joining takes about 30 seconds: tap the button, fill in
-your details, and add the pass to Apple Wallet or
-Google Wallet.
+        <!-- Footer -->
+        <tr><td align="center" style="background-color:#f6f3ec; padding:20px 40px; font-family:Helvetica,Arial,sans-serif; font-size:11px; line-height:1.7; color:#8a948e;">
+          Mintleaf Coffee &middot; Strandgaten 12, Bergen<br>
+          You're receiving this because you're a Mintleaf customer.
+          <a href="https://YOUR-UNSUBSCRIBE-LINK" style="color:#8a948e;">Unsubscribe</a>
+        </td></tr>
 
-See you at the counter,
-The Mintleaf Coffee team
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
 ```
-
-The button links to your enrollment link.
 </Tab>
 <Tab title="Invitation">
-For customers already in your CRM. The wallet buttons issue their pass directly — their details are already on file, so there's no form at all. Lead with that.
+For customers already in your CRM. The wallet buttons issue their pass directly — their details are already on file, so there's no form at all. The button images and link templates are the same ones the [configurator's email tab](/enrollment/wallet-button-widget#in-your-emails) generates.
 
-```text
-Subject: Your Mintleaf Rewards pass is ready, Anna
+**Subject:** Your Mintleaf Rewards pass is ready, Anna
 
-Preview text: One tap and it's in your wallet — we've
-already filled everything in.
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Mintleaf Rewards pass is ready</title>
+</head>
+<body style="margin:0; padding:0; background-color:#faf7f2;">
 
----
+  <!-- Preview text -->
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+    One tap and it's in your wallet — we've already filled everything in.
+  </div>
 
-Hi Anna,
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#faf7f2;">
+    <tr><td align="center" style="padding:32px 16px;">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0"
+             style="width:600px; max-width:100%; background-color:#ffffff; border-radius:12px; overflow:hidden;">
 
-We made you a Mintleaf Rewards pass. It's ready to go —
-one tap below and it's in your phone's wallet.
+        <!-- Hero -->
+        <tr><td align="center" style="background-color:#14432f; padding:44px 24px 40px;">
+          <div style="font-family:Helvetica,Arial,sans-serif; font-size:22px; letter-spacing:4px; font-weight:bold; color:#ffffff;">MINTLEAF</div>
+          <div style="font-family:Helvetica,Arial,sans-serif; font-size:11px; letter-spacing:7px; color:#ffffff; padding-top:4px;">COFFEE</div>
+        </td></tr>
 
-    [ Add to Apple Wallet ]  [ Add to Google Wallet ]
+        <!-- Value proposition -->
+        <tr><td style="padding:36px 40px 8px; font-family:Helvetica,Arial,sans-serif;">
+          <h1 style="margin:0; font-size:24px; line-height:1.3; color:#1a2b24;">We made you a pass, Anna.</h1>
+          <p style="margin:16px 0 0; font-size:15px; line-height:1.6; color:#51635a;">
+            Your Mintleaf Rewards pass is ready to go &mdash; one tap below and it's in
+            your phone's wallet. From then on it's automatic: every coffee counts when
+            you tap to pay, and your tenth one is free.
+          </p>
+        </td></tr>
 
-From then on it's automatic: every coffee counts when
-you tap to pay, and your tenth one is free. No app,
-nothing to carry, nothing to remember.
+        <!-- Wallet buttons: replace {nanoId} with your program's nano ID and let
+             your email tool fill {identifier} per recipient -->
+        <tr><td align="center" style="padding:28px 40px 8px;">
+          <a href="https://stell.in/api/pass/{nanoId}/{identifier}?wallet=apple" style="text-decoration:none;">
+            <img src="https://stell.in/embed/assets/apple/en.svg" height="48" alt="Add to Apple Wallet" style="border:0; vertical-align:middle;">
+          </a>
+          &nbsp;&nbsp;
+          <a href="https://stell.in/api/pass/{nanoId}/{identifier}?wallet=google" style="text-decoration:none;">
+            <img src="https://stell.in/embed/assets/google/en.svg" height="48" alt="Add to Google Wallet" style="border:0; vertical-align:middle;">
+          </a>
+        </td></tr>
 
-Button not working? Use this link instead: <link>
+        <!-- Fallback link -->
+        <tr><td align="center" style="padding:14px 40px 36px; font-family:Helvetica,Arial,sans-serif; font-size:12px; color:#51635a;">
+          Button not working? Open this link on your phone:
+          <a href="https://stell.in/api/pass/{nanoId}/{identifier}" style="color:#1d5a3f;">get your pass</a>.
+        </td></tr>
 
-See you at the counter,
-The Mintleaf Coffee team
+        <!-- Footer -->
+        <tr><td align="center" style="background-color:#f6f3ec; padding:20px 40px; font-family:Helvetica,Arial,sans-serif; font-size:11px; line-height:1.7; color:#8a948e;">
+          Mintleaf Coffee &middot; Strandgaten 12, Bergen<br>
+          You're receiving this because you're a Mintleaf customer.
+          <a href="https://YOUR-UNSUBSCRIBE-LINK" style="color:#8a948e;">Unsubscribe</a>
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
 ```
+</Tab>
+<Tab title="Pass showcase">
+The strongest version of the invitation: the email shows **the pass itself**, so the customer sees exactly what lands in their wallet before they tap. Host an image of your pass design yourself and reference it in the hero.
+
+<Frame caption="The pass is the hero — the customer sees what they're getting before they tap.">
+  <img src="/images/promote/email-pass-visual.png" alt="The Mintleaf Rewards pass showcase email: the pass rendered large in the dark green hero, with Add to Apple Wallet and Add to Google Wallet buttons below" width="400" />
+</Frame>
+
+**Subject:** This is your new loyalty card, Anna
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>This is your new loyalty card</title>
+</head>
+<body style="margin:0; padding:0; background-color:#faf7f2;">
+
+  <!-- Preview text -->
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+    It's already made — one tap and it's in your wallet.
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#faf7f2;">
+    <tr><td align="center" style="padding:32px 16px;">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0"
+             style="width:600px; max-width:100%; background-color:#ffffff; border-radius:12px; overflow:hidden;">
+
+        <!-- Hero with the pass as the visual -->
+        <tr><td align="center" style="background-color:#14432f; padding:44px 24px 12px;">
+          <div style="font-family:Helvetica,Arial,sans-serif; font-size:22px; letter-spacing:4px; font-weight:bold; color:#ffffff;">MINTLEAF</div>
+          <div style="font-family:Helvetica,Arial,sans-serif; font-size:11px; letter-spacing:7px; color:#ffffff; padding-top:4px;">COFFEE</div>
+          <div style="font-family:Helvetica,Arial,sans-serif; font-size:26px; font-weight:bold; color:#ffffff; padding-top:28px;">This is your new loyalty card</div>
+          <div style="font-family:Helvetica,Arial,sans-serif; font-size:14px; color:#8fe6b4; padding-top:8px;">No app. No plastic. It lives in your phone's wallet.</div>
+        </td></tr>
+        <tr><td align="center" style="background-color:#14432f; padding:24px 24px 44px;">
+          <!-- An image of your pass design, hosted by you. Width 280-320 px keeps it
+               crisp on phones; the alt text carries the message if images are blocked. -->
+          <img src="https://YOUR-IMAGE-HOST/mintleaf-pass.png" width="300"
+               alt="The Mintleaf Rewards pass: your balance, your name, and your member tier on a green card"
+               style="display:block; border:0; max-width:300px; width:100%;">
+        </td></tr>
+
+        <!-- Value proposition -->
+        <tr><td align="center" style="padding:32px 40px 4px; font-family:Helvetica,Arial,sans-serif;">
+          <p style="margin:0; font-size:15px; line-height:1.6; color:#51635a;">
+            It's already made for you, Anna. One tap below and it's in your wallet &mdash;
+            then every coffee counts automatically when you tap to pay.
+          </p>
+        </td></tr>
+
+        <!-- Wallet buttons: replace {nanoId} with your program's nano ID and let
+             your email tool fill {identifier} per recipient -->
+        <tr><td align="center" style="padding:24px 40px 8px;">
+          <a href="https://stell.in/api/pass/{nanoId}/{identifier}?wallet=apple" style="text-decoration:none;">
+            <img src="https://stell.in/embed/assets/apple/en.svg" height="48" alt="Add to Apple Wallet" style="border:0; vertical-align:middle;">
+          </a>
+          &nbsp;&nbsp;
+          <a href="https://stell.in/api/pass/{nanoId}/{identifier}?wallet=google" style="text-decoration:none;">
+            <img src="https://stell.in/embed/assets/google/en.svg" height="48" alt="Add to Google Wallet" style="border:0; vertical-align:middle;">
+          </a>
+        </td></tr>
+
+        <!-- Fallback link -->
+        <tr><td align="center" style="padding:14px 40px 36px; font-family:Helvetica,Arial,sans-serif; font-size:12px; color:#51635a;">
+          Button not working? Open this link on your phone:
+          <a href="https://stell.in/api/pass/{nanoId}/{identifier}" style="color:#1d5a3f;">get your pass</a>.
+        </td></tr>
+
+        <!-- Footer -->
+        <tr><td align="center" style="background-color:#f6f3ec; padding:20px 40px; font-family:Helvetica,Arial,sans-serif; font-size:11px; line-height:1.7; color:#8a948e;">
+          Mintleaf Coffee &middot; Strandgaten 12, Bergen<br>
+          You're receiving this because you're a Mintleaf customer.
+          <a href="https://YOUR-UNSUBSCRIBE-LINK" style="color:#8a948e;">Unsubscribe</a>
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
+```
+
+For the pass image, use a render of your actual pass design so the email matches what lands in the wallet — and keep some clear space around it rather than cropping it tight.
 </Tab>
 </Tabs>
 

@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body { width: 680px; height: 920px; background: var(--cream); display: flex; align-items: center; justify-content: center; }
+
+  .email {
+    width: 560px; background: #fff; border-radius: 14px; overflow: hidden;
+    box-shadow: 0 24px 60px rgba(20, 40, 30, 0.16);
+    border: 1px solid var(--line);
+  }
+
+  .hero {
+    background: linear-gradient(150deg, var(--forest) 0%, var(--forest-dark) 100%);
+    padding: 40px 24px 40px; text-align: center; position: relative; overflow: hidden;
+  }
+  .hero .bg-leaf { position: absolute; opacity: 0.12; }
+  .hero .wordmark { justify-content: center; position: relative; }
+  .hero h1 { color: #fff; font-size: 25px; letter-spacing: -0.3px; margin-top: 26px; position: relative; }
+  .hero .sub { color: var(--mint); font-size: 13.5px; margin-top: 8px; position: relative; }
+  .hero .passwrap { display: flex; justify-content: center; margin-top: 24px; position: relative; }
+
+  .pass { width: 280px; }
+  .pass .strip { height: 78px; }
+  .pass .strip .balance b { font-size: 34px; }
+  .pass .foot { height: 74px; }
+
+  .bodycopy { padding: 30px 48px 4px; text-align: center; }
+  .bodycopy p { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); }
+
+  .cta { display: flex; justify-content: center; gap: 14px; padding: 22px 40px 6px; }
+  .cta img { height: 44px; display: block; }
+
+  .fallback { text-align: center; padding: 12px 40px 30px; font-size: 12px; color: var(--ink-soft); }
+  .fallback a { color: var(--forest-mid); }
+
+  .footer {
+    background: #f6f3ec; padding: 18px 40px 20px; text-align: center;
+    font-size: 11px; color: #8a948e; line-height: 1.7;
+  }
+  .footer a { color: #8a948e; }
+</style>
+</head>
+<body>
+
+<div class="email">
+  <div class="hero">
+    <svg class="bg-leaf" style="top:-20px; left:6px; transform:rotate(-24deg)" width="90" height="90" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+    <svg class="bg-leaf" style="bottom:-26px; right:14px; transform:rotate(36deg)" width="110" height="110" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+
+    <div class="wordmark">
+      <svg class="leaf" width="34" height="34" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#14432f" stroke-width="6" fill="none"/></svg>
+      <div class="name"><b style="font-size:18px">MINTLEAF</b><span style="font-size:9.5px">COFFEE</span></div>
+    </div>
+
+    <h1>This is your new loyalty card</h1>
+    <div class="sub">No app. No plastic. It lives in your phone's wallet.</div>
+
+    <div class="passwrap">
+      <div class="pass">
+        <div class="head">
+          <div class="brand">
+            <svg width="19" height="19" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#0c3526" stroke-width="6" fill="none"/></svg>
+            <div class="t"><b>MINTLEAF</b><span>COFFEE</span></div>
+          </div>
+          <div class="tier"><label>MEMBER TIER</label><b>Evergreen</b></div>
+        </div>
+        <div class="strip">
+          <svg class="bg-leaf" style="top:8px; right:16px; transform:rotate(30deg); position:absolute; opacity:.22" width="48" height="48" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/></svg>
+          <svg class="bg-leaf" style="bottom:-8px; right:100px; transform:rotate(-20deg); position:absolute; opacity:.22" width="34" height="34" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/></svg>
+          <div class="balance"><b>1 250</b><span>Balance</span></div>
+        </div>
+        <div class="row">
+          <div class="cell"><label>MEMBER</label><b>Anna Berg</b></div>
+          <div class="cell"><label>MEMBER SINCE</label><b>June 2026</b></div>
+        </div>
+        <div class="foot">
+          <svg class="nfc" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8fe6b4" stroke-width="2" stroke-linecap="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="19" r="1" fill="#8fe6b4" stroke="none"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bodycopy">
+    <p>It's already made for you, Anna. One tap below and it's in your wallet — then every coffee counts automatically when you tap to pay.</p>
+  </div>
+
+  <div class="cta">
+    <img src="assets/apple-wallet-en.svg" alt="">
+    <img src="assets/google-wallet-en.svg" alt="">
+  </div>
+
+  <div class="fallback">Button not working? Open this link on your phone: <a href="#">get your pass</a>.</div>
+
+  <div class="footer">
+    Mintleaf Coffee · Strandgaten 12, Bergen<br>
+    You're receiving this because you're a Mintleaf customer. <a href="#">Unsubscribe</a>
+  </div>
+</div>
+
+</body>
+</html>
