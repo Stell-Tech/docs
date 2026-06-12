@@ -8,7 +8,7 @@ External user documentation for the **Stell merchant portal** (platform.getstell
 ## Audience
 
 1. **Merchant staff and admins** (primary) — non-technical users of the merchant portal. They manage programs, issue passes, run Engage campaigns, and look up transactions for their own company.
-2. **Support staff** (secondary) — the Onboarding & support tab documents the end-customer enrollment flow (web/App Clip via Launchpad) as a support reference.
+2. **Support staff** (secondary) — the Launch & grow tab documents the end-customer enrollment flow (web/App Clip via Launchpad) as a support reference.
 
 Write for the merchant, not the operator. Assume no knowledge of Stell internals, AWS, or wallet provider APIs.
 
