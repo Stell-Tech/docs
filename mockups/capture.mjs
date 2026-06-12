@@ -10,6 +10,8 @@ const outDir = path.join(here, '..', 'images', 'promote');
 
 const SHOTS = [
   { name: 'email-anatomy', width: 1100, height: 870 },
+  { name: 'email-announcement', width: 680, height: 850 },
+  { name: 'email-invitation', width: 680, height: 660 },
   { name: 'email-pass-visual', width: 680, height: 920 },
   { name: 'social-announcement', width: 560, height: 884 },
   { name: 'social-story', width: 420, height: 747 },
