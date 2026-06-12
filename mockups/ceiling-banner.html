@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body {
+    width: 640px; height: 920px; position: relative; overflow: hidden;
+    background: linear-gradient(180deg, #efeae0 0%, #e9e3d6 100%);
+  }
+
+  /* ceiling strip */
+  .ceiling {
+    position: absolute; top: 0; left: 0; right: 0; height: 34px;
+    background: linear-gradient(180deg, #d8d2c4, #cfc8b8);
+  }
+  .track { position: absolute; top: 10px; left: 40px; right: 40px; height: 6px; background: #b8b1a0; border-radius: 3px; }
+
+  /* suspension wires */
+  .wire { position: absolute; top: 16px; width: 2px; height: 96px; background: #9a937f; }
+  .wire.l { left: 200px; }
+  .wire.r { right: 200px; }
+
+  .banner {
+    position: absolute; top: 110px; left: 50%; transform: translateX(-50%);
+    width: 380px; padding: 40px 36px 34px;
+    background: linear-gradient(170deg, var(--forest-mid) 0%, var(--forest) 45%, var(--forest-dark) 100%);
+    border-radius: 6px; text-align: center; overflow: hidden;
+    box-shadow: 0 30px 60px rgba(70, 60, 35, 0.35);
+  }
+  .banner .bg-leaf { position: absolute; opacity: 0.12; }
+
+  .banner .wordmark { justify-content: center; position: relative; }
+  .banner .wordmark .name b { font-size: 14px; letter-spacing: 3px; }
+  .banner .wordmark .name span { font-size: 7.5px; letter-spacing: 5px; }
+
+  .banner h1 { position: relative; color: #fff; font-size: 38px; letter-spacing: -0.6px; line-height: 1.12; margin-top: 28px; }
+  .banner h1 em { font-style: normal; color: var(--mint); }
+  .banner .sub { position: relative; color: rgba(255,255,255,.85); font-size: 15.5px; line-height: 1.55; margin-top: 14px; }
+
+  .banner .qr-card { position: relative; margin-top: 26px; padding: 14px; border-radius: 14px; }
+  .banner .qr-card img { width: 170px; height: 170px; display: block; }
+  .banner .hint { position: relative; color: rgba(255,255,255,.8); font-size: 12.5px; line-height: 1.5; margin-top: 14px; }
+
+  .banner .free {
+    position: relative; display: inline-block; margin-top: 20px;
+    background: var(--mint); color: var(--forest-dark);
+    font-size: 13px; font-weight: 800; letter-spacing: 0.5px;
+    border-radius: 999px; padding: 10px 22px;
+  }
+
+  /* eyelets where the wires attach */
+  .eyelet {
+    position: absolute; top: -7px; width: 14px; height: 14px; border-radius: 50%;
+    background: #cfc8b8; border: 3px solid #9a937f;
+  }
+  .eyelet.l { left: 4px; }
+  .eyelet.r { right: 4px; }
+</style>
+</head>
+<body>
+
+<div class="ceiling"></div>
+<div class="track"></div>
+<div class="wire l"></div>
+<div class="wire r"></div>
+
+<div class="banner">
+  <div class="eyelet l"></div>
+  <div class="eyelet r"></div>
+
+  <svg class="bg-leaf" style="top:-30px; right:-40px; transform:rotate(30deg)" width="180" height="180" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+  <svg class="bg-leaf" style="bottom:-50px; left:-50px; transform:rotate(-24deg)" width="200" height="200" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+
+  <div class="wordmark">
+    <svg class="leaf" width="28" height="28" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#14432f" stroke-width="6" fill="none"/></svg>
+    <div class="name"><b>MINTLEAF</b><span>COFFEE</span></div>
+  </div>
+
+  <h1>Every cup<br><em>counts</em></h1>
+  <div class="sub">Join Mintleaf Rewards — it lives in your phone's wallet, and your tenth coffee is free.</div>
+
+  <div class="qr-card"><img src="assets/qr.png" alt=""></div>
+  <div class="hint">Open the Camera app and point it at the code — it takes 30 seconds</div>
+
+  <div class="free">NO APP · NO PLASTIC CARD</div>
+</div>
+
+</body>
+</html>

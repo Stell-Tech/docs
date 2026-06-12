@@ -20,6 +20,9 @@ const SHOTS = [
   { name: 'poster', width: 660, height: 933 },
   { name: 'counter-card', width: 660, height: 820 },
   { name: 'pos-screen', width: 1280, height: 720 },
+  { name: 'screen-promo', width: 1280, height: 720 },
+  { name: 'floor-stand', width: 660, height: 880 },
+  { name: 'ceiling-banner', width: 640, height: 920 },
   { name: 'launch-collage', width: 1280, height: 880 },
 ];
 

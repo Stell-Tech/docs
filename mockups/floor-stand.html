@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body {
+    width: 660px; height: 880px; position: relative; overflow: hidden;
+    background: linear-gradient(180deg, #efeae0 0%, #e7e1d4 56%, #cfc8b8 56.5%, #c2bba9 100%);
+  }
+  /* wall/floor hint: shelf shadow shapes on the wall */
+  .wallshape { position: absolute; background: rgba(120, 110, 90, 0.08); border-radius: 6px; }
+
+  .scene { position: absolute; left: 50%; transform: translateX(-50%); bottom: 70px; }
+
+  /* easel legs */
+  .easel { position: relative; width: 360px; height: 660px; }
+  .leg {
+    position: absolute; bottom: 0; width: 16px; height: 560px;
+    background: linear-gradient(90deg, #c9a16b, #b3854e);
+    border-radius: 6px;
+  }
+  .leg.left  { left: 30px;  transform: rotate(7deg);  transform-origin: top center; }
+  .leg.right { right: 30px; transform: rotate(-7deg); transform-origin: top center; }
+  .leg.back  { left: 50%; margin-left: -8px; height: 540px; transform: scaleY(0.98); opacity: .55; }
+  .crossbar {
+    position: absolute; left: 22px; right: 22px; bottom: 180px; height: 14px;
+    background: linear-gradient(180deg, #c9a16b, #ad7f49); border-radius: 4px;
+    box-shadow: 0 6px 14px rgba(80, 60, 30, 0.25);
+  }
+  .easel-top {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    width: 54px; height: 26px; background: #b3854e; border-radius: 6px;
+  }
+
+  /* the board */
+  .board {
+    position: absolute; left: 50%; transform: translateX(-50%); bottom: 192px;
+    width: 330px; padding: 34px 30px 28px;
+    background: linear-gradient(165deg, var(--forest) 0%, var(--forest-dark) 100%);
+    border-radius: 10px; text-align: center;
+    box-shadow: 0 26px 50px rgba(70, 60, 35, 0.4);
+  }
+  .board .qrwrap {
+    position: relative; background: #fff; border-radius: 14px; padding: 16px; display: inline-block;
+  }
+  .board .qrwrap img { width: 218px; height: 218px; display: block; }
+  .board .qrwrap .badge {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: 52px; height: 52px; border-radius: 50%; background: var(--forest);
+    display: flex; align-items: center; justify-content: center;
+    border: 4px solid #fff;
+  }
+  .board .line { color: #fff; font-size: 16.5px; line-height: 1.45; margin-top: 22px; }
+  .board .line b { color: var(--mint); }
+  .board .wordmark { justify-content: center; margin-top: 18px; }
+  .board .wordmark .name b { font-size: 11px; letter-spacing: 2.5px; }
+  .board .wordmark .name span { font-size: 6px; letter-spacing: 4px; }
+
+  /* floor shadow */
+  .floorshadow {
+    position: absolute; left: 50%; transform: translateX(-50%); bottom: 56px;
+    width: 420px; height: 26px; border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(70, 60, 35, 0.3) 0%, rgba(70,60,35,0) 70%);
+  }
+</style>
+</head>
+<body>
+
+<div class="wallshape" style="top:60px; left:-40px; width:220px; height:90px;"></div>
+<div class="wallshape" style="top:200px; left:-60px; width:180px; height:90px;"></div>
+<div class="wallshape" style="top:90px; right:-50px; width:240px; height:110px;"></div>
+<div class="wallshape" style="top:260px; right:-30px; width:170px; height:80px;"></div>
+
+<div class="floorshadow"></div>
+
+<div class="scene">
+  <div class="easel">
+    <div class="leg back"></div>
+    <div class="leg left"></div>
+    <div class="leg right"></div>
+    <div class="easel-top"></div>
+    <div class="crossbar"></div>
+
+    <div class="board">
+      <div class="qrwrap">
+        <img src="assets/qr-h.png" alt="">
+        <div class="badge">
+          <svg width="26" height="26" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#14432f" stroke-width="6" fill="none"/></svg>
+        </div>
+      </div>
+      <div class="line">Scan the QR code to join<br><b>Mintleaf Rewards</b></div>
+      <div class="wordmark">
+        <svg class="leaf" width="20" height="20" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#14432f" stroke-width="6" fill="none"/></svg>
+        <div class="name"><b>MINTLEAF</b><span>COFFEE</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
