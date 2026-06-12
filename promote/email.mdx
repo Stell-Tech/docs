@@ -1,0 +1,109 @@
+---
+title: "Email"
+description: "Announce your program and invite existing customers to add their pass — with example copy you can adapt"
+---
+
+Email is the strongest launch channel: you already know who to send to, and recipients who exist in your CRM can get their pass with **one tap** — the email wallet links issue the pass directly, no enrollment form. Everyone else clicks through to the enrollment flow instead. Either way, the email's only job is to make adding the pass feel as easy as it is.
+
+## Anatomy of a program email
+
+A good program email is short and has exactly one call to action. The Mintleaf Rewards announcement below is annotated top to bottom:
+
+<Frame caption="The Mintleaf Rewards announcement email, annotated.">
+  <img src="/images/promote/email-anatomy.png" alt="Annotated Mintleaf Rewards announcement email, with callouts for the subject line, hero image, value proposition, Add to Apple Wallet and Save to Google Wallet buttons, fallback link, and footer" />
+</Frame>
+
+1. **Subject line** — lead with the benefit, not the technology. "Your coffee now earns you free coffee" beats "Introducing our new digital wallet pass solution".
+2. **Preview text** — the line shown next to the subject in the inbox. Use it to remove friction: "No app to install — it takes one tap."
+3. **Hero** — your brand and the pass itself. Showing the pass on a phone tells the whole story in one image.
+4. **Value proposition** — one or two sentences on what the customer gets and why it's effortless.
+5. **The wallet buttons** — the single call to action: **Add to Apple Wallet** and **Save to Google Wallet** buttons, side by side. Nothing else in the email should compete with them.
+6. **Fallback text link** — a plain link under the buttons ("Button not working? Use this link") for email clients that block images.
+7. **Footer** — your usual sender details and unsubscribe link. If you market in the United States, the wallet providers expect their trademark attributions here — see [using the wallet badges](/promote/overview#using-the-wallet-badges).
+
+## Example emails
+
+Two emails cover most launches: an **announcement** to your full list, and a one-tap **invitation** to customers who already exist in your CRM. The copy below is a starting point — adapt the voice, keep the structure.
+
+<Tabs>
+<Tab title="Announcement">
+For your full mailing list at launch. Recipients may or may not be in your CRM, so the call to action links to the enrollment flow.
+
+```text
+Subject: Your coffee now earns you free coffee — meet Mintleaf Rewards
+
+Preview text: No app, no plastic card. It takes 30 seconds.
+
+---
+
+Hi Anna,
+
+Your loyalty card just got an upgrade — by disappearing.
+
+Mintleaf Rewards lives in your phone's wallet. No app to
+install, no plastic card to forget. Join once, and every
+coffee counts automatically when you tap to pay — your
+tenth one is on us.
+
+    [ Join Mintleaf Rewards ]
+
+Joining takes about 30 seconds: tap the button, fill in
+your details, and add the pass to Apple Wallet or
+Google Wallet.
+
+See you at the counter,
+The Mintleaf Coffee team
+```
+
+The button links to your enrollment link.
+</Tab>
+<Tab title="Invitation">
+For customers already in your CRM. The wallet buttons issue their pass directly — their details are already on file, so there's no form at all. Lead with that.
+
+```text
+Subject: Your Mintleaf Rewards pass is ready, Anna
+
+Preview text: One tap and it's in your wallet — we've
+already filled everything in.
+
+---
+
+Hi Anna,
+
+We made you a Mintleaf Rewards pass. It's ready to go —
+one tap below and it's in your phone's wallet.
+
+    [ Add to Apple Wallet ]  [ Save to Google Wallet ]
+
+From then on it's automatic: every coffee counts when
+you tap to pay, and your tenth one is free. No app,
+nothing to carry, nothing to remember.
+
+Button not working? Use this link instead: <link>
+
+See you at the counter,
+The Mintleaf Coffee team
+```
+</Tab>
+</Tabs>
+
+## Making the buttons work
+
+The wallet buttons in the invitation email come from Stell's configurator: it generates an email-safe HTML snippet with both buttons, official badge images in your language, and per-recipient links your email tool fills in at send time. The setup — snippet, identifiers, localized images — is covered on the [wallet button widget page](/enrollment/wallet-button-widget#in-your-emails); don't hand-build the links.
+
+If a recipient isn't in your CRM — a newsletter subscriber who never bought anything, say — the one-tap links can't identify them. Send those recipients to your enrollment link instead, where the [enrollment flow](/enrollment/how-enrollment-works) collects their details.
+
+## Before you send
+
+- **One call to action.** If the email also promotes this month's blend, the pass loses. Give the program its own send.
+- **Design for the phone.** The wallet add happens on a phone, so most recipients will read the email there. One column, big buttons.
+- **Segment members from non-members.** Members get the one-tap invitation; everyone else gets the announcement with the enrollment link. A "fill in this form" email to someone you already know feels careless.
+- **Test on real devices.** Send the email to yourself and a colleague, and add the pass on a real iPhone and a real Android phone — not just a desktop preview.
+
+<Tip>
+Test with two different member identifiers, not one. The most common launch bug is every recipient getting a link to the *same* pass — two test recipients catch it immediately.
+</Tip>
+
+<Note>
+Email reaches customers who *don't* have the pass yet. Once they've added it, [Engage](/engage/overview) push notifications reach them directly on the lock screen — no inbox to fight through. If you don't see Engage in your navigation, it isn't enabled for your company — [contact support](/support/contact).
+</Note>

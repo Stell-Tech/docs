@@ -86,6 +86,16 @@
             ]
           },
           {
+            "group": "Promote your program",
+            "pages": [
+              "promote/overview",
+              "promote/email",
+              "promote/social-media",
+              "promote/website",
+              "promote/in-store"
+            ]
+          },
+          {
             "group": "Merchant onboarding",
             "pages": [
               "onboarding/checklist"
