@@ -37,7 +37,7 @@ The **Preview** card renders the real button with your test values — tapping i
 
 | Setting | What renders on the page |
 |---|---|
-| **Default — program config** | A button for every wallet your program supports — both **Add to Apple Wallet** and **Save to Google Wallet** if your program offers both. The safe choice for most sites. |
+| **Default — program config** | A button for every wallet your program supports — both **Add to Apple Wallet** and **Add to Google Wallet** if your program offers both. The safe choice for most sites. |
 | **Apple Wallet** | Only the Apple Wallet button, on every device. |
 | **Google Wallet** | Only the Google Wallet button, on every device. |
 | **Apple + Google** | Both buttons, on every device — an Android visitor will also see the Apple Wallet button, and an iPhone visitor the Google Wallet one. |
@@ -79,7 +79,7 @@ The **In your emails** tab generates wallet links for email templates instead of
 
 ![The configurator's In your emails tab, with test values and the email links card containing wallet link templates and downloadable button images](/images/embed/configurator-email.png)
 
-1. Paste the HTML snippet from the **Email links** card into your email template. It contains an **Add to Apple Wallet** and a **Save to Google Wallet** button, each linking to a URL template like `https://stell.in/api/pass/{nanoId}/{identifier}?wallet=apple`.
+1. Paste the HTML snippet from the **Email links** card into your email template. It contains an **Add to Apple Wallet** and a **Add to Google Wallet** button, each linking to a URL template like `https://stell.in/api/pass/{nanoId}/{identifier}?wallet=apple`.
 2. At send time, have your email tool replace `{nanoId}` with your program's nano ID and `{identifier}` with each recipient's CRM member ID — or their email address; the link works with either.
 3. For non-English emails, swap the button image's `/en.svg` for the matching language (`/nb.svg`, `/sv.svg`, `/de.svg`, and so on).
 

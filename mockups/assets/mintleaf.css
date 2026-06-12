@@ -1,0 +1,159 @@
+/* Mintleaf Coffee — shared mockup styles. Colors sampled from the
+   enrollment splash and wallet renders in images/enrollment and images/wallet. */
+
+:root {
+  --forest-dark: #0c3526;
+  --forest: #14432f;
+  --forest-mid: #1d5a3f;
+  --pass-strip: #65bb8b;
+  --mint: #8fe6b4;
+  --mint-soft: #a7e9c3;
+  --cream: #faf7f2;
+  --ink: #1a2b24;
+  --ink-soft: #51635a;
+  --line: #e6e1d8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--ink);
+}
+
+/* ---- Wordmark ---- */
+
+.wordmark { display: flex; align-items: center; gap: 12px; }
+.wordmark .leaf { flex: none; }
+.wordmark .name { line-height: 1.1; }
+.wordmark .name b {
+  display: block; font-size: 21px; font-weight: 800; letter-spacing: 4px; color: #fff;
+}
+.wordmark .name span {
+  display: block; font-size: 11px; font-weight: 500; letter-spacing: 7px; color: #fff; margin-top: 3px;
+}
+.wordmark.dark .name b, .wordmark.dark .name span { color: var(--forest); }
+
+/* ---- Leaf pattern backdrop ---- */
+
+.leafbed { position: relative; overflow: hidden; }
+.leafbed > * { position: relative; z-index: 1; }
+.leafbed .bg-leaf { position: absolute; z-index: 0; opacity: 0.14; }
+
+/* ---- Wallet pass card (recreation of the Mintleaf Rewards pass) ---- */
+
+.pass {
+  background: var(--forest-dark);
+  border-radius: 14px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 18px 40px rgba(10, 35, 25, 0.35);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+.pass .head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 14px;
+}
+.pass .head .brand { display: flex; align-items: center; gap: 7px; }
+.pass .head .brand .t b {
+  display: block; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 2px;
+}
+.pass .head .brand .t span {
+  display: block; color: #fff; font-size: 6.5px; letter-spacing: 4px; margin-top: 1px;
+}
+.pass .head .tier { text-align: right; }
+.pass .head .tier label {
+  display: block; color: var(--mint); font-size: 7px; font-weight: 700; letter-spacing: 1.5px;
+}
+.pass .head .tier b {
+  display: block; color: #fff; font-size: 13px; font-weight: 500;
+  font-family: "SF Mono", Menlo, monospace; letter-spacing: 0.5px; margin-top: 2px;
+}
+.pass .strip {
+  position: relative; overflow: hidden;
+  background: var(--pass-strip);
+  padding: 18px 14px 14px;
+  height: 86px;
+}
+.pass .strip .bg-leaf { position: absolute; opacity: 0.22; }
+.pass .strip .balance { position: relative; }
+.pass .strip .balance b {
+  display: block; color: #fff; font-size: 38px; font-weight: 400; letter-spacing: 1px;
+  font-family: "SF Mono", Menlo, monospace;
+}
+.pass .strip .balance span { display: block; color: #fff; font-size: 11px; margin-top: 2px; }
+.pass .row {
+  display: flex; justify-content: space-between;
+  padding: 12px 14px 14px;
+}
+.pass .row .cell label {
+  display: block; color: var(--mint); font-size: 7px; font-weight: 700; letter-spacing: 1.5px;
+}
+.pass .row .cell b {
+  display: block; color: #fff; font-size: 14px; font-weight: 400; margin-top: 3px;
+  font-family: "SF Mono", Menlo, monospace;
+}
+.pass .row .cell:last-child { text-align: right; }
+.pass .foot { height: 92px; position: relative; }
+.pass .foot .nfc { position: absolute; right: 14px; bottom: 12px; opacity: 0.9; }
+
+/* ---- iPhone frame ---- */
+
+.phone {
+  width: 340px;
+  border-radius: 48px;
+  background: #0c0f0e;
+  padding: 10px;
+  box-shadow: 0 30px 60px rgba(10, 30, 22, 0.45);
+}
+.phone .screen {
+  border-radius: 38px;
+  overflow: hidden;
+  background: #f4f4f6;
+  position: relative;
+}
+.phone .island {
+  position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+  width: 92px; height: 26px; border-radius: 14px; background: #0c0f0e; z-index: 5;
+}
+.phone .statusbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 26px 4px; font-size: 14px; font-weight: 600; color: #111;
+}
+
+/* ---- Browser chrome ---- */
+
+.browser {
+  border-radius: 12px; overflow: hidden;
+  box-shadow: 0 24px 60px rgba(20, 40, 30, 0.18);
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.browser .bar {
+  display: flex; align-items: center; gap: 14px;
+  background: #efece6; padding: 10px 16px; border-bottom: 1px solid var(--line);
+}
+.browser .bar .dots { display: flex; gap: 7px; }
+.browser .bar .dots i { width: 11px; height: 11px; border-radius: 50%; display: block; }
+.browser .bar .dots i:nth-child(1) { background: #f06a5c; }
+.browser .bar .dots i:nth-child(2) { background: #f5bd4f; }
+.browser .bar .dots i:nth-child(3) { background: #61c454; }
+.browser .bar .url {
+  flex: 1; max-width: 420px; margin: 0 auto;
+  background: #fff; border-radius: 8px; padding: 6px 14px;
+  font-size: 12.5px; color: var(--ink-soft); text-align: center;
+}
+
+/* ---- Wallet buttons ---- */
+
+.wallet-buttons { display: flex; gap: 14px; align-items: center; }
+.wallet-buttons img { height: 46px; display: block; }
+
+/* ---- QR block ---- */
+
+.qr-card {
+  background: #fff; border-radius: 16px; padding: 16px;
+  display: inline-block;
+}
+.qr-card img { display: block; }

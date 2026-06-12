@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body { width: 1100px; height: 870px; background: var(--cream); position: relative; }
+
+  .email {
+    position: absolute; top: 50px; left: 60px; width: 620px;
+    background: #fff; border-radius: 14px; overflow: hidden;
+    box-shadow: 0 24px 60px rgba(20, 40, 30, 0.16);
+    border: 1px solid var(--line);
+  }
+
+  .inbox { padding: 22px 28px 18px; border-bottom: 1px solid #eee9e0; }
+  .inbox .sender { display: flex; align-items: center; gap: 12px; }
+  .inbox .avatar {
+    width: 40px; height: 40px; border-radius: 50%; background: var(--forest);
+    display: flex; align-items: center; justify-content: center; flex: none;
+  }
+  .inbox .who { flex: 1; }
+  .inbox .who b { font-size: 15px; }
+  .inbox .who span { font-size: 12.5px; color: var(--ink-soft); }
+  .inbox .time { font-size: 12.5px; color: var(--ink-soft); }
+  .inbox .subject { font-size: 15.5px; font-weight: 700; margin-top: 14px; }
+  .inbox .preview { font-size: 14px; color: var(--ink-soft); margin-top: 5px; }
+
+  .hero {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%);
+    padding: 44px 28px 40px; text-align: center;
+  }
+  .hero .wordmark { justify-content: center; }
+  .hero .tag { color: var(--mint); font-size: 14px; margin-top: 16px; }
+
+  .body { padding: 34px 44px 8px; }
+  .body h1 { font-size: 23px; line-height: 1.3; letter-spacing: -0.2px; }
+  .body p { font-size: 15px; line-height: 1.6; color: var(--ink-soft); margin-top: 14px; }
+  .cta { padding: 26px 44px 8px; }
+  .cta .wallet-buttons { justify-content: center; }
+  .fallback { text-align: center; padding: 16px 44px 30px; font-size: 12.5px; color: var(--ink-soft); }
+  .fallback a { color: var(--forest-mid); }
+
+  .footer {
+    background: #f6f3ec; padding: 20px 44px 24px; text-align: center;
+    font-size: 11.5px; color: #8a948e; line-height: 1.7;
+  }
+  .footer a { color: #8a948e; }
+
+  /* Callouts */
+  .callout {
+    position: absolute; display: flex; align-items: center; gap: 0;
+  }
+  .callout .line { height: 2px; background: var(--pass-strip); }
+  .callout .num {
+    width: 34px; height: 34px; border-radius: 50%; background: var(--forest);
+    color: #fff; font-size: 16px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; flex: none;
+    box-shadow: 0 4px 12px rgba(12, 53, 38, 0.3);
+  }
+  .callout .label { margin-left: 14px; }
+  .callout .label b { display: block; font-size: 16px; }
+  .callout .label span { display: block; font-size: 13px; color: var(--ink-soft); margin-top: 3px; max-width: 230px; line-height: 1.45; }
+
+  .title { position: absolute; left: 60px; top: 12px; font-size: 13px; letter-spacing: 2px; font-weight: 700; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<div class="email" id="email">
+  <div class="inbox">
+    <div class="sender">
+      <div class="avatar">
+        <svg width="22" height="22" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#14432f" stroke-width="6" fill="none"/></svg>
+      </div>
+      <div class="who"><b>Mintleaf Coffee</b><br><span>to me</span></div>
+      <div class="time">09:02</div>
+    </div>
+    <div class="subject" data-callout="1">Your coffee now earns you free coffee — meet Mintleaf Rewards</div>
+    <div class="preview" data-callout="2">No app, no plastic card. It takes 30 seconds.</div>
+  </div>
+
+  <div class="hero leafbed" data-callout="3">
+    <svg class="bg-leaf" style="top:-14px; left:18px; transform:rotate(-24deg)" width="74" height="74" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+    <svg class="bg-leaf" style="bottom:-20px; right:30px; transform:rotate(36deg)" width="92" height="92" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+    <div class="wordmark">
+      <svg class="leaf" width="40" height="40" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#14432f" stroke-width="6" fill="none"/></svg>
+      <div class="name"><b>MINTLEAF</b><span>COFFEE</span></div>
+    </div>
+    <div class="tag">Fresh roasts, fresher rewards.</div>
+  </div>
+
+  <div class="body">
+    <h1>Your loyalty card just got an upgrade — by disappearing.</h1>
+    <p data-callout="4">Mintleaf Rewards lives in your phone's wallet. No app to install, no plastic card to forget. Join once, and every coffee counts automatically when you tap to pay — your tenth one is on us.</p>
+  </div>
+
+  <div class="cta">
+    <div class="wallet-buttons" data-callout="5">
+      <img src="assets/apple-wallet-en.svg" alt="">
+      <img src="assets/google-wallet-en.svg" alt="">
+    </div>
+  </div>
+
+  <div class="fallback" data-callout="6">Button not working? <a href="#">Use this link instead</a>.</div>
+
+  <div class="footer" data-callout="7">
+    Mintleaf Coffee · Strandgaten 12, Bergen<br>
+    You're receiving this because you're a Mintleaf customer. <a href="#">Unsubscribe</a>
+  </div>
+</div>
+
+<div class="title">ANATOMY OF A PROGRAM EMAIL</div>
+
+<div id="callouts"></div>
+
+<script>
+  const labels = {
+    1: ["Subject line", "Lead with the benefit, not the technology"],
+    2: ["Preview text", "Remove friction right in the inbox"],
+    3: ["Hero", "Your brand tells the story in one glance"],
+    4: ["Value proposition", "One or two sentences on what they get"],
+    5: ["The wallet buttons", "The single call to action — nothing competes with it"],
+    6: ["Fallback text link", "For email clients that block images"],
+    7: ["Footer", "Sender details, unsubscribe, trademark attributions"],
+  };
+  const email = document.getElementById('email');
+  const er = email.getBoundingClientRect();
+  const MIN_GAP = 76;
+  let lastTop = -Infinity;
+  document.querySelectorAll('[data-callout]').forEach(el => {
+    const n = el.dataset.callout;
+    const r = el.getBoundingClientRect();
+    let top = r.top + r.height / 2 - 17 + window.scrollY;
+    if (top - lastTop < MIN_GAP) top = lastTop + MIN_GAP;
+    lastTop = top;
+    const c = document.createElement('div');
+    c.className = 'callout';
+    const lineW = (er.right - r.right) + 36;
+    c.style.left = (r.right + window.scrollX) + 'px';
+    c.style.top = top + 'px';
+    c.innerHTML = `<div class="line" style="width:${lineW}px; margin-top:0"></div>` +
+      `<div class="num">${n}</div>` +
+      `<div class="label"><b>${labels[n][0]}</b><span>${labels[n][1]}</span></div>`;
+    document.getElementById('callouts').appendChild(c);
+  });
+</script>
+</body>
+</html>

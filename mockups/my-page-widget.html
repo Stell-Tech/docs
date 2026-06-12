@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body { width: 1180px; height: 756px; background: var(--cream); padding: 40px; }
+
+  .browser { width: 1100px; }
+  .site { background: #f8f6f1; min-height: 660px; }
+
+  .nav {
+    display: flex; align-items: center; gap: 34px;
+    padding: 18px 48px; border-bottom: 1px solid var(--line); background: #fff;
+  }
+  .nav .wordmark .name b { font-size: 15px; letter-spacing: 3px; color: var(--forest); }
+  .nav .wordmark .name span { font-size: 7.5px; letter-spacing: 5px; color: var(--forest); margin-top: 2px; }
+  .nav .links { display: flex; gap: 26px; margin-left: auto; font-size: 14px; color: var(--ink-soft); }
+  .nav .links .active { color: var(--forest); font-weight: 700; }
+  .nav .me {
+    display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600;
+  }
+  .nav .me .avatar {
+    width: 32px; height: 32px; border-radius: 50%; background: var(--pass-strip);
+    color: #fff; font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .content { padding: 38px 48px; }
+  .content h1 { font-size: 28px; letter-spacing: -0.4px; color: var(--forest-dark); }
+  .content .sub { font-size: 14.5px; color: var(--ink-soft); margin-top: 6px; }
+
+  .grid { display: flex; gap: 24px; margin-top: 28px; align-items: stretch; }
+
+  .card {
+    background: #fff; border-radius: 16px; border: 1px solid var(--line);
+    padding: 26px 28px;
+  }
+  .membership { width: 350px; flex: none; }
+  .membership .tag {
+    display: inline-block; background: var(--mint-soft); color: var(--forest);
+    font-size: 11px; font-weight: 800; letter-spacing: 1.5px;
+    border-radius: 999px; padding: 5px 12px;
+  }
+  .membership h2 { font-size: 19px; margin-top: 14px; }
+  .membership .stats { display: flex; gap: 28px; margin-top: 18px; }
+  .membership .stats label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--ink-soft); }
+  .membership .stats b { display: block; font-size: 22px; margin-top: 4px; color: var(--forest-dark); }
+  .membership .bar { display: block; height: 8px; padding: 0; border-bottom: none; background: #eee9e0; border-radius: 4px; margin-top: 20px; overflow: hidden; }
+  .membership .bar i { display: block; width: 70%; height: 100%; background: var(--pass-strip); border-radius: 4px; }
+  .membership .note { font-size: 12.5px; color: var(--ink-soft); margin-top: 8px; }
+
+  .widget { flex: 1; display: flex; flex-direction: column; }
+  .widget h2 { font-size: 19px; }
+  .widget p { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); margin-top: 8px; max-width: 480px; }
+  .widget .wallet-buttons { margin-top: 24px; }
+  .widget .wallet-buttons img { height: 48px; }
+  .widget .powered { margin-top: auto; padding-top: 22px; font-size: 11.5px; color: #a8b0aa; }
+
+  .below { display: flex; gap: 24px; margin-top: 24px; }
+  .below .card { flex: 1; }
+  .below .card h3 { font-size: 14.5px; }
+  .below .card .muted { font-size: 13px; color: var(--ink-soft); margin-top: 8px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<div class="browser">
+  <div class="bar">
+    <div class="dots"><i></i><i></i><i></i></div>
+    <div class="url">mintleafcoffee.com/account</div>
+    <div style="width:60px"></div>
+  </div>
+  <div class="site">
+    <div class="nav">
+      <div class="wordmark dark">
+        <svg class="leaf" width="28" height="28" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#14432f"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#faf7f2" stroke-width="6" fill="none"/></svg>
+        <div class="name"><b>MINTLEAF</b><span>COFFEE</span></div>
+      </div>
+      <div class="links"><span>Menu</span><span>Order ahead</span><span class="active">My page</span></div>
+      <div class="me"><div class="avatar">A</div>Anna</div>
+    </div>
+
+    <div class="content">
+      <h1>Hi Anna</h1>
+      <div class="sub">Your Mintleaf account</div>
+
+      <div class="grid">
+        <div class="card membership">
+          <span class="tag">MINTLEAF REWARDS</span>
+          <h2>Your membership</h2>
+          <div class="stats">
+            <div><label>BALANCE</label><b>1 250</b></div>
+            <div><label>MEMBER SINCE</label><b>March 2024</b></div>
+          </div>
+          <div class="bar"><i style="display:block; width:70%; height:100%; background:#65bb8b; border-radius:4px;"></i></div>
+          <div class="note">3 coffees to go until your free one</div>
+        </div>
+
+        <div class="card widget">
+          <h2>Add your pass to your phone</h2>
+          <p>Keep Mintleaf Rewards in your phone's wallet — it counts every coffee automatically when you tap to pay. One tap below and it's there.</p>
+          <div class="wallet-buttons">
+            <img src="assets/apple-wallet-en.svg" alt="">
+            <img src="assets/google-wallet-en.svg" alt="">
+          </div>
+          <div class="powered">Powered by Stell</div>
+        </div>
+      </div>
+
+      <div class="below">
+        <div class="card">
+          <h3>Recent orders</h3>
+          <div class="muted">Flat white · Tuesday 08:14<br>Filter coffee · Monday 08:21</div>
+        </div>
+        <div class="card">
+          <h3>Account details</h3>
+          <div class="muted">anna@example.com<br>+47 912 34 567</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body { width: 1180px; height: 716px; background: var(--cream); padding: 40px; }
+
+  .browser { width: 1100px; }
+  .site { background: #fff; }
+
+  .nav {
+    display: flex; align-items: center; gap: 34px;
+    padding: 20px 48px; border-bottom: 1px solid var(--line);
+  }
+  .nav .wordmark .name b { font-size: 16px; letter-spacing: 3px; color: var(--forest); }
+  .nav .wordmark .name span { font-size: 8px; letter-spacing: 5px; color: var(--forest); margin-top: 2px; }
+  .nav .links { display: flex; gap: 28px; margin-left: auto; font-size: 14.5px; color: var(--ink-soft); }
+  .nav .links .active { color: var(--forest); font-weight: 700; }
+  .nav .order {
+    background: var(--forest); color: #fff; font-size: 13.5px; font-weight: 600;
+    border-radius: 999px; padding: 9px 20px;
+  }
+
+  .hero {
+    display: flex; align-items: center; gap: 40px;
+    padding: 56px 64px 64px; position: relative; overflow: hidden;
+    background: linear-gradient(150deg, #f9f5ec 0%, #f0ead9 100%);
+  }
+  .hero .bg-leaf { position: absolute; opacity: 0.1; }
+
+  .hero .copy { flex: 1; position: relative; }
+  .hero .eyebrow {
+    display: inline-block; background: var(--mint-soft); color: var(--forest);
+    font-size: 12px; font-weight: 800; letter-spacing: 2px;
+    border-radius: 999px; padding: 7px 16px;
+  }
+  .hero h1 { font-size: 52px; letter-spacing: -1px; line-height: 1.08; color: var(--forest-dark); margin-top: 22px; }
+  .hero p { font-size: 18px; line-height: 1.6; color: var(--ink-soft); margin-top: 18px; max-width: 430px; }
+  .hero .cta {
+    display: inline-block; margin-top: 30px;
+    background: var(--forest); color: #fff; font-size: 16.5px; font-weight: 700;
+    border-radius: 12px; padding: 17px 32px;
+    box-shadow: 0 14px 30px rgba(12, 53, 38, 0.28);
+  }
+  .hero .small { display: block; font-size: 13px; color: var(--ink-soft); margin-top: 16px; }
+
+  .hero .visual { position: relative; width: 360px; height: 320px; flex: none; }
+  .hero .visual .pass { position: absolute; top: 24px; right: 16px; transform: rotate(4deg); }
+</style>
+</head>
+<body>
+
+<div class="browser">
+  <div class="bar">
+    <div class="dots"><i></i><i></i><i></i></div>
+    <div class="url">mintleafcoffee.com</div>
+    <div style="width:60px"></div>
+  </div>
+  <div class="site">
+    <div class="nav">
+      <div class="wordmark dark">
+        <svg class="leaf" width="30" height="30" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#14432f"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#faf7f2" stroke-width="6" fill="none"/></svg>
+        <div class="name"><b>MINTLEAF</b><span>COFFEE</span></div>
+      </div>
+      <div class="links"><span>Menu</span><span>Beans</span><span>Locations</span><span class="active">Rewards</span></div>
+      <div class="order">Order ahead</div>
+    </div>
+
+    <div class="hero">
+      <svg class="bg-leaf" style="bottom:-60px; left:340px; transform:rotate(30deg)" width="280" height="280" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#1d5a3f"/></svg>
+      <svg class="bg-leaf" style="top:-40px; right:-30px; transform:rotate(-18deg)" width="200" height="200" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#1d5a3f"/></svg>
+
+      <div class="copy">
+        <span class="eyebrow">MINTLEAF REWARDS</span>
+        <h1>Earn with<br>every cup</h1>
+        <p>No app, no plastic card — your pass lives in your phone's wallet, and your tenth coffee is free.</p>
+        <span class="cta">Join Mintleaf Rewards</span>
+        <span class="small">Takes 30 seconds · Works with Apple Wallet and Google Wallet</span>
+      </div>
+
+      <div class="visual">
+        <div class="pass">
+          <div class="head">
+            <div class="brand">
+              <svg width="22" height="22" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#0c3526" stroke-width="6" fill="none"/></svg>
+              <div class="t"><b>MINTLEAF</b><span>COFFEE</span></div>
+            </div>
+            <div class="tier"><label>MEMBER TIER</label><b>Evergreen</b></div>
+          </div>
+          <div class="strip">
+            <svg class="bg-leaf" style="top:8px; right:18px; transform:rotate(30deg); position:absolute; opacity:.22" width="56" height="56" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/></svg>
+            <svg class="bg-leaf" style="bottom:-10px; right:104px; transform:rotate(-20deg); position:absolute; opacity:.22" width="40" height="40" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/></svg>
+            <div class="balance"><b>1 250</b><span>Balance</span></div>
+          </div>
+          <div class="row">
+            <div class="cell"><label>MEMBER</label><b>Alex Smith</b></div>
+            <div class="cell"><label>MEMBER SINCE</label><b>March 2024</b></div>
+          </div>
+          <div class="foot">
+            <svg class="nfc" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8fe6b4" stroke-width="2" stroke-linecap="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="19" r="1" fill="#8fe6b4" stroke="none"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

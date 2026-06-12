@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body { width: 1280px; height: 720px; }
+
+  .board {
+    width: 1280px; height: 720px; display: flex; position: relative; overflow: hidden;
+    background: linear-gradient(160deg, var(--forest-mid) 0%, var(--forest) 45%, var(--forest-dark) 100%);
+  }
+  .board .bg-leaf { position: absolute; opacity: 0.1; }
+
+  .menu { flex: 1; padding: 64px 80px; position: relative; }
+  .menu .wordmark .name b { font-size: 17px; }
+  .menu .wordmark .name span { font-size: 8.5px; }
+  .menu h1 { color: #fff; font-size: 40px; letter-spacing: -0.6px; margin-top: 40px; }
+  .menu .items { margin-top: 34px; max-width: 560px; }
+  .menu .item {
+    display: flex; align-items: baseline; gap: 14px;
+    padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.14);
+  }
+  .menu .item b { color: #fff; font-size: 21px; font-weight: 600; }
+  .menu .item .dots { flex: 1; border-bottom: 2px dotted rgba(255,255,255,0.25); transform: translateY(-5px); }
+  .menu .item span { color: var(--mint); font-size: 21px; font-family: "SF Mono", Menlo, monospace; }
+
+  .join {
+    width: 420px; flex: none; position: relative;
+    background: var(--cream);
+    padding: 56px 48px;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    clip-path: polygon(36px 0, 100% 0, 100% 100%, 0 100%);
+    padding-left: 70px;
+  }
+  .join h2 { font-size: 31px; letter-spacing: -0.5px; color: var(--forest-dark); line-height: 1.15; }
+  .join h2 em { font-style: normal; color: var(--forest-mid); }
+  .join p { font-size: 15.5px; line-height: 1.55; color: var(--ink-soft); margin-top: 12px; }
+  .join .qr-card {
+    margin-top: 28px; padding: 16px; border-radius: 18px;
+    border: 1.5px solid var(--line);
+    box-shadow: 0 16px 36px rgba(60, 50, 30, 0.16);
+  }
+  .join .qr-card img { width: 196px; height: 196px; }
+  .join .hint { font-size: 13px; color: var(--ink-soft); margin-top: 16px; max-width: 250px; line-height: 1.5; }
+  .join .free {
+    margin-top: auto;
+    background: var(--forest); color: #fff;
+    font-size: 14.5px; font-weight: 700; letter-spacing: 0.3px;
+    border-radius: 999px; padding: 12px 26px;
+  }
+</style>
+</head>
+<body>
+
+<div class="board">
+  <svg class="bg-leaf" style="bottom:-80px; left:-60px; transform:rotate(-24deg)" width="300" height="300" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+  <svg class="bg-leaf" style="top:-50px; left:480px; transform:rotate(26deg)" width="220" height="220" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+
+  <div class="menu">
+    <div class="wordmark">
+      <svg class="leaf" width="36" height="36" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#14432f" stroke-width="6" fill="none"/></svg>
+      <div class="name"><b>MINTLEAF</b><span>COFFEE</span></div>
+    </div>
+    <h1>Today's coffee</h1>
+    <div class="items">
+      <div class="item"><b>Flat white</b><div class="dots"></div><span>49</span></div>
+      <div class="item"><b>Latte</b><div class="dots"></div><span>52</span></div>
+      <div class="item"><b>Cortado</b><div class="dots"></div><span>46</span></div>
+      <div class="item"><b>Filter of the day</b><div class="dots"></div><span>39</span></div>
+      <div class="item"><b>Cinnamon bun</b><div class="dots"></div><span>35</span></div>
+    </div>
+  </div>
+
+  <div class="join">
+    <h2>Scan to join<br><em>Mintleaf Rewards</em></h2>
+    <p>Your tenth coffee is free — and this one already counts.</p>
+    <div class="qr-card"><img src="assets/qr.png" alt=""></div>
+    <div class="hint">Open the Camera app on your phone and point it at the code</div>
+    <div class="free">NO APP · NO PLASTIC CARD</div>
+  </div>
+</div>
+
+</body>
+</html>

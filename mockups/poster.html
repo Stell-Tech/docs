@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body { width: 660px; height: 933px; }
+
+  .poster {
+    width: 660px; height: 933px; position: relative; overflow: hidden;
+    background: linear-gradient(160deg, var(--forest-mid) 0%, var(--forest) 40%, var(--forest-dark) 100%);
+    padding: 56px 56px 44px;
+    display: flex; flex-direction: column;
+  }
+  .poster .bg-leaf { position: absolute; opacity: 0.12; }
+
+  .brand-top { position: relative; }
+  .brand-top .wordmark .name b { font-size: 18px; }
+  .brand-top .wordmark .name span { font-size: 9px; }
+
+  .headline { position: relative; margin-top: 44px; }
+  .headline h1 { color: #fff; font-size: 76px; letter-spacing: -1.5px; line-height: 1.04; }
+  .headline h1 em { font-style: normal; color: var(--mint); }
+  .headline p { color: rgba(255,255,255,.85); font-size: 20px; line-height: 1.5; margin-top: 18px; max-width: 270px; }
+
+  .middle { position: relative; flex: 1; }
+  .middle .pass { position: absolute; right: 0px; top: -118px; transform: rotate(6deg); width: 264px; }
+  .middle .pass .strip { height: 80px; }
+  .middle .pass .strip .balance b { font-size: 34px; }
+  .middle .pass .foot { height: 70px; }
+
+  .scanrow { position: relative; display: flex; align-items: flex-end; gap: 28px; }
+  .qr-card { padding: 18px; border-radius: 18px; box-shadow: 0 16px 40px rgba(5,25,17,.4); }
+  .qr-card img { width: 168px; height: 168px; }
+  .scaninfo { padding-bottom: 6px; }
+  .scaninfo b { display: block; color: #fff; font-size: 22px; letter-spacing: -0.2px; }
+  .scaninfo p { color: rgba(255,255,255,.8); font-size: 14.5px; line-height: 1.55; margin-top: 10px; max-width: 330px; }
+  .scaninfo .badges { display: flex; gap: 12px; margin-top: 20px; }
+  .scaninfo .badges img { height: 40px; display: block; }
+</style>
+</head>
+<body>
+
+<div class="poster">
+  <svg class="bg-leaf" style="top:-60px; right:-70px; transform:rotate(30deg)" width="320" height="320" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+  <svg class="bg-leaf" style="bottom:200px; left:-80px; transform:rotate(-26deg)" width="240" height="240" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+
+  <div class="brand-top">
+    <div class="wordmark">
+      <svg class="leaf" width="38" height="38" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#14432f" stroke-width="6" fill="none"/></svg>
+      <div class="name"><b>MINTLEAF</b><span>COFFEE</span></div>
+    </div>
+  </div>
+
+  <div class="headline">
+    <h1>Tap.<br>Sip.<br><em>Earn.</em></h1>
+    <p>Mintleaf Rewards lives in your phone's wallet — and your tenth coffee is free.</p>
+  </div>
+
+  <div class="middle">
+    <div class="pass">
+      <div class="head">
+        <div class="brand">
+          <svg width="20" height="20" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#0c3526" stroke-width="6" fill="none"/></svg>
+          <div class="t"><b>MINTLEAF</b><span>COFFEE</span></div>
+        </div>
+        <div class="tier"><label>MEMBER TIER</label><b>Evergreen</b></div>
+      </div>
+      <div class="strip">
+        <svg class="bg-leaf" style="top:8px; right:16px; transform:rotate(30deg); position:absolute; opacity:.22" width="50" height="50" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/></svg>
+        <svg class="bg-leaf" style="bottom:-8px; right:96px; transform:rotate(-20deg); position:absolute; opacity:.22" width="36" height="36" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/></svg>
+        <div class="balance"><b>1 250</b><span>Balance</span></div>
+      </div>
+      <div class="row">
+        <div class="cell"><label>MEMBER</label><b>Alex Smith</b></div>
+        <div class="cell"><label>MEMBER SINCE</label><b>March 2024</b></div>
+      </div>
+      <div class="foot">
+        <svg class="nfc" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8fe6b4" stroke-width="2" stroke-linecap="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="19" r="1" fill="#8fe6b4" stroke="none"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="scanrow">
+    <div class="qr-card"><img src="assets/qr.png" alt=""></div>
+    <div class="scaninfo">
+      <b>Scan to join</b>
+      <p>Open the Camera app on your phone and point it at the code — your pass is ready in 30 seconds.</p>
+      <div class="badges">
+        <img src="assets/apple-wallet-en.svg" alt="">
+        <img src="assets/google-wallet-en.svg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body { width: 420px; height: 747px; }
+
+  .story {
+    width: 420px; height: 747px; position: relative; overflow: hidden;
+    background: linear-gradient(165deg, var(--forest-mid) 0%, var(--forest) 45%, var(--forest-dark) 100%);
+  }
+  .story .bg-leaf { position: absolute; opacity: 0.13; }
+
+  .topbar { position: absolute; top: 0; left: 0; right: 0; padding: 12px 14px 0; z-index: 4; }
+  .topbar .progress { height: 2.5px; background: rgba(255,255,255,.35); border-radius: 2px; }
+  .topbar .progress i { display: block; width: 62%; height: 100%; background: #fff; border-radius: 2px; }
+  .topbar .who { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+  .topbar .avatar {
+    width: 34px; height: 34px; border-radius: 50%; background: var(--forest-dark);
+    border: 1.5px solid rgba(255,255,255,.7);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .topbar .who b { color: #fff; font-size: 13.5px; }
+  .topbar .who span { color: rgba(255,255,255,.7); font-size: 13px; }
+  .topbar .who .x { margin-left: auto; color: #fff; font-size: 20px; font-weight: 300; }
+
+  .headline { position: absolute; top: 96px; left: 0; right: 0; text-align: center; z-index: 3; }
+  .headline b { color: #fff; font-size: 31px; letter-spacing: -0.3px; display: block; }
+  .headline span { color: var(--mint); font-size: 15.5px; display: block; margin-top: 8px; }
+
+  .phone { position: absolute; left: 50%; transform: translateX(-50%) rotate(-3deg); top: 208px; width: 252px; padding: 8px; border-radius: 38px; z-index: 2; }
+  .phone .screen { border-radius: 30px; }
+  .phone .statusbar { padding: 12px 20px 2px; font-size: 11px; }
+  .phone .island { width: 68px; height: 19px; top: 8px; border-radius: 10px; }
+  .phone .wallet-area { padding: 14px 11px 20px; background: #f4f4f6; }
+  .pass { width: 214px; border-radius: 11px; box-shadow: 0 10px 24px rgba(10,35,25,.3); }
+  .pass .head { padding: 9px 11px; }
+  .pass .strip { height: 64px; padding: 12px 11px 10px; }
+  .pass .strip .balance b { font-size: 28px; }
+  .pass .strip .balance span { font-size: 9px; }
+  .pass .row { padding: 9px 11px 11px; }
+  .pass .row .cell b { font-size: 11px; }
+  .pass .foot { height: 50px; }
+
+  .sticker {
+    position: absolute; left: 50%; transform: translateX(-50%) rotate(-2deg);
+    bottom: 116px; z-index: 5;
+    background: #fff; border-radius: 999px; padding: 13px 24px;
+    display: flex; align-items: center; gap: 9px;
+    box-shadow: 0 12px 30px rgba(5, 25, 17, 0.45);
+  }
+  .sticker b { font-size: 16.5px; color: var(--forest); letter-spacing: .2px; white-space: nowrap; }
+  .sticker svg { display: block; }
+
+  .bottomline { position: absolute; bottom: 64px; left: 0; right: 0; text-align: center; color: rgba(255,255,255,.85); font-size: 13.5px; z-index: 3; }
+
+  .replybar { position: absolute; bottom: 14px; left: 16px; right: 16px; display: flex; align-items: center; gap: 12px; z-index: 4; }
+  .replybar .field {
+    flex: 1; border: 1.5px solid rgba(255,255,255,.5); border-radius: 999px;
+    color: rgba(255,255,255,.7); font-size: 13.5px; padding: 11px 16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="story">
+  <svg class="bg-leaf" style="top:120px; left:-40px; transform:rotate(-28deg)" width="170" height="170" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+  <svg class="bg-leaf" style="bottom:90px; right:-50px; transform:rotate(34deg)" width="210" height="210" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+  <svg class="bg-leaf" style="top:40px; right:30px; transform:rotate(12deg)" width="80" height="80" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+
+  <div class="topbar">
+    <div class="progress"><i></i></div>
+    <div class="who">
+      <div class="avatar">
+        <svg width="18" height="18" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#0c3526" stroke-width="6" fill="none"/></svg>
+      </div>
+      <b>mintleafcoffee</b><span>2h</span>
+      <div class="x">×</div>
+    </div>
+  </div>
+
+  <div class="headline">
+    <b>Your tenth coffee is free</b>
+    <span>No app. No plastic card. 30 seconds.</span>
+  </div>
+
+  <div class="phone">
+    <div class="screen">
+      <div class="island"></div>
+      <div class="statusbar"><span>12:55</span><span>5G</span></div>
+      <div class="wallet-area">
+        <div class="pass">
+          <div class="head">
+            <div class="brand">
+              <svg width="17" height="17" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#0c3526" stroke-width="6" fill="none"/></svg>
+              <div class="t"><b>MINTLEAF</b><span>COFFEE</span></div>
+            </div>
+            <div class="tier"><label>MEMBER TIER</label><b>Evergreen</b></div>
+          </div>
+          <div class="strip">
+            <svg class="bg-leaf" style="top:6px; right:14px; transform:rotate(30deg); position:absolute; opacity:.22" width="42" height="42" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/></svg>
+            <div class="balance"><b>1 250</b><span>Balance</span></div>
+          </div>
+          <div class="row">
+            <div class="cell"><label>MEMBER</label><b>Alex Smith</b></div>
+            <div class="cell"><label>MEMBER SINCE</label><b>March 2024</b></div>
+          </div>
+          <div class="foot">
+            <svg class="nfc" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8fe6b4" stroke-width="2" stroke-linecap="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="19" r="1" fill="#8fe6b4" stroke="none"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticker">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#14432f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+    <b>Join Mintleaf Rewards</b>
+  </div>
+
+  <div class="bottomline">Tap the link to join — it takes 30 seconds</div>
+
+  <div class="replybar">
+    <div class="field">Send message</div>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+  </div>
+</div>
+
+</body>
+</html>

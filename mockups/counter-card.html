@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body {
+    width: 660px; height: 820px;
+    background: linear-gradient(170deg, #e8dcc8 0%, #d9c9ad 100%);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  /* counter surface */
+  body::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 110px;
+    background: linear-gradient(180deg, #b89a72 0%, #a3855e 100%);
+  }
+
+  .card {
+    position: relative; z-index: 2;
+    width: 430px;
+    background: var(--cream);
+    border-radius: 18px;
+    padding: 44px 44px 38px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(90, 70, 40, 0.45), 0 4px 12px rgba(90, 70, 40, 0.25);
+    margin-bottom: 60px;
+  }
+
+  .card .wordmark { justify-content: center; }
+  .card .wordmark .name b { font-size: 15px; letter-spacing: 3px; color: var(--forest); }
+  .card .wordmark .name span { font-size: 8px; letter-spacing: 5px; color: var(--forest); margin-top: 2px; }
+
+  .card h1 { font-size: 37px; letter-spacing: -0.6px; color: var(--forest-dark); margin-top: 28px; line-height: 1.12; }
+  .card h1 em { font-style: normal; color: var(--forest-mid); }
+  .card p { font-size: 15.5px; line-height: 1.6; color: var(--ink-soft); margin-top: 14px; }
+
+  .card .qr-card {
+    margin-top: 26px; padding: 14px;
+    border: 1.5px solid var(--line); border-radius: 16px;
+  }
+  .card .qr-card img { width: 150px; height: 150px; }
+
+  .card .hint { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; }
+  .card .free {
+    display: inline-block; margin-top: 22px;
+    background: var(--forest); color: #fff;
+    font-size: 13.5px; font-weight: 700; letter-spacing: 0.3px;
+    border-radius: 999px; padding: 10px 22px;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="wordmark dark">
+    <svg class="leaf" width="30" height="30" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#14432f"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#faf7f2" stroke-width="6" fill="none"/></svg>
+    <div class="name"><b>MINTLEAF</b><span>COFFEE</span></div>
+  </div>
+
+  <h1>Join before<br>you <em>pay</em></h1>
+  <p>Scan to add Mintleaf Rewards to your phone's wallet — it takes 30 seconds, and this coffee already counts.</p>
+
+  <div class="qr-card"><img src="assets/qr.png" alt=""></div>
+  <div class="hint">Open the Camera app and point it at the code</div>
+
+  <div class="free">YOUR 10TH COFFEE IS FREE</div>
+</div>
+
+</body>
+</html>

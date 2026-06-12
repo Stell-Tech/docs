@@ -73,7 +73,7 @@ Screenshots are **generated** by the Playwright pipeline in `screenshots/` — n
 - Auth: `npm run shots:login` opens a headed browser for a manual staging login (MFA included); the session is saved to `screenshots/.auth/state.json` (gitignored) and reused until it expires
 - If staging access is unavailable, write the content anyway and leave the image embed in place — backfill the capture later
 - Exception: `images/wallet/` holds manual device captures (real iPhone wallet renders, English device language) supplied by Morten — not part of the pipeline; replacing them means retaking them on a device
-- Exception: `images/promote/` holds designed Mintleaf marketing mockups (email render, social posts, poster, counter card, POS slide) — not part of the pipeline; the `promote/*.mdx` pages embed them as backfill placeholders until the mockups are produced
+- Exception: `images/promote/` holds designed Mintleaf marketing mockups (email render, social posts, poster, counter card, POS slide) — not part of the Playwright portal pipeline. Sources are the HTML files in `mockups/`; regenerate with `node mockups/capture.mjs` (the wallet badge SVGs in `mockups/assets/` come from the Stell embed assets)
 
 ## Workflow
 
