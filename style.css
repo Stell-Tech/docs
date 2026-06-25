@@ -1,0 +1,7 @@
+/* Mintlify strips default margins from Frames (.not-prose), so stacked
+   images sit flush against each other and the surrounding text. Give them
+   room to breathe across the whole site. */
+.frame {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}

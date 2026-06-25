@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body { width: 720px; height: 1180px; background: #1c1c1f; }
+  .kiosk { position: absolute; inset: 0; padding: 22px; background: linear-gradient(160deg, #2a2a2e, #161618); }
+  .screen { width: 100%; height: 100%; border-radius: 26px; overflow: hidden; position: relative; display: flex; flex-direction: column;
+    background: linear-gradient(165deg, var(--forest-mid) 0%, var(--forest) 50%, var(--forest-dark) 100%); }
+  .screen .bg-leaf { position: absolute; opacity: .10; }
+
+  .head { padding: 28px 40px 26px; text-align: center; position: relative; z-index: 3; }
+  .head .row { display: flex; align-items: center; justify-content: center; gap: 12px; }
+  .head .row h2 { color: #fff; font-size: 26px; font-weight: 800; }
+  .head .pill {
+    display: inline-flex; align-items: center; gap: 12px; margin-top: 18px;
+    background: #fff; color: var(--forest); border-radius: 999px; padding: 15px 32px;
+    font-size: 20px; font-weight: 800; box-shadow: 0 10px 26px rgba(5,25,17,.45);
+  }
+
+  /* single hero: the pass on a phone */
+  .hero { flex: 1; position: relative; }
+  .hero .spotlight { position: absolute; left: 50%; top: 44%; transform: translate(-50%,-50%);
+    width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(143,230,180,.30) 0%, rgba(143,230,180,0) 65%); }
+  .phone {
+    position: absolute; left: 50%; top: 40px; transform: translateX(-50%) rotate(-5deg);
+    width: 322px; background: #0c0f0e; padding: 10px; border-radius: 46px;
+    box-shadow: 0 50px 70px rgba(5,25,17,.55);
+  }
+  .phone img { display: block; width: 100%; border-radius: 38px; }
+
+  .foot { padding: 0 56px 70px; text-align: left; position: relative; z-index: 2; }
+  .foot h1 { color: #fff; font-size: 70px; font-weight: 800; line-height: .98; letter-spacing: -2px; }
+  .foot h1 em { font-style: normal; color: var(--mint); }
+  .foot p { color: rgba(255,255,255,.85); font-size: 22px; margin-top: 18px; line-height: 1.45; max-width: 520px; }
+  .foot p b { color: #fff; }
+  .foot .scrim { position: absolute; inset: -160px 0 -40px; z-index: -1;
+    background: linear-gradient(180deg, rgba(12,53,38,0) 0%, var(--forest-dark) 60%); }
+
+  .statusbar { display: flex; justify-content: space-between; padding: 12px 28px; font-size: 13px; color: rgba(255,255,255,.6); position: relative; z-index: 3; }
+</style>
+</head>
+<body>
+<div class="kiosk">
+  <div class="screen">
+    <svg class="bg-leaf" style="top:120px; right:-30px; transform:rotate(22deg)" width="220" height="220" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+    <svg class="bg-leaf" style="top:300px; left:-40px; transform:rotate(-26deg)" width="180" height="180" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+
+    <div class="head">
+      <div class="row">
+        <svg width="30" height="30" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#14432f" stroke-width="6" fill="none"/></svg>
+        <h2>Members earn free coffee</h2>
+      </div>
+      <div class="pill">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14432f" stroke-width="2.2" stroke-linecap="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="19" r="1.3" fill="#14432f" stroke="none"/></svg>
+        TAP HERE TO CHECK IN
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="spotlight"></div>
+      <div class="phone"><img src="../images/wallet/iphone-front.png" alt=""></div>
+    </div>
+
+    <div class="foot">
+      <div class="scrim"></div>
+      <h1>Rewards are<br><em>ahead</em></h1>
+      <p>Your pass is already in your wallet — tap <b>check in</b> at the top to use your rewards.</p>
+    </div>
+
+    <div class="statusbar"><span>6:39 PM</span><span>Privacy · Terms · English</span></div>
+  </div>
+</div>
+</body>
+</html>

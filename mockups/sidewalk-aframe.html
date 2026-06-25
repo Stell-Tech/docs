@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body { width: 700px; height: 900px; position: relative; overflow: hidden; background: #cdc6ba; }
+
+  /* ---- storefront facade behind ---- */
+  .facade { position: absolute; top: 0; left: 0; right: 0; height: 286px;
+    background: linear-gradient(180deg, #e0d8cb 0%, #d2c9ba 100%); }
+  .facade .pier { position: absolute; top: 0; bottom: 0; width: 34px; background: rgba(120,108,88,.10); }
+  .facade .shopwin { position: absolute; top: 44px; height: 150px; border-radius: 3px;
+    background: linear-gradient(160deg, rgba(20,67,47,.18), rgba(12,53,38,.30));
+    box-shadow: inset 0 0 0 4px rgba(255,255,255,.25); }
+  .facade .shopwin::after { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(115deg, rgba(255,255,255,.28) 0 18%, transparent 18% 32%, rgba(255,255,255,.16) 32% 42%, transparent 42%); }
+
+  /* green awning along the storefront */
+  .awning { position: absolute; top: 250px; left: 0; right: 0; height: 50px;
+    background: repeating-linear-gradient(90deg, var(--forest) 0 46px, var(--forest-mid) 46px 92px);
+    box-shadow: 0 10px 20px rgba(20,20,25,.2); z-index: 2; }
+  .awning::after { content: ""; position: absolute; left: 0; right: 0; bottom: -15px; height: 18px; z-index: 2;
+    background: radial-gradient(circle at 16px 0, var(--forest) 15px, transparent 16px) repeat-x;
+    background-size: 32px 18px; }
+  .awning .sign { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 9px; }
+  .awning .sign b { color: #fff; font-size: 15px; font-weight: 800; letter-spacing: 5px; }
+
+  /* ---- sidewalk ---- */
+  .sidewalk { position: absolute; left: 0; right: 0; top: 286px; bottom: 0;
+    background: linear-gradient(180deg, #c9c2b5 0%, #b7afa0 78%, #ad a597 100%); }
+  .sidewalk { background: linear-gradient(180deg, #c9c2b5 0%, #b7afa0 100%); }
+  .joint { position: absolute; background: rgba(90,80,62,.16); }
+  /* curb + asphalt street at the very bottom */
+  .curb { position: absolute; left: 0; right: 0; bottom: 54px; height: 12px; background: linear-gradient(180deg, #cfc8bb, #a59d8d); z-index: 1; }
+  .street { position: absolute; left: 0; right: 0; bottom: 0; height: 54px; background: linear-gradient(180deg, #5f5b55, #514e49); z-index: 1; }
+  .street::before { content: ""; position: absolute; top: 22px; left: 0; right: 0; height: 3px;
+    background: repeating-linear-gradient(90deg, #d8cf9a 0 34px, transparent 34px 68px); opacity: .55; }
+
+  /* sun cast shadow of the stand */
+  .castshadow { position: absolute; left: 50%; bottom: 70px; width: 360px; height: 60px; z-index: 1;
+    transform: translateX(-30%) skewX(-58deg) scaleY(.5);
+    background: radial-gradient(ellipse, rgba(40,38,32,.42) 0%, rgba(40,38,32,0) 72%); }
+
+  /* ---- A-frame ---- */
+  .stand { position: absolute; left: 50%; bottom: 96px; transform: translateX(-50%); width: 420px; z-index: 3; }
+  .frame { position: relative; width: 420px; border-radius: 12px;
+    background: linear-gradient(180deg, #232326, #161618); padding: 13px; box-shadow: 0 34px 50px rgba(20,20,25,.4); }
+  .board { background: var(--cream); border-radius: 6px; overflow: hidden; text-align: center; }
+  .board .top { background: linear-gradient(160deg, var(--forest-mid), var(--forest)); padding: 22px 24px 18px; position: relative; overflow: hidden; }
+  .board .top .bg-leaf { position: absolute; opacity: .12; }
+  .board .top .wordmark { justify-content: center; }
+  .board .top .wordmark .name b { font-size: 15px; letter-spacing: 3px; }
+  .board .top h1 { color: #fff; font-size: 38px; font-weight: 800; letter-spacing: -.5px; margin-top: 12px; line-height: 1; }
+  .board .top h1 em { font-style: normal; color: var(--mint); }
+
+  .board .mid { display: flex; align-items: center; justify-content: center; gap: 20px; padding: 24px 30px 12px; }
+  .board .qr-card { padding: 11px; border: 1.5px solid var(--line); }
+  .board .qr-card img { width: 132px; height: 132px; display: block; }
+  .board .mid .cup { filter: drop-shadow(0 12px 16px rgba(60,45,20,.22)); }
+
+  .board .join { color: var(--forest-dark); font-size: 21px; font-weight: 700; }
+  .board .join em { font-style: normal; color: var(--forest-mid); }
+  .board .tagline { background: var(--forest); color: #fff; font-size: 16px; font-weight: 800; letter-spacing: .5px; padding: 13px; margin-top: 16px; }
+
+  /* hinge feet */
+  .feet { position: absolute; left: 50%; bottom: -9px; transform: translateX(-50%); width: 458px; height: 11px; border-radius: 4px; background: #121214; z-index: 3; }
+</style>
+</head>
+<body>
+  <div class="facade">
+    <div class="pier" style="left:40px"></div>
+    <div class="pier" style="right:40px"></div>
+    <div class="shopwin" style="left:74px; right:74px"></div>
+  </div>
+  <div class="awning"><div class="sign"><b>MINTLEAF COFFEE</b></div></div>
+
+  <div class="sidewalk">
+    <div class="joint" style="top:84px; left:0; right:0; height:2px"></div>
+    <div class="joint" style="top:200px; left:0; right:0; height:2px"></div>
+    <div class="joint" style="top:340px; left:0; right:0; height:3px"></div>
+    <div class="joint" style="top:0; bottom:120px; left:210px; width:2px"></div>
+    <div class="joint" style="top:0; bottom:120px; right:210px; width:2px"></div>
+  </div>
+  <div class="curb"></div>
+  <div class="street"></div>
+
+  <div class="castshadow"></div>
+
+  <div class="stand">
+    <div class="frame">
+      <div class="board">
+        <div class="top">
+          <svg class="bg-leaf" style="top:-20px; right:-10px; transform:rotate(22deg)" width="130" height="130" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+          <div class="wordmark">
+            <svg class="leaf" width="26" height="26" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#14432f" stroke-width="6" fill="none"/></svg>
+            <div class="name"><b>MINTLEAF</b></div>
+          </div>
+          <h1>Rewards,<br>on your <em>phone</em></h1>
+        </div>
+
+        <div class="mid">
+          <div class="qr-card"><img src="assets/qr-h.png" alt=""></div>
+          <svg class="cup" width="96" height="132" viewBox="0 0 110 150">
+            <path d="M14 40 h82 l-9 88 a16 16 0 0 1 -16 14 H39 a16 16 0 0 1 -16 -14 Z" fill="#fff" stroke="#e0d6c2" stroke-width="3"/>
+            <path d="M18 40 h74 l-3 26 H21 Z" fill="#14432f"/>
+            <ellipse cx="55" cy="40" rx="41" ry="9" fill="#caa06f"/>
+            <path d="M55 33 C63 39 65 49 55 60 C45 49 47 39 55 33 Z" fill="#fff" opacity=".85"/>
+            <path d="M40 26 q-7 -11 0 -22" fill="none" stroke="#c7bdac" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+            <path d="M70 26 q7 -11 0 -22" fill="none" stroke="#c7bdac" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+          </svg>
+        </div>
+
+        <div class="join">Scan to join — <em>it's free</em></div>
+        <div class="tagline">A BETTER WAY TO COFFEE</div>
+      </div>
+    </div>
+    <div class="feet"></div>
+  </div>
+</body>
+</html>

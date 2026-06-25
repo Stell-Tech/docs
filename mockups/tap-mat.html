@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body { width: 720px; height: 1040px; position: relative; overflow: hidden;
+    background: linear-gradient(160deg, #efeae1 0%, #e2dccf 60%, #d4ccbb 100%); }
+  /* faint table veining */
+  .vein { position: absolute; background: rgba(150,140,120,.10); border-radius: 40px; filter: blur(2px); }
+
+  .stage { position: absolute; left: 50%; top: 150px; transform: translateX(-50%); perspective: 1400px; }
+  .mat {
+    width: 480px; height: 740px; border-radius: 18px; overflow: hidden;
+    transform: rotateX(34deg) rotateZ(-3deg);
+    transform-origin: center top;
+    background: linear-gradient(165deg, var(--forest) 0%, var(--forest-dark) 100%);
+    box-shadow: 0 60px 80px rgba(60,45,20,.45);
+    padding: 54px 50px; text-align: center; position: relative;
+  }
+  .mat .bg-leaf { position: absolute; opacity: .08; }
+
+  /* NFC tap zone */
+  .zone {
+    position: relative; width: 230px; height: 230px; margin: 0 auto;
+    border-radius: 26px; background: rgba(143,230,180,.10);
+    border: 2px dashed rgba(143,230,180,.5);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .zone .ripple { position: absolute; border-radius: 50%; border: 2px solid rgba(143,230,180,.35); }
+
+  .mat h1 { color: #fff; font-size: 58px; font-weight: 800; letter-spacing: -1px; line-height: 1; margin-top: 40px; }
+  .mat p { color: rgba(255,255,255,.82); font-size: 19px; line-height: 1.5; margin-top: 22px; max-width: 360px; margin-left: auto; margin-right: auto; }
+  .mat p b { color: var(--mint); }
+
+  /* visit-streak token */
+  .token { margin-top: 30px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .token .dot { width: 22px; height: 22px; border-radius: 50%; border: 2px solid rgba(255,255,255,.4); }
+  .token .dot.on { background: var(--mint); border-color: var(--mint); }
+  .token .coin {
+    width: 50px; height: 50px; border-radius: 50%; background: var(--mint);
+    display: flex; align-items: center; justify-content: center; margin-left: 6px;
+    box-shadow: 0 0 0 4px rgba(143,230,180,.25);
+  }
+
+  .fine { position: absolute; left: 50px; right: 50px; bottom: 30px; color: rgba(255,255,255,.45); font-size: 11px; line-height: 1.4; }
+</style>
+</head>
+<body>
+<div class="vein" style="top:80px; left:-40px; width:300px; height:24px; transform:rotate(18deg)"></div>
+<div class="vein" style="bottom:120px; right:-60px; width:360px; height:30px; transform:rotate(-12deg)"></div>
+
+<div class="stage">
+  <div class="mat">
+    <svg class="bg-leaf" style="top:30px; right:20px; transform:rotate(20deg)" width="160" height="160" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+
+    <div class="zone">
+      <div class="ripple" style="width:150px; height:150px;"></div>
+      <div class="ripple" style="width:200px; height:200px;"></div>
+      <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="#8fe6b4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="7" y="2.5" width="10" height="19" rx="2.4"/>
+        <path d="M19.5 7a8 8 0 0 1 0 10" opacity=".8"/>
+        <path d="M21.6 4.5a12 12 0 0 1 0 15" opacity=".5"/>
+      </svg>
+    </div>
+
+    <h1>Tap to<br>check in</h1>
+    <p>Tap your <b>Mintleaf Rewards</b> pass on every visit. Visit 10 times and your next coffee is on us.</p>
+
+    <div class="token">
+      <span class="dot on"></span><span class="dot on"></span><span class="dot on"></span>
+      <span class="dot on"></span><span class="dot"></span><span class="dot"></span>
+      <div class="coin">
+        <svg width="26" height="26" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#14432f"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#8fe6b4" stroke-width="6" fill="none"/></svg>
+      </div>
+    </div>
+
+    <div class="fine">Don't have the pass yet? Ask our staff or scan the counter card to join. Terms apply.</div>
+  </div>
+</div>
+</body>
+</html>

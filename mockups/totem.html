@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/mintleaf.css">
+<style>
+  body { width: 460px; height: 1100px; position: relative; overflow: hidden;
+    background: linear-gradient(180deg, #d7d3cb 0%, #cbc6bc 60%, #b9b3a6 60.5%, #aaa395 100%); }
+  .wallshape { position: absolute; background: rgba(120,110,90,.06); border-radius: 6px; }
+
+  /* light spilling from the backlit box onto wall + floor */
+  .halo { position: absolute; left: 50%; top: 46%; transform: translate(-50%,-50%); z-index: 0;
+    width: 470px; height: 1010px; border-radius: 90px;
+    background: radial-gradient(ellipse at 50% 50%, rgba(86,206,142,.55) 0%, rgba(60,160,108,.28) 40%, rgba(40,110,75,0) 70%);
+    filter: blur(26px); }
+  .floorpool { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); z-index: 0;
+    width: 430px; height: 150px; border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(86,206,142,.45) 0%, rgba(60,160,108,0) 68%); filter: blur(10px); }
+
+  /* slim stand foot */
+  .foot { position: absolute; left: 50%; bottom: 70px; transform: translateX(-50%); z-index: 1;
+    width: 190px; height: 13px; border-radius: 3px; background: linear-gradient(180deg, #e2e2e4, #a4a4a7);
+    box-shadow: 0 6px 12px rgba(40,40,40,.3); }
+  .foot::before { content: ""; position: absolute; left: 50%; top: -2px; transform: translateX(-50%); width: 22px; height: 16px; background: #b6b6b9; }
+
+  /* ---- the lightbox: slim aluminium frame ---- */
+  .lightbox {
+    position: absolute; left: 50%; bottom: 82px; transform: translateX(-50%); z-index: 2;
+    width: 300px; height: 884px; padding: 9px; border-radius: 12px;
+    background: linear-gradient(135deg, #f0f0f2 0%, #b8b9bd 38%, #dcdce0 55%, #9a9b9f 100%);
+    box-shadow: 0 30px 60px rgba(30,30,30,.45), 0 0 60px rgba(86,206,142,.5);
+  }
+  /* corner screws */
+  .lightbox::before, .lightbox::after { content: ""; position: absolute; top: 16px; width: 5px; height: 5px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #fafafa, #8c8c8f); }
+  .lightbox::before { left: 16px; } .lightbox::after { right: 16px; }
+
+  /* illuminated translucent face (even backlight + soft center hotspot) */
+  .face {
+    position: relative; width: 100%; height: 100%; border-radius: 5px; overflow: hidden;
+    background: radial-gradient(ellipse 78% 56% at 50% 40%, #248a5a 0%, #176c45 42%, #114d33 78%, #0d3f29 100%);
+    box-shadow: inset 0 0 70px rgba(143,230,180,.4), inset 0 0 0 1px rgba(255,255,255,.18),
+                inset 0 2px 0 rgba(255,255,255,.22);
+    padding: 54px 38px; text-align: center; color: #fff;
+  }
+  .face .diffuse { position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(180deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,0) 22%); }
+  .face .bg-leaf { position: absolute; opacity: .16; }
+
+  .face .wordmark { justify-content: center; position: relative; }
+  .face .wordmark .name b { font-size: 14px; letter-spacing: 3px; }
+  .face .wordmark .name span { font-size: 7px; letter-spacing: 5px; }
+
+  .stack { margin-top: 86px; position: relative; }
+  .stack div { font-size: 56px; font-weight: 300; line-height: 1.18; letter-spacing: -1px; text-shadow: 0 0 18px rgba(143,230,180,.35); }
+  .stack div b { font-weight: 700; color: var(--mint); }
+
+  .qrwrap { margin-top: 76px; display: inline-block; background: #fff; border-radius: 14px; padding: 14px; position: relative;
+    box-shadow: 0 0 30px rgba(255,255,255,.55); }
+  .qrwrap img { width: 150px; height: 150px; display: block; }
+  .scan { font-size: 13px; color: rgba(255,255,255,.88); margin-top: 16px; position: relative; }
+
+  .perks { margin-top: 40px; text-align: left; display: inline-block; position: relative; }
+  .perks li { list-style: none; font-size: 13.5px; color: rgba(255,255,255,.9); padding: 6px 0 6px 22px; position: relative; }
+  .perks li::before { content: ""; position: absolute; left: 0; top: 11px; width: 9px; height: 9px; border-radius: 50%;
+    background: var(--mint); box-shadow: 0 0 8px rgba(143,230,180,.8); }
+</style>
+</head>
+<body>
+<div class="wallshape" style="top:80px; left:-30px; width:150px; height:80px;"></div>
+<div class="wallshape" style="top:250px; right:-40px; width:170px; height:90px;"></div>
+
+<div class="halo"></div>
+<div class="floorpool"></div>
+<div class="foot"></div>
+
+<div class="lightbox">
+  <div class="face">
+    <div class="diffuse"></div>
+    <svg class="bg-leaf" style="top:-30px; right:-30px; transform:rotate(22deg)" width="180" height="180" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+    <svg class="bg-leaf" style="bottom:120px; left:-40px; transform:rotate(-26deg)" width="160" height="160" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#8fe6b4"/></svg>
+
+    <div class="wordmark">
+      <svg class="leaf" width="24" height="24" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#14432f" stroke-width="6" fill="none"/></svg>
+      <div class="name"><b>MINTLEAF</b><span>REWARDS</span></div>
+    </div>
+
+    <div class="stack">
+      <div>Earn</div>
+      <div><b>Redeem</b></div>
+      <div>Enjoy</div>
+    </div>
+
+    <div class="qrwrap"><img src="assets/qr.png" alt=""></div>
+    <div class="scan">Scan to join — it's free</div>
+
+    <ul class="perks">
+      <li>A point on every coffee</li>
+      <li>Members-only offers</li>
+      <li>Your 10th coffee free</li>
+      <li>Lives in your phone's wallet</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

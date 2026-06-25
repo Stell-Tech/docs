@@ -25,19 +25,14 @@
   .scan .t b { display: block; color: #fff; font-size: 22px; }
   .scan .t span { display: block; color: rgba(255,255,255,.78); font-size: 14.5px; line-height: 1.5; margin-top: 8px; max-width: 270px; }
 
-  /* phone with pass, image-led right side */
+  /* phone with the real wallet render, image-led right side */
   .phone {
-    position: absolute; right: 110px; top: 64px; transform: rotate(5deg);
-    width: 330px; padding: 10px; border-radius: 48px;
+    position: absolute; right: 150px; top: 34px; transform: rotate(4deg);
+    width: 300px; background: #0c0f0e; padding: 9px; border-radius: 46px;
+    box-shadow: 0 44px 70px rgba(5,25,17,.55);
   }
-  .phone .screen { border-radius: 38px; }
-  .phone .statusbar { padding: 16px 26px 4px; font-size: 13px; }
-  .phone .wallet-area { padding: 18px 15px 70px; background: #f4f4f6; }
-  .pass { width: 280px; border-radius: 13px; box-shadow: 0 12px 28px rgba(10,35,25,.3); }
-  .pass .strip { height: 80px; }
-  .pass .strip .balance b { font-size: 34px; }
-  .pass .row .cell b { font-size: 13px; }
-  .pass .foot { height: 76px; }
+  .phone .island { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 86px; height: 24px; border-radius: 13px; background: #0c0f0e; z-index: 5; }
+  .phone img { display: block; width: 100%; border-radius: 38px; }
 </style>
 </head>
 <body>
@@ -64,33 +59,8 @@
   </div>
 
   <div class="phone">
-    <div class="screen">
-      <div class="island"></div>
-      <div class="statusbar"><span>12:55</span><span>5G</span></div>
-      <div class="wallet-area">
-        <div class="pass">
-          <div class="head">
-            <div class="brand">
-              <svg width="20" height="20" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/><path d="M50 22 L50 92 M50 46 L34 33 M50 64 L66 49" stroke="#0c3526" stroke-width="6" fill="none"/></svg>
-              <div class="t"><b>MINTLEAF</b><span>COFFEE</span></div>
-            </div>
-            <div class="tier"><label>MEMBER TIER</label><b>Evergreen</b></div>
-          </div>
-          <div class="strip">
-            <svg class="bg-leaf" style="top:8px; right:16px; transform:rotate(30deg); position:absolute; opacity:.22" width="50" height="50" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/></svg>
-            <svg class="bg-leaf" style="bottom:-8px; right:100px; transform:rotate(-20deg); position:absolute; opacity:.22" width="36" height="36" viewBox="0 0 100 100"><path d="M50 3 C80 28 88 60 50 97 C12 60 20 28 50 3 Z" fill="#fff"/></svg>
-            <div class="balance"><b>1 250</b><span>Balance</span></div>
-          </div>
-          <div class="row">
-            <div class="cell"><label>MEMBER</label><b>Alex Smith</b></div>
-            <div class="cell"><label>MEMBER SINCE</label><b>March 2024</b></div>
-          </div>
-          <div class="foot">
-            <svg class="nfc" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8fe6b4" stroke-width="2" stroke-linecap="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="19" r="1" fill="#8fe6b4" stroke="none"/></svg>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="island"></div>
+    <img src="../images/wallet/iphone-front.png" alt="">
   </div>
 </div>
 

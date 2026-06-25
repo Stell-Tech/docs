@@ -23,6 +23,12 @@ const SHOTS = [
   { name: 'screen-promo', width: 1280, height: 720 },
   { name: 'floor-stand', width: 660, height: 880 },
   { name: 'ceiling-banner', width: 640, height: 920 },
+  { name: 'kiosk-offer', width: 720, height: 1180 },
+  { name: 'kiosk-checkin', width: 720, height: 1180 },
+  { name: 'register-topper', width: 660, height: 880 },
+  { name: 'tap-mat', width: 720, height: 1040 },
+  { name: 'totem', width: 460, height: 1100 },
+  { name: 'sidewalk-aframe', width: 700, height: 900 },
   { name: 'launch-collage', width: 1280, height: 880 },
 ];
 
