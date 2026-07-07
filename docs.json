@@ -25,7 +25,9 @@
             "group": "Programs",
             "pages": [
               "programs/overview",
-              "programs/the-program-page"
+              "programs/the-program-page",
+              "programs/webhooks",
+              "programs/webhook-deliveries"
             ]
           },
           {

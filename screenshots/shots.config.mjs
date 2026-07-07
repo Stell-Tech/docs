@@ -28,6 +28,27 @@ export default [
     clicks: ['main a[href^="/portal/programs/"]'],
     waitForUrl: '**/portal/programs/*',
   },
+  // The Event webhooks card sits near the bottom of the program page.
+  {
+    name: 'portal/programs/webhooks-card',
+    path: '/portal/programs',
+    clicks: ['main a[href^="/portal/programs/"]'],
+    waitForUrl: '**/portal/programs/*',
+    scrollTo: 'text=Event webhooks',
+  },
+  // The card's button says "Configure" with no subscriptions and "Manage"
+  // otherwise; the selector matches whichever is present. "Add subscription"
+  // is the action in both the empty state and the header of the dialog.
+  {
+    name: 'portal/programs/webhooks-create',
+    path: '/portal/programs',
+    clicks: [
+      'main a[href^="/portal/programs/"]',
+      'button:has-text("Configure"), button:has-text("Manage")',
+      'button:has-text("Add subscription")',
+    ],
+    waitForUrl: '**/portal/programs/*',
+  },
   // The template editor is wide; collapse the sidebar so the live preview
   // and settings panel fit the frame.
   {
