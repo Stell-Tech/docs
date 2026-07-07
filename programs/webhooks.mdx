@@ -9,7 +9,7 @@ description: "Send a program's pass events to your own systems"
 
 Two event types are available:
 
-- **Pass status changed** — fires each time a pass moves between [lifecycle states](/passes/lifecycle). The most common use is detecting enrollment: when a customer adds their pass to Apple Wallet or Google Wallet, the pass goes from Pre-Active to Active, and that change fires the webhook.
+- **Pass status changed** — fires each time a pass moves between [lifecycle states](/passes/lifecycle). The most common use is detecting enrollment: when a customer adds their pass to Apple Wallet or Google Wallet, the pass goes from `PREACTIVE` to `ACTIVE`, and that change fires the webhook.
 - **Transaction created** — fires when a transaction is recorded against a pass, for example an NFC tap at a terminal.
 
 Subscriptions belong to a program. If you run several programs and want the same events from each, create a subscription on each program — the same endpoint URL works fine, and every delivery says which program it came from.
