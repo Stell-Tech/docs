@@ -5,3 +5,7 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Marketing mockup sources (HTML/CSS for generating images/promote) — their
+# universal CSS reset must not be bundled into the docs site's custom CSS
+mockups/
